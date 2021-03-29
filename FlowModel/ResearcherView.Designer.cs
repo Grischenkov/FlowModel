@@ -1,6 +1,6 @@
 ﻿namespace FlowModel
 {
-    partial class Form1
+    partial class ResearcherView
     {
         /// <summary>
         /// Обязательная переменная конструктора.
