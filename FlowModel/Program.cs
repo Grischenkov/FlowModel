@@ -1,22 +1,23 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using FlowModel.Presenter;
+using FlowModel.Presenter.ParentInterfaces;
 
 namespace FlowModel
 {
-    static class Program
+    internal static class Program
     {
-        /// <summary>
-        /// Главная точка входа для приложения.
-        /// </summary>
         [STAThread]
-        static void Main()
+        public static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+
+            IApplicationController controller = new ApplicationController(new LightInjectAdapter())
+                .RegisterView<IMainView, MainView>
+                .RegisterInstance(new ApplicationContext());
+            
+            controller.Run<MainPresenter>();
         }
     }
 }
