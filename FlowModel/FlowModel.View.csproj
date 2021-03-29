@@ -80,5 +80,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FlowModel.Presenter\FlowModel.Presenter.csproj">
+      <Project>{2a45cca6-bb36-434a-bae5-08ed0aec713c}</Project>
+      <Name>FlowModel.Presenter</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

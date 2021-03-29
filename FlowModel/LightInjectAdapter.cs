@@ -1,7 +1,7 @@
 using System;
 using System.Linq.Expressions;
 using LightInject;
-using FlowModel.Presenter;
+using FlowModel.Presenter.ParentInterfaces;
 
 namespace FlowModel
 {

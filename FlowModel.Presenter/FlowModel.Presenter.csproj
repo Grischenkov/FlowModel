@@ -80,6 +80,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\FlowModel.Model\FlowModel.Model.csproj">
+      <Project>{6fd9188e-5fa8-4080-b8f4-247cda6aca13}</Project>
+      <Name>FlowModel.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
