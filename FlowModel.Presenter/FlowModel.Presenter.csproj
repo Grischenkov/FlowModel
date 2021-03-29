@@ -50,6 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplicationController.cs" />
+    <Compile Include="BasePresenter.cs" />
+    <Compile Include="ParentInterfaces\IApplicationController.cs" />
+    <Compile Include="ParentInterfaces\IContainer.cs" />
+    <Compile Include="ParentInterfaces\IPresenter.cs" />
+    <Compile Include="ParentInterfaces\IView.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -74,5 +80,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
