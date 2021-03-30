@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace FlowModel
 {
-    public partial class Form1 : Form
+    public partial class ResearcherView : Form
     {
-        public Form1()
+        public ResearcherView()
         {
             InitializeComponent();
         }
