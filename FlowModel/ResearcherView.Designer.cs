@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.open_ToolStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.save_ToolStrip = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,6 +52,8 @@
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
             this.materialInput_GroupBox = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
+            this.materialCombo_GroupBox = new System.Windows.Forms.GroupBox();
+            this.material_ComboBox = new System.Windows.Forms.ComboBox();
             this.coefficientInput_GroupBox = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
@@ -59,11 +61,11 @@
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.tableOutput_GroupBox = new System.Windows.Forms.GroupBox();
-            this.button4 = new System.Windows.Forms.Button();
+            this.showValueTable_Button = new System.Windows.Forms.Button();
             this.temperatureChartOutput_GroupBox = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.showTemperatureChart_Button = new System.Windows.Forms.Button();
             this.viscosityChartOutput_GroupBox = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.showViscosityChart_Button = new System.Windows.Forms.Button();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.performanceOutput_GroupBox = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
@@ -74,24 +76,22 @@
             this.viscosityOutput_GroupBox = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel13 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.parameterInput1 = new FlowModel.ParameterInput();
-            this.parameterInput7 = new FlowModel.ParameterInput();
-            this.parameterInput8 = new FlowModel.ParameterInput();
-            this.parameterInput13 = new FlowModel.ParameterInput();
-            this.parameterInput14 = new FlowModel.ParameterInput();
-            this.parameterInput12 = new FlowModel.ParameterInput();
-            this.parameterInput11 = new FlowModel.ParameterInput();
-            this.parameterInput10 = new FlowModel.ParameterInput();
-            this.parameterInput9 = new FlowModel.ParameterInput();
-            this.parameterInput2 = new FlowModel.ParameterInput();
-            this.parameterInput3 = new FlowModel.ParameterInput();
-            this.parameterInput4 = new FlowModel.ParameterInput();
-            this.parameterInput5 = new FlowModel.ParameterInput();
-            this.parameterInput6 = new FlowModel.ParameterInput();
-            this.menuStrip1.SuspendLayout();
+            this.calculate_Button = new System.Windows.Forms.Button();
+            this.lidSpeed_ParameterInput = new FlowModel.ParameterInput();
+            this.lidTemperature_ParameterInput = new FlowModel.ParameterInput();
+            this.step_ParameterInput = new FlowModel.ParameterInput();
+            this.length_ParameterInput = new FlowModel.ParameterInput();
+            this.depth_ParameterInput = new FlowModel.ParameterInput();
+            this.width_ParameterInput = new FlowModel.ParameterInput();
+            this.meltingTemperature_ParameterInput = new FlowModel.ParameterInput();
+            this.heatCapacity_ParameterInput = new FlowModel.ParameterInput();
+            this.density_ParameterInput = new FlowModel.ParameterInput();
+            this.consistencyIndex_ParameterInput = new FlowModel.ParameterInput();
+            this.viscosityIndex_ParameterInput = new FlowModel.ParameterInput();
+            this.referenceTemperature_ParameterInput = new FlowModel.ParameterInput();
+            this.flowIndex_ParameterInput = new FlowModel.ParameterInput();
+            this.heatTransferIndex_ParameterInput = new FlowModel.ParameterInput();
+            this.menuStrip.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.input_GroupBox.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -104,6 +104,7 @@
             this.tableLayoutPanel10.SuspendLayout();
             this.materialInput_GroupBox.SuspendLayout();
             this.tableLayoutPanel9.SuspendLayout();
+            this.materialCombo_GroupBox.SuspendLayout();
             this.coefficientInput_GroupBox.SuspendLayout();
             this.tableLayoutPanel11.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
@@ -120,20 +121,19 @@
             this.tableLayoutPanel14.SuspendLayout();
             this.viscosityOutput_GroupBox.SuspendLayout();
             this.tableLayoutPanel13.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // menuStrip1
+            // menuStrip
             // 
-            this.menuStrip1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuStrip.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.helpToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1434, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip.Name = "menuStrip";
+            this.menuStrip.Size = new System.Drawing.Size(1434, 24);
+            this.menuStrip.TabIndex = 0;
+            this.menuStrip.Text = "menuStrip1";
             // 
             // fileToolStripMenuItem
             // 
@@ -301,8 +301,8 @@
             this.tableLayoutPanel8.ColumnCount = 1;
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel8.Controls.Add(this.parameterInput1, 0, 0);
-            this.tableLayoutPanel8.Controls.Add(this.parameterInput7, 0, 1);
+            this.tableLayoutPanel8.Controls.Add(this.lidSpeed_ParameterInput, 0, 0);
+            this.tableLayoutPanel8.Controls.Add(this.lidTemperature_ParameterInput, 0, 1);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel8.Location = new System.Drawing.Point(3, 16);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
@@ -329,7 +329,7 @@
             this.tableLayoutPanel12.ColumnCount = 1;
             this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel12.Controls.Add(this.parameterInput8, 0, 0);
+            this.tableLayoutPanel12.Controls.Add(this.step_ParameterInput, 0, 0);
             this.tableLayoutPanel12.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel12.Location = new System.Drawing.Point(3, 16);
             this.tableLayoutPanel12.Name = "tableLayoutPanel12";
@@ -355,9 +355,9 @@
             // 
             this.tableLayoutPanel10.ColumnCount = 1;
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel10.Controls.Add(this.parameterInput13, 0, 2);
-            this.tableLayoutPanel10.Controls.Add(this.parameterInput14, 0, 1);
-            this.tableLayoutPanel10.Controls.Add(this.parameterInput12, 0, 0);
+            this.tableLayoutPanel10.Controls.Add(this.length_ParameterInput, 0, 2);
+            this.tableLayoutPanel10.Controls.Add(this.depth_ParameterInput, 0, 1);
+            this.tableLayoutPanel10.Controls.Add(this.width_ParameterInput, 0, 0);
             this.tableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel10.Location = new System.Drawing.Point(3, 16);
             this.tableLayoutPanel10.Name = "tableLayoutPanel10";
@@ -384,10 +384,10 @@
             // 
             this.tableLayoutPanel9.ColumnCount = 1;
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel9.Controls.Add(this.parameterInput11, 0, 3);
-            this.tableLayoutPanel9.Controls.Add(this.groupBox1, 0, 0);
-            this.tableLayoutPanel9.Controls.Add(this.parameterInput10, 0, 2);
-            this.tableLayoutPanel9.Controls.Add(this.parameterInput9, 0, 1);
+            this.tableLayoutPanel9.Controls.Add(this.meltingTemperature_ParameterInput, 0, 3);
+            this.tableLayoutPanel9.Controls.Add(this.materialCombo_GroupBox, 0, 0);
+            this.tableLayoutPanel9.Controls.Add(this.heatCapacity_ParameterInput, 0, 2);
+            this.tableLayoutPanel9.Controls.Add(this.density_ParameterInput, 0, 1);
             this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel9.Location = new System.Drawing.Point(3, 16);
             this.tableLayoutPanel9.Name = "tableLayoutPanel9";
@@ -398,6 +398,27 @@
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 26.66667F));
             this.tableLayoutPanel9.Size = new System.Drawing.Size(343, 290);
             this.tableLayoutPanel9.TabIndex = 0;
+            // 
+            // materialCombo_GroupBox
+            // 
+            this.materialCombo_GroupBox.Controls.Add(this.material_ComboBox);
+            this.materialCombo_GroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.materialCombo_GroupBox.Location = new System.Drawing.Point(3, 3);
+            this.materialCombo_GroupBox.Name = "materialCombo_GroupBox";
+            this.materialCombo_GroupBox.Size = new System.Drawing.Size(337, 51);
+            this.materialCombo_GroupBox.TabIndex = 1;
+            this.materialCombo_GroupBox.TabStop = false;
+            this.materialCombo_GroupBox.Text = "Выбор материала";
+            // 
+            // material_ComboBox
+            // 
+            this.material_ComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.material_ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.material_ComboBox.FormattingEnabled = true;
+            this.material_ComboBox.Location = new System.Drawing.Point(3, 16);
+            this.material_ComboBox.Name = "material_ComboBox";
+            this.material_ComboBox.Size = new System.Drawing.Size(331, 21);
+            this.material_ComboBox.TabIndex = 0;
             // 
             // coefficientInput_GroupBox
             // 
@@ -416,11 +437,11 @@
             this.tableLayoutPanel11.ColumnCount = 1;
             this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel11.Controls.Add(this.parameterInput2, 0, 0);
-            this.tableLayoutPanel11.Controls.Add(this.parameterInput3, 0, 1);
-            this.tableLayoutPanel11.Controls.Add(this.parameterInput4, 0, 2);
-            this.tableLayoutPanel11.Controls.Add(this.parameterInput5, 0, 3);
-            this.tableLayoutPanel11.Controls.Add(this.parameterInput6, 0, 4);
+            this.tableLayoutPanel11.Controls.Add(this.consistencyIndex_ParameterInput, 0, 0);
+            this.tableLayoutPanel11.Controls.Add(this.viscosityIndex_ParameterInput, 0, 1);
+            this.tableLayoutPanel11.Controls.Add(this.referenceTemperature_ParameterInput, 0, 2);
+            this.tableLayoutPanel11.Controls.Add(this.flowIndex_ParameterInput, 0, 3);
+            this.tableLayoutPanel11.Controls.Add(this.heatTransferIndex_ParameterInput, 0, 4);
             this.tableLayoutPanel11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel11.Location = new System.Drawing.Point(3, 16);
             this.tableLayoutPanel11.Name = "tableLayoutPanel11";
@@ -439,7 +460,7 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tableLayoutPanel4.Controls.Add(this.output_GroupBox, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.button1, 1, 0);
+            this.tableLayoutPanel4.Controls.Add(this.calculate_Button, 1, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 343);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
@@ -496,7 +517,7 @@
             // 
             // tableOutput_GroupBox
             // 
-            this.tableOutput_GroupBox.Controls.Add(this.button4);
+            this.tableOutput_GroupBox.Controls.Add(this.showValueTable_Button);
             this.tableOutput_GroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableOutput_GroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tableOutput_GroupBox.Location = new System.Drawing.Point(3, 3);
@@ -506,19 +527,20 @@
             this.tableOutput_GroupBox.TabStop = false;
             this.tableOutput_GroupBox.Text = "Таблица значений";
             // 
-            // button4
+            // showValueTable_Button
             // 
-            this.button4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button4.Location = new System.Drawing.Point(3, 16);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(315, 27);
-            this.button4.TabIndex = 0;
-            this.button4.Text = "Показать";
-            this.button4.UseVisualStyleBackColor = true;
+            this.showValueTable_Button.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.showValueTable_Button.Enabled = false;
+            this.showValueTable_Button.Location = new System.Drawing.Point(3, 16);
+            this.showValueTable_Button.Name = "showValueTable_Button";
+            this.showValueTable_Button.Size = new System.Drawing.Size(315, 27);
+            this.showValueTable_Button.TabIndex = 0;
+            this.showValueTable_Button.Text = "Показать";
+            this.showValueTable_Button.UseVisualStyleBackColor = true;
             // 
             // temperatureChartOutput_GroupBox
             // 
-            this.temperatureChartOutput_GroupBox.Controls.Add(this.button3);
+            this.temperatureChartOutput_GroupBox.Controls.Add(this.showTemperatureChart_Button);
             this.temperatureChartOutput_GroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.temperatureChartOutput_GroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.temperatureChartOutput_GroupBox.Location = new System.Drawing.Point(330, 3);
@@ -528,19 +550,20 @@
             this.temperatureChartOutput_GroupBox.TabStop = false;
             this.temperatureChartOutput_GroupBox.Text = "График распределения температуры";
             // 
-            // button3
+            // showTemperatureChart_Button
             // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button3.Location = new System.Drawing.Point(3, 16);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(315, 27);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "Показать";
-            this.button3.UseVisualStyleBackColor = true;
+            this.showTemperatureChart_Button.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.showTemperatureChart_Button.Enabled = false;
+            this.showTemperatureChart_Button.Location = new System.Drawing.Point(3, 16);
+            this.showTemperatureChart_Button.Name = "showTemperatureChart_Button";
+            this.showTemperatureChart_Button.Size = new System.Drawing.Size(315, 27);
+            this.showTemperatureChart_Button.TabIndex = 0;
+            this.showTemperatureChart_Button.Text = "Показать";
+            this.showTemperatureChart_Button.UseVisualStyleBackColor = true;
             // 
             // viscosityChartOutput_GroupBox
             // 
-            this.viscosityChartOutput_GroupBox.Controls.Add(this.button2);
+            this.viscosityChartOutput_GroupBox.Controls.Add(this.showViscosityChart_Button);
             this.viscosityChartOutput_GroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.viscosityChartOutput_GroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.viscosityChartOutput_GroupBox.Location = new System.Drawing.Point(657, 3);
@@ -550,15 +573,16 @@
             this.viscosityChartOutput_GroupBox.TabStop = false;
             this.viscosityChartOutput_GroupBox.Text = "График распределения вязкости";
             // 
-            // button2
+            // showViscosityChart_Button
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button2.Location = new System.Drawing.Point(3, 16);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(315, 27);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "Показать";
-            this.button2.UseVisualStyleBackColor = true;
+            this.showViscosityChart_Button.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.showViscosityChart_Button.Enabled = false;
+            this.showViscosityChart_Button.Location = new System.Drawing.Point(3, 16);
+            this.showViscosityChart_Button.Name = "showViscosityChart_Button";
+            this.showViscosityChart_Button.Size = new System.Drawing.Size(315, 27);
+            this.showViscosityChart_Button.TabIndex = 0;
+            this.showViscosityChart_Button.Text = "Показать";
+            this.showViscosityChart_Button.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel7
             // 
@@ -692,204 +716,183 @@
             this.label1.TabIndex = 0;
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // groupBox1
+            // calculate_Button
             // 
-            this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox1.Location = new System.Drawing.Point(3, 3);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(337, 51);
-            this.groupBox1.TabIndex = 1;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Выбор материала";
+            this.calculate_Button.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.calculate_Button.Location = new System.Drawing.Point(1002, 3);
+            this.calculate_Button.Name = "calculate_Button";
+            this.calculate_Button.Size = new System.Drawing.Size(423, 135);
+            this.calculate_Button.TabIndex = 1;
+            this.calculate_Button.Text = "Расчитать";
+            this.calculate_Button.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // lidSpeed_ParameterInput
             // 
-            this.comboBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(3, 16);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(331, 21);
-            this.comboBox1.TabIndex = 0;
+            this.lidSpeed_ParameterInput.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lidSpeed_ParameterInput.IsEnabled = true;
+            this.lidSpeed_ParameterInput.Location = new System.Drawing.Point(3, 3);
+            this.lidSpeed_ParameterInput.MesuarmentUnit = "м/с";
+            this.lidSpeed_ParameterInput.Name = "lidSpeed_ParameterInput";
+            this.lidSpeed_ParameterInput.ParameterName = "Скорость крышки";
+            this.lidSpeed_ParameterInput.Size = new System.Drawing.Size(331, 74);
+            this.lidSpeed_ParameterInput.TabIndex = 0;
+            this.lidSpeed_ParameterInput.Value = "";
             // 
-            // button1
+            // lidTemperature_ParameterInput
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.Location = new System.Drawing.Point(1002, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(423, 135);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Расчитать";
-            this.button1.UseVisualStyleBackColor = true;
+            this.lidTemperature_ParameterInput.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lidTemperature_ParameterInput.IsEnabled = true;
+            this.lidTemperature_ParameterInput.Location = new System.Drawing.Point(3, 83);
+            this.lidTemperature_ParameterInput.MesuarmentUnit = "°C";
+            this.lidTemperature_ParameterInput.Name = "lidTemperature_ParameterInput";
+            this.lidTemperature_ParameterInput.ParameterName = "Температура крышки";
+            this.lidTemperature_ParameterInput.Size = new System.Drawing.Size(331, 74);
+            this.lidTemperature_ParameterInput.TabIndex = 1;
+            this.lidTemperature_ParameterInput.Value = "";
             // 
-            // parameterInput1
+            // step_ParameterInput
             // 
-            this.parameterInput1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.parameterInput1.IsEnabled = true;
-            this.parameterInput1.Location = new System.Drawing.Point(3, 3);
-            this.parameterInput1.MesuarmentUnit = "м/с";
-            this.parameterInput1.Name = "parameterInput1";
-            this.parameterInput1.ParameterName = "Скорость крышки";
-            this.parameterInput1.Size = new System.Drawing.Size(331, 74);
-            this.parameterInput1.TabIndex = 0;
-            this.parameterInput1.Value = "";
+            this.step_ParameterInput.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.step_ParameterInput.IsEnabled = true;
+            this.step_ParameterInput.Location = new System.Drawing.Point(3, 3);
+            this.step_ParameterInput.MesuarmentUnit = "м";
+            this.step_ParameterInput.Name = "step_ParameterInput";
+            this.step_ParameterInput.ParameterName = "Шаг расчета по длине канала";
+            this.step_ParameterInput.Size = new System.Drawing.Size(331, 93);
+            this.step_ParameterInput.TabIndex = 0;
+            this.step_ParameterInput.Value = "";
             // 
-            // parameterInput7
+            // length_ParameterInput
             // 
-            this.parameterInput7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.parameterInput7.IsEnabled = true;
-            this.parameterInput7.Location = new System.Drawing.Point(3, 83);
-            this.parameterInput7.MesuarmentUnit = "°C";
-            this.parameterInput7.Name = "parameterInput7";
-            this.parameterInput7.ParameterName = "Температура крышки";
-            this.parameterInput7.Size = new System.Drawing.Size(331, 74);
-            this.parameterInput7.TabIndex = 1;
-            this.parameterInput7.Value = "";
+            this.length_ParameterInput.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.length_ParameterInput.IsEnabled = true;
+            this.length_ParameterInput.Location = new System.Drawing.Point(3, 195);
+            this.length_ParameterInput.MesuarmentUnit = "м";
+            this.length_ParameterInput.Name = "length_ParameterInput";
+            this.length_ParameterInput.ParameterName = "Длина";
+            this.length_ParameterInput.Size = new System.Drawing.Size(337, 92);
+            this.length_ParameterInput.TabIndex = 1;
+            this.length_ParameterInput.Value = "";
             // 
-            // parameterInput8
+            // depth_ParameterInput
             // 
-            this.parameterInput8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.parameterInput8.IsEnabled = true;
-            this.parameterInput8.Location = new System.Drawing.Point(3, 3);
-            this.parameterInput8.MesuarmentUnit = "м";
-            this.parameterInput8.Name = "parameterInput8";
-            this.parameterInput8.ParameterName = "Шаг расчета по длине канала";
-            this.parameterInput8.Size = new System.Drawing.Size(331, 93);
-            this.parameterInput8.TabIndex = 0;
-            this.parameterInput8.Value = "";
+            this.depth_ParameterInput.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.depth_ParameterInput.IsEnabled = true;
+            this.depth_ParameterInput.Location = new System.Drawing.Point(3, 99);
+            this.depth_ParameterInput.MesuarmentUnit = "м";
+            this.depth_ParameterInput.Name = "depth_ParameterInput";
+            this.depth_ParameterInput.ParameterName = "Глубина";
+            this.depth_ParameterInput.Size = new System.Drawing.Size(337, 90);
+            this.depth_ParameterInput.TabIndex = 2;
+            this.depth_ParameterInput.Value = "";
             // 
-            // parameterInput13
+            // width_ParameterInput
             // 
-            this.parameterInput13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.parameterInput13.IsEnabled = true;
-            this.parameterInput13.Location = new System.Drawing.Point(3, 195);
-            this.parameterInput13.MesuarmentUnit = "м";
-            this.parameterInput13.Name = "parameterInput13";
-            this.parameterInput13.ParameterName = "Длина";
-            this.parameterInput13.Size = new System.Drawing.Size(337, 92);
-            this.parameterInput13.TabIndex = 1;
-            this.parameterInput13.Value = "";
+            this.width_ParameterInput.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.width_ParameterInput.IsEnabled = true;
+            this.width_ParameterInput.Location = new System.Drawing.Point(3, 3);
+            this.width_ParameterInput.MesuarmentUnit = "м";
+            this.width_ParameterInput.Name = "width_ParameterInput";
+            this.width_ParameterInput.ParameterName = "Ширина";
+            this.width_ParameterInput.Size = new System.Drawing.Size(337, 90);
+            this.width_ParameterInput.TabIndex = 3;
+            this.width_ParameterInput.Value = "";
             // 
-            // parameterInput14
+            // meltingTemperature_ParameterInput
             // 
-            this.parameterInput14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.parameterInput14.IsEnabled = true;
-            this.parameterInput14.Location = new System.Drawing.Point(3, 99);
-            this.parameterInput14.MesuarmentUnit = "м";
-            this.parameterInput14.Name = "parameterInput14";
-            this.parameterInput14.ParameterName = "Глубина";
-            this.parameterInput14.Size = new System.Drawing.Size(337, 90);
-            this.parameterInput14.TabIndex = 2;
-            this.parameterInput14.Value = "";
+            this.meltingTemperature_ParameterInput.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.meltingTemperature_ParameterInput.IsEnabled = false;
+            this.meltingTemperature_ParameterInput.Location = new System.Drawing.Point(3, 214);
+            this.meltingTemperature_ParameterInput.MesuarmentUnit = "°C";
+            this.meltingTemperature_ParameterInput.Name = "meltingTemperature_ParameterInput";
+            this.meltingTemperature_ParameterInput.ParameterName = "Температура плавления";
+            this.meltingTemperature_ParameterInput.Size = new System.Drawing.Size(337, 73);
+            this.meltingTemperature_ParameterInput.TabIndex = 2;
+            this.meltingTemperature_ParameterInput.Value = "";
             // 
-            // parameterInput12
+            // heatCapacity_ParameterInput
             // 
-            this.parameterInput12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.parameterInput12.IsEnabled = true;
-            this.parameterInput12.Location = new System.Drawing.Point(3, 3);
-            this.parameterInput12.MesuarmentUnit = "м";
-            this.parameterInput12.Name = "parameterInput12";
-            this.parameterInput12.ParameterName = "Ширина";
-            this.parameterInput12.Size = new System.Drawing.Size(337, 90);
-            this.parameterInput12.TabIndex = 3;
-            this.parameterInput12.Value = "";
+            this.heatCapacity_ParameterInput.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.heatCapacity_ParameterInput.IsEnabled = false;
+            this.heatCapacity_ParameterInput.Location = new System.Drawing.Point(3, 137);
+            this.heatCapacity_ParameterInput.MesuarmentUnit = "Дж/(кг⋅°C)";
+            this.heatCapacity_ParameterInput.Name = "heatCapacity_ParameterInput";
+            this.heatCapacity_ParameterInput.ParameterName = "Удельная теплоемкость";
+            this.heatCapacity_ParameterInput.Size = new System.Drawing.Size(337, 71);
+            this.heatCapacity_ParameterInput.TabIndex = 1;
+            this.heatCapacity_ParameterInput.Value = "";
             // 
-            // parameterInput11
+            // density_ParameterInput
             // 
-            this.parameterInput11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.parameterInput11.IsEnabled = false;
-            this.parameterInput11.Location = new System.Drawing.Point(3, 214);
-            this.parameterInput11.MesuarmentUnit = "°C";
-            this.parameterInput11.Name = "parameterInput11";
-            this.parameterInput11.ParameterName = "Температура плавления";
-            this.parameterInput11.Size = new System.Drawing.Size(337, 73);
-            this.parameterInput11.TabIndex = 2;
-            this.parameterInput11.Value = "";
+            this.density_ParameterInput.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.density_ParameterInput.IsEnabled = false;
+            this.density_ParameterInput.Location = new System.Drawing.Point(3, 60);
+            this.density_ParameterInput.MesuarmentUnit = "кг/м^3";
+            this.density_ParameterInput.Name = "density_ParameterInput";
+            this.density_ParameterInput.ParameterName = "Плотность";
+            this.density_ParameterInput.Size = new System.Drawing.Size(337, 71);
+            this.density_ParameterInput.TabIndex = 0;
+            this.density_ParameterInput.Value = "";
             // 
-            // parameterInput10
+            // consistencyIndex_ParameterInput
             // 
-            this.parameterInput10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.parameterInput10.IsEnabled = false;
-            this.parameterInput10.Location = new System.Drawing.Point(3, 137);
-            this.parameterInput10.MesuarmentUnit = "Дж/(кг⋅°C)";
-            this.parameterInput10.Name = "parameterInput10";
-            this.parameterInput10.ParameterName = "Удельная теплоемкость";
-            this.parameterInput10.Size = new System.Drawing.Size(337, 71);
-            this.parameterInput10.TabIndex = 1;
-            this.parameterInput10.Value = "";
+            this.consistencyIndex_ParameterInput.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.consistencyIndex_ParameterInput.IsEnabled = true;
+            this.consistencyIndex_ParameterInput.Location = new System.Drawing.Point(3, 3);
+            this.consistencyIndex_ParameterInput.MesuarmentUnit = "Па⋅с^n";
+            this.consistencyIndex_ParameterInput.Name = "consistencyIndex_ParameterInput";
+            this.consistencyIndex_ParameterInput.ParameterName = "Коэффициент консистенции при температуре приведения";
+            this.consistencyIndex_ParameterInput.Size = new System.Drawing.Size(339, 52);
+            this.consistencyIndex_ParameterInput.TabIndex = 0;
+            this.consistencyIndex_ParameterInput.Value = "";
             // 
-            // parameterInput9
+            // viscosityIndex_ParameterInput
             // 
-            this.parameterInput9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.parameterInput9.IsEnabled = false;
-            this.parameterInput9.Location = new System.Drawing.Point(3, 60);
-            this.parameterInput9.MesuarmentUnit = "кг/м^3";
-            this.parameterInput9.Name = "parameterInput9";
-            this.parameterInput9.ParameterName = "Плотность";
-            this.parameterInput9.Size = new System.Drawing.Size(337, 71);
-            this.parameterInput9.TabIndex = 0;
-            this.parameterInput9.Value = "";
+            this.viscosityIndex_ParameterInput.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.viscosityIndex_ParameterInput.IsEnabled = true;
+            this.viscosityIndex_ParameterInput.Location = new System.Drawing.Point(3, 61);
+            this.viscosityIndex_ParameterInput.MesuarmentUnit = "1/°C";
+            this.viscosityIndex_ParameterInput.Name = "viscosityIndex_ParameterInput";
+            this.viscosityIndex_ParameterInput.ParameterName = "Температурный коэффициент вязкости";
+            this.viscosityIndex_ParameterInput.Size = new System.Drawing.Size(339, 52);
+            this.viscosityIndex_ParameterInput.TabIndex = 1;
+            this.viscosityIndex_ParameterInput.Value = "";
             // 
-            // parameterInput2
+            // referenceTemperature_ParameterInput
             // 
-            this.parameterInput2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.parameterInput2.IsEnabled = true;
-            this.parameterInput2.Location = new System.Drawing.Point(3, 3);
-            this.parameterInput2.MesuarmentUnit = "Па⋅с^n";
-            this.parameterInput2.Name = "parameterInput2";
-            this.parameterInput2.ParameterName = "Коэффициент консистенции при температуре приведения";
-            this.parameterInput2.Size = new System.Drawing.Size(339, 52);
-            this.parameterInput2.TabIndex = 0;
-            this.parameterInput2.Value = "";
+            this.referenceTemperature_ParameterInput.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.referenceTemperature_ParameterInput.IsEnabled = true;
+            this.referenceTemperature_ParameterInput.Location = new System.Drawing.Point(3, 119);
+            this.referenceTemperature_ParameterInput.MesuarmentUnit = "°C";
+            this.referenceTemperature_ParameterInput.Name = "referenceTemperature_ParameterInput";
+            this.referenceTemperature_ParameterInput.ParameterName = "Температура приведения";
+            this.referenceTemperature_ParameterInput.Size = new System.Drawing.Size(339, 52);
+            this.referenceTemperature_ParameterInput.TabIndex = 2;
+            this.referenceTemperature_ParameterInput.Value = "";
             // 
-            // parameterInput3
+            // flowIndex_ParameterInput
             // 
-            this.parameterInput3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.parameterInput3.IsEnabled = true;
-            this.parameterInput3.Location = new System.Drawing.Point(3, 61);
-            this.parameterInput3.MesuarmentUnit = "1/°C";
-            this.parameterInput3.Name = "parameterInput3";
-            this.parameterInput3.ParameterName = "Температурный коэффициент вязкости";
-            this.parameterInput3.Size = new System.Drawing.Size(339, 52);
-            this.parameterInput3.TabIndex = 1;
-            this.parameterInput3.Value = "";
+            this.flowIndex_ParameterInput.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowIndex_ParameterInput.IsEnabled = true;
+            this.flowIndex_ParameterInput.Location = new System.Drawing.Point(3, 177);
+            this.flowIndex_ParameterInput.MesuarmentUnit = "";
+            this.flowIndex_ParameterInput.Name = "flowIndex_ParameterInput";
+            this.flowIndex_ParameterInput.ParameterName = "Индекс течения";
+            this.flowIndex_ParameterInput.Size = new System.Drawing.Size(339, 52);
+            this.flowIndex_ParameterInput.TabIndex = 3;
+            this.flowIndex_ParameterInput.Value = "";
             // 
-            // parameterInput4
+            // heatTransferIndex_ParameterInput
             // 
-            this.parameterInput4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.parameterInput4.IsEnabled = true;
-            this.parameterInput4.Location = new System.Drawing.Point(3, 119);
-            this.parameterInput4.MesuarmentUnit = "°C";
-            this.parameterInput4.Name = "parameterInput4";
-            this.parameterInput4.ParameterName = "Температура приведения";
-            this.parameterInput4.Size = new System.Drawing.Size(339, 52);
-            this.parameterInput4.TabIndex = 2;
-            this.parameterInput4.Value = "";
-            // 
-            // parameterInput5
-            // 
-            this.parameterInput5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.parameterInput5.IsEnabled = true;
-            this.parameterInput5.Location = new System.Drawing.Point(3, 177);
-            this.parameterInput5.MesuarmentUnit = "";
-            this.parameterInput5.Name = "parameterInput5";
-            this.parameterInput5.ParameterName = "Индекс течения";
-            this.parameterInput5.Size = new System.Drawing.Size(339, 52);
-            this.parameterInput5.TabIndex = 3;
-            this.parameterInput5.Value = "";
-            // 
-            // parameterInput6
-            // 
-            this.parameterInput6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.parameterInput6.IsEnabled = true;
-            this.parameterInput6.Location = new System.Drawing.Point(3, 235);
-            this.parameterInput6.MesuarmentUnit = "Вт/(м^2⋅°C)";
-            this.parameterInput6.Name = "parameterInput6";
-            this.parameterInput6.ParameterName = "Коэффициент теплоотдачи от крышки канала к материалу";
-            this.parameterInput6.Size = new System.Drawing.Size(339, 52);
-            this.parameterInput6.TabIndex = 4;
-            this.parameterInput6.Value = "";
+            this.heatTransferIndex_ParameterInput.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.heatTransferIndex_ParameterInput.IsEnabled = true;
+            this.heatTransferIndex_ParameterInput.Location = new System.Drawing.Point(3, 235);
+            this.heatTransferIndex_ParameterInput.MesuarmentUnit = "Вт/(м^2⋅°C)";
+            this.heatTransferIndex_ParameterInput.Name = "heatTransferIndex_ParameterInput";
+            this.heatTransferIndex_ParameterInput.ParameterName = "Коэффициент теплоотдачи от крышки канала к материалу";
+            this.heatTransferIndex_ParameterInput.Size = new System.Drawing.Size(339, 52);
+            this.heatTransferIndex_ParameterInput.TabIndex = 4;
+            this.heatTransferIndex_ParameterInput.Value = "";
             // 
             // ResearcherView
             // 
@@ -897,14 +900,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1434, 511);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
+            this.Controls.Add(this.menuStrip);
+            this.MainMenuStrip = this.menuStrip;
             this.MinimumSize = new System.Drawing.Size(1450, 550);
             this.Name = "ResearcherView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Исследователь";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.menuStrip.ResumeLayout(false);
+            this.menuStrip.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.input_GroupBox.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
@@ -917,6 +920,7 @@
             this.tableLayoutPanel10.ResumeLayout(false);
             this.materialInput_GroupBox.ResumeLayout(false);
             this.tableLayoutPanel9.ResumeLayout(false);
+            this.materialCombo_GroupBox.ResumeLayout(false);
             this.coefficientInput_GroupBox.ResumeLayout(false);
             this.tableLayoutPanel11.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
@@ -936,7 +940,6 @@
             this.viscosityOutput_GroupBox.ResumeLayout(false);
             this.tableLayoutPanel13.ResumeLayout(false);
             this.tableLayoutPanel13.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -944,7 +947,7 @@
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.MenuStrip menuStrip;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem open_ToolStrip;
         private System.Windows.Forms.ToolStripMenuItem save_ToolStrip;
@@ -976,37 +979,37 @@
         private System.Windows.Forms.GroupBox performanceOutput_GroupBox;
         private System.Windows.Forms.GroupBox temperatureOutput_GroupBox;
         private System.Windows.Forms.GroupBox viscosityOutput_GroupBox;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button showValueTable_Button;
+        private System.Windows.Forms.Button showTemperatureChart_Button;
+        private System.Windows.Forms.Button showViscosityChart_Button;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel10;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel11;
-        private ParameterInput parameterInput1;
-        private ParameterInput parameterInput7;
-        private ParameterInput parameterInput2;
-        private ParameterInput parameterInput3;
-        private ParameterInput parameterInput4;
-        private ParameterInput parameterInput5;
-        private ParameterInput parameterInput6;
+        private ParameterInput lidSpeed_ParameterInput;
+        private ParameterInput lidTemperature_ParameterInput;
+        private ParameterInput consistencyIndex_ParameterInput;
+        private ParameterInput viscosityIndex_ParameterInput;
+        private ParameterInput referenceTemperature_ParameterInput;
+        private ParameterInput flowIndex_ParameterInput;
+        private ParameterInput heatTransferIndex_ParameterInput;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel12;
-        private ParameterInput parameterInput13;
-        private ParameterInput parameterInput14;
-        private ParameterInput parameterInput12;
-        private ParameterInput parameterInput9;
-        private ParameterInput parameterInput10;
-        private ParameterInput parameterInput11;
-        private ParameterInput parameterInput8;
+        private ParameterInput length_ParameterInput;
+        private ParameterInput depth_ParameterInput;
+        private ParameterInput width_ParameterInput;
+        private ParameterInput density_ParameterInput;
+        private ParameterInput heatCapacity_ParameterInput;
+        private ParameterInput meltingTemperature_ParameterInput;
+        private ParameterInput step_ParameterInput;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel15;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel14;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel13;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.GroupBox materialCombo_GroupBox;
+        private System.Windows.Forms.ComboBox material_ComboBox;
+        private System.Windows.Forms.Button calculate_Button;
     }
 }
 
