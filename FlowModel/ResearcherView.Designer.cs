@@ -412,6 +412,7 @@
             // 
             // material_ComboBox
             // 
+            this.material_ComboBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.material_ComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.material_ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.material_ComboBox.FormattingEnabled = true;
@@ -419,6 +420,7 @@
             this.material_ComboBox.Name = "material_ComboBox";
             this.material_ComboBox.Size = new System.Drawing.Size(331, 21);
             this.material_ComboBox.TabIndex = 0;
+            this.material_ComboBox.TabStop = false;
             // 
             // coefficientInput_GroupBox
             // 
@@ -529,12 +531,14 @@
             // 
             // showValueTable_Button
             // 
+            this.showValueTable_Button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.showValueTable_Button.Dock = System.Windows.Forms.DockStyle.Fill;
             this.showValueTable_Button.Enabled = false;
             this.showValueTable_Button.Location = new System.Drawing.Point(3, 16);
             this.showValueTable_Button.Name = "showValueTable_Button";
             this.showValueTable_Button.Size = new System.Drawing.Size(315, 27);
             this.showValueTable_Button.TabIndex = 0;
+            this.showValueTable_Button.TabStop = false;
             this.showValueTable_Button.Text = "Показать";
             this.showValueTable_Button.UseVisualStyleBackColor = true;
             // 
@@ -552,12 +556,14 @@
             // 
             // showTemperatureChart_Button
             // 
+            this.showTemperatureChart_Button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.showTemperatureChart_Button.Dock = System.Windows.Forms.DockStyle.Fill;
             this.showTemperatureChart_Button.Enabled = false;
             this.showTemperatureChart_Button.Location = new System.Drawing.Point(3, 16);
             this.showTemperatureChart_Button.Name = "showTemperatureChart_Button";
             this.showTemperatureChart_Button.Size = new System.Drawing.Size(315, 27);
             this.showTemperatureChart_Button.TabIndex = 0;
+            this.showTemperatureChart_Button.TabStop = false;
             this.showTemperatureChart_Button.Text = "Показать";
             this.showTemperatureChart_Button.UseVisualStyleBackColor = true;
             // 
@@ -575,12 +581,14 @@
             // 
             // showViscosityChart_Button
             // 
+            this.showViscosityChart_Button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.showViscosityChart_Button.Dock = System.Windows.Forms.DockStyle.Fill;
             this.showViscosityChart_Button.Enabled = false;
             this.showViscosityChart_Button.Location = new System.Drawing.Point(3, 16);
             this.showViscosityChart_Button.Name = "showViscosityChart_Button";
             this.showViscosityChart_Button.Size = new System.Drawing.Size(315, 27);
             this.showViscosityChart_Button.TabIndex = 0;
+            this.showViscosityChart_Button.TabStop = false;
             this.showViscosityChart_Button.Text = "Показать";
             this.showViscosityChart_Button.UseVisualStyleBackColor = true;
             // 
@@ -718,11 +726,13 @@
             // 
             // calculate_Button
             // 
+            this.calculate_Button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.calculate_Button.Dock = System.Windows.Forms.DockStyle.Fill;
             this.calculate_Button.Location = new System.Drawing.Point(1002, 3);
             this.calculate_Button.Name = "calculate_Button";
             this.calculate_Button.Size = new System.Drawing.Size(423, 135);
             this.calculate_Button.TabIndex = 1;
+            this.calculate_Button.TabStop = false;
             this.calculate_Button.Text = "Расчитать";
             this.calculate_Button.UseVisualStyleBackColor = true;
             // 
@@ -736,6 +746,7 @@
             this.lidSpeed_ParameterInput.ParameterName = "Скорость крышки";
             this.lidSpeed_ParameterInput.Size = new System.Drawing.Size(331, 74);
             this.lidSpeed_ParameterInput.TabIndex = 0;
+            this.lidSpeed_ParameterInput.TabStop = false;
             this.lidSpeed_ParameterInput.Value = "";
             // 
             // lidTemperature_ParameterInput
@@ -748,6 +759,7 @@
             this.lidTemperature_ParameterInput.ParameterName = "Температура крышки";
             this.lidTemperature_ParameterInput.Size = new System.Drawing.Size(331, 74);
             this.lidTemperature_ParameterInput.TabIndex = 1;
+            this.lidTemperature_ParameterInput.TabStop = false;
             this.lidTemperature_ParameterInput.Value = "";
             // 
             // step_ParameterInput
@@ -760,6 +772,7 @@
             this.step_ParameterInput.ParameterName = "Шаг расчета по длине канала";
             this.step_ParameterInput.Size = new System.Drawing.Size(331, 93);
             this.step_ParameterInput.TabIndex = 0;
+            this.step_ParameterInput.TabStop = false;
             this.step_ParameterInput.Value = "";
             // 
             // length_ParameterInput
@@ -772,6 +785,7 @@
             this.length_ParameterInput.ParameterName = "Длина";
             this.length_ParameterInput.Size = new System.Drawing.Size(337, 92);
             this.length_ParameterInput.TabIndex = 1;
+            this.length_ParameterInput.TabStop = false;
             this.length_ParameterInput.Value = "";
             // 
             // depth_ParameterInput
@@ -784,6 +798,7 @@
             this.depth_ParameterInput.ParameterName = "Глубина";
             this.depth_ParameterInput.Size = new System.Drawing.Size(337, 90);
             this.depth_ParameterInput.TabIndex = 2;
+            this.depth_ParameterInput.TabStop = false;
             this.depth_ParameterInput.Value = "";
             // 
             // width_ParameterInput
@@ -796,6 +811,7 @@
             this.width_ParameterInput.ParameterName = "Ширина";
             this.width_ParameterInput.Size = new System.Drawing.Size(337, 90);
             this.width_ParameterInput.TabIndex = 3;
+            this.width_ParameterInput.TabStop = false;
             this.width_ParameterInput.Value = "";
             // 
             // meltingTemperature_ParameterInput
@@ -808,6 +824,7 @@
             this.meltingTemperature_ParameterInput.ParameterName = "Температура плавления";
             this.meltingTemperature_ParameterInput.Size = new System.Drawing.Size(337, 73);
             this.meltingTemperature_ParameterInput.TabIndex = 2;
+            this.meltingTemperature_ParameterInput.TabStop = false;
             this.meltingTemperature_ParameterInput.Value = "";
             // 
             // heatCapacity_ParameterInput
@@ -820,6 +837,7 @@
             this.heatCapacity_ParameterInput.ParameterName = "Удельная теплоемкость";
             this.heatCapacity_ParameterInput.Size = new System.Drawing.Size(337, 71);
             this.heatCapacity_ParameterInput.TabIndex = 1;
+            this.heatCapacity_ParameterInput.TabStop = false;
             this.heatCapacity_ParameterInput.Value = "";
             // 
             // density_ParameterInput
@@ -832,6 +850,7 @@
             this.density_ParameterInput.ParameterName = "Плотность";
             this.density_ParameterInput.Size = new System.Drawing.Size(337, 71);
             this.density_ParameterInput.TabIndex = 0;
+            this.density_ParameterInput.TabStop = false;
             this.density_ParameterInput.Value = "";
             // 
             // consistencyIndex_ParameterInput
@@ -844,6 +863,7 @@
             this.consistencyIndex_ParameterInput.ParameterName = "Коэффициент консистенции при температуре приведения";
             this.consistencyIndex_ParameterInput.Size = new System.Drawing.Size(339, 52);
             this.consistencyIndex_ParameterInput.TabIndex = 0;
+            this.consistencyIndex_ParameterInput.TabStop = false;
             this.consistencyIndex_ParameterInput.Value = "";
             // 
             // viscosityIndex_ParameterInput
@@ -856,6 +876,7 @@
             this.viscosityIndex_ParameterInput.ParameterName = "Температурный коэффициент вязкости";
             this.viscosityIndex_ParameterInput.Size = new System.Drawing.Size(339, 52);
             this.viscosityIndex_ParameterInput.TabIndex = 1;
+            this.viscosityIndex_ParameterInput.TabStop = false;
             this.viscosityIndex_ParameterInput.Value = "";
             // 
             // referenceTemperature_ParameterInput
@@ -868,6 +889,7 @@
             this.referenceTemperature_ParameterInput.ParameterName = "Температура приведения";
             this.referenceTemperature_ParameterInput.Size = new System.Drawing.Size(339, 52);
             this.referenceTemperature_ParameterInput.TabIndex = 2;
+            this.referenceTemperature_ParameterInput.TabStop = false;
             this.referenceTemperature_ParameterInput.Value = "";
             // 
             // flowIndex_ParameterInput
@@ -880,6 +902,7 @@
             this.flowIndex_ParameterInput.ParameterName = "Индекс течения";
             this.flowIndex_ParameterInput.Size = new System.Drawing.Size(339, 52);
             this.flowIndex_ParameterInput.TabIndex = 3;
+            this.flowIndex_ParameterInput.TabStop = false;
             this.flowIndex_ParameterInput.Value = "";
             // 
             // heatTransferIndex_ParameterInput
@@ -892,6 +915,7 @@
             this.heatTransferIndex_ParameterInput.ParameterName = "Коэффициент теплоотдачи от крышки канала к материалу";
             this.heatTransferIndex_ParameterInput.Size = new System.Drawing.Size(339, 52);
             this.heatTransferIndex_ParameterInput.TabIndex = 4;
+            this.heatTransferIndex_ParameterInput.TabStop = false;
             this.heatTransferIndex_ParameterInput.Value = "";
             // 
             // ResearcherView

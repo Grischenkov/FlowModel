@@ -51,6 +51,7 @@
             this.value_TextBox.Name = "value_TextBox";
             this.value_TextBox.Size = new System.Drawing.Size(98, 20);
             this.value_TextBox.TabIndex = 1;
+            this.value_TextBox.TabStop = false;
             // 
             // unit_Label
             // 
