@@ -1,4 +1,7 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Drawing;
+using System.Text.RegularExpressions;
+using System.Windows.Forms;
 
 namespace FlowModel
 {
@@ -13,6 +16,30 @@ namespace FlowModel
         public ParameterInput()
         {
             InitializeComponent();
+        }
+
+        private void DoubleInput(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '-' && e.KeyChar != '.' && e.KeyChar != ',')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void Validate(object sender, EventArgs e)
+        {
+            Value = Value.Replace('.', ',');
+            var doubleRegular = new Regex(@"^-?[0-9]+(?:\,[0-9]*)?$");
+            if (doubleRegular.IsMatch(Value)) return;
+            value_TextBox.BackColor = Color.Red;
+        }
+
+        private void Clear(object sender, EventArgs e)
+        {
+            if (value_TextBox.Enabled)
+            {
+                value_TextBox.BackColor = Color.White;
+            }
         }
     }
 }

@@ -981,7 +981,7 @@
             this.memoryOutput_GroupBox.Size = new System.Drawing.Size(345, 62);
             this.memoryOutput_GroupBox.TabIndex = 1;
             this.memoryOutput_GroupBox.TabStop = false;
-            this.memoryOutput_GroupBox.Text = "Оперативная память [кб]";
+            this.memoryOutput_GroupBox.Text = "Оперативная память [Кб]";
             // 
             // tableLayoutPanel18
             // 

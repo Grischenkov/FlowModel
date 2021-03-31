@@ -22,9 +22,9 @@
 
         #region Код, автоматически созданный конструктором компонентов
 
-        /// <summary> 
-        /// Требуемый метод для поддержки конструктора — не изменяйте 
-        /// содержимое этого метода с помощью редактора кода.
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
@@ -46,12 +46,16 @@
             // 
             // value_TextBox
             // 
+            this.value_TextBox.BackColor = System.Drawing.SystemColors.Window;
             this.value_TextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.value_TextBox.Location = new System.Drawing.Point(217, 8);
             this.value_TextBox.Name = "value_TextBox";
             this.value_TextBox.Size = new System.Drawing.Size(98, 20);
             this.value_TextBox.TabIndex = 1;
             this.value_TextBox.TabStop = false;
+            this.value_TextBox.Enter += new System.EventHandler(this.Clear);
+            this.value_TextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DoubleInput);
+            this.value_TextBox.Leave += new System.EventHandler(this.Validate);
             // 
             // unit_Label
             // 
@@ -91,7 +95,6 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
-
         }
 
         #endregion
