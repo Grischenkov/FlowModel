@@ -7,18 +7,18 @@ namespace FlowModel.Presenter.Views.ResearcherView
         string MaterialItem { get; set; }
         string MaterialSelectedItem { get; set; }
         
-        string Width { get; set; }
-        string Depth { get; set; }
-        string Length { get; set; }
+        string Width { get; }
+        string Depth { get; }
+        string Length { get; }
         
         string Density { get; set; }
         string HeatCapacity { get; set; }
         string MeltingTemperature { get; set; }
         
-        string LidSpeed { get; set; }
-        string LidTemperature { get; set; }
+        string LidSpeed { get; }
+        string LidTemperature { get; }
         
-        string Step { get; set; }
+        string Step { get; }
         
         string FlowIndex { get; set; }
         string ViscosityIndex { get; set; }
