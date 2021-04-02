@@ -60,6 +60,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cap.cs" />
+    <Compile Include="Channel.cs" />
     <Compile Include="Entities\ProcessDB\Coefficient.cs" />
     <Compile Include="Entities\ProcessDB\Material.cs" />
     <Compile Include="Entities\ProcessDB\MaterialCoefficients.cs" />
