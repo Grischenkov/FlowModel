@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace FlowModel.Model
+namespace FlowModel.Model.Repository
 {
-    public interface IRepository<TEntity> : IDisposable 
+    public interface IRepository<TEntity> : IDisposable
         where TEntity : class
     {
         IEnumerable<TEntity> GetList();
-        
+
         TEntity Get(object id);
-            
+
         void Insert(TEntity entity);
 
         void Update(TEntity entity);

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace FlowModel.Model
+namespace FlowModel.Model.Repository
 {
     public class Repository<TEntity> : IRepository<TEntity> 
         where TEntity : class
