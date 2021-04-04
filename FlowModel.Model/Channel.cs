@@ -1,13 +1,36 @@
-﻿namespace FlowModel.Model
+﻿using System;
+
+// ReSharper disable ClassNeverInstantiated.Global
+namespace FlowModel.Model
 {
-    public class Channel
+    public sealed class Channel
     {
-        public double Width { get; set; }
-        
-        public double Depth { get; set; }
-        
-        public double Length { get; set; }
-        
-        public double CalculationStep { get; set; }
+        private readonly double _qChannel;
+
+        public Cap Cap { get; }
+        private FlowingMaterial FlowingMaterial { get; }
+
+        public double Width { get; }
+        public double Depth { get; }
+        public double Length { get; }
+
+        public double CalculationStep { get; }
+
+        public double Performance => FlowingMaterial.Density * _qChannel;
+
+        public Channel(double width, double depth, double length, double calculationStep, Cap cap, FlowingMaterial flowingMaterial)
+        {
+            Width = width;
+            Depth = depth;
+            Length = length;
+
+            CalculationStep = calculationStep;
+            
+            Cap = cap;
+            FlowingMaterial = flowingMaterial;
+
+            var f = 0.125 * Math.Pow((Depth / Width), 2) - 0.625 * (Depth / Width) + 1;
+            _qChannel = (Width * Cap.Speed * Depth * f) / 2;
+        }
     }
 }

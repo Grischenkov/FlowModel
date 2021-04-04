@@ -1,9 +1,15 @@
-﻿namespace FlowModel.Model
+﻿// ReSharper disable ClassNeverInstantiated.Global
+namespace FlowModel.Model
 {
-    public class Cap
+    public sealed class Cap
     {
-        public double Speed { get; set; }
-        
-        public double Temperature { get; set; }
+        public double Speed { get; }
+        public double Temperature { get; }
+
+        public Cap(double temperature, double speed)
+        {
+            Temperature = temperature;
+            Speed = speed;
+        }
     }
 }

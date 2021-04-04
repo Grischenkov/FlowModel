@@ -68,6 +68,8 @@
     <Compile Include="Entities\ProcessDB\MaterialParameters.cs" />
     <Compile Include="Entities\ProcessDB\Parameter.cs" />
     <Compile Include="Entities\ProcessDB\Unit.cs" />
+    <Compile Include="FlowingMaterial.cs" />
+    <Compile Include="Process.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\IRepository.cs" />
     <Compile Include="Repository\Repository.cs" />
