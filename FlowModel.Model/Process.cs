@@ -8,51 +8,47 @@ namespace FlowModel.Model
         private readonly double _gamma;
         private readonly double _qGamma;
         private readonly double _qAlpha;
-
+        
         private readonly double[] _kappa;
         private readonly double[] _viscosity;
         private readonly double[] _temperature;
-
-        private readonly double[][] _result;
-
+        
         private Channel Channel { get; }
-        private FlowingMaterial FlowingMaterial { get; }
+        
+        public Parameters Parameters { get; }
 
-        public Process(Channel channel, FlowingMaterial flowingMaterial)
+        public Process()
         {
-            Channel = channel;
-            FlowingMaterial = flowingMaterial;
+        }
 
+        public Process(Channel channel)
+        {
+            Parameters = new Parameters();
+            
+            Channel = channel;
             _gamma = CalculateGammaCoefficient();
             _qGamma = CalculateQGamma();
             _qAlpha = CalculateQAlpha();
-
             var size = CalculateSize();
-
             _kappa = new double[size + 1];
             _viscosity = new double[size + 1];
             _temperature = new double[size + 1];
-            _result = new double[size + 1][];
-
+            Parameters.Size = size;
             CalculateProcessParameters();
         }
 
         private void CalculateProcessParameters()
         {
             var coefficient = CalculateSupportCoefficient();
-
             for (var i = 0; i < _kappa.Length; i++)
             {
                 var coordinate = i * Channel.CalculationStep;
-
                 _kappa[i] = CalculateKappaCoefficient(coefficient, coordinate);
                 _temperature[i] = CalculateTemperature(i);
                 _viscosity[i] = CalculateViscosity(i);
-
-                _result[i] = new double[3];
-                _result[i][0] = Math.Round(coordinate, 2);
-                _result[i][1] = Math.Round(_temperature[i], 2);
-                _result[i][2] = Math.Round(_viscosity[i], 1);
+                Parameters[i,0] = Math.Round(coordinate, 2);
+                Parameters[i,1] = Math.Round(_temperature[i], 2);
+                Parameters[i,2] = Math.Round(_viscosity[i], 1);
             }
         }
 
@@ -63,15 +59,15 @@ namespace FlowModel.Model
 
         private double CalculateQGamma()
         {
-            return Channel.Width * Channel.Depth * FlowingMaterial.ConsistencyIndex *
-                   Math.Pow(_gamma, FlowingMaterial.FlowIndex - 1);
+            return Channel.Width * Channel.Depth * Channel.FlowingMaterial.ConsistencyIndex *
+                   Math.Pow(_gamma, Channel.FlowingMaterial.FlowIndex - 1);
         }
 
         private double CalculateQAlpha()
         {
-            return Channel.Width * FlowingMaterial.HeatTransferIndex *
-                   (1 / FlowingMaterial.ViscosityIndex - Channel.Cap.Temperature +
-                    FlowingMaterial.ReferenceTemperature);
+            return Channel.Width * Channel.FlowingMaterial.HeatTransferIndex *
+                   (1 / Channel.FlowingMaterial.ViscosityIndex - Channel.Cap.Temperature +
+                    Channel.FlowingMaterial.ReferenceTemperature);
         }
 
         private int CalculateSize()
@@ -81,32 +77,33 @@ namespace FlowModel.Model
 
         private double CalculateSupportCoefficient()
         {
-            return (FlowingMaterial.ViscosityIndex * _qGamma + Channel.Width * FlowingMaterial.HeatTransferIndex) /
-                   (FlowingMaterial.ViscosityIndex * _qAlpha);
+            return (Channel.FlowingMaterial.ViscosityIndex * _qGamma +
+                    Channel.Width * Channel.FlowingMaterial.HeatTransferIndex) /
+                   (Channel.FlowingMaterial.ViscosityIndex * _qAlpha);
         }
 
         private double CalculateKappaCoefficient(double coefficient, double coordinate)
         {
-            return coefficient * (1 - Math.Exp(-(coordinate * FlowingMaterial.ViscosityIndex * _qAlpha) /
-                                               (Channel.Performance * FlowingMaterial.HeatCapacity))) + Math.Exp(
-                FlowingMaterial.ViscosityIndex * (FlowingMaterial.MeltingTemperature -
-                                                  FlowingMaterial.ReferenceTemperature -
-                                                  coordinate * _qAlpha / (Channel.Performance *
-                                                                          FlowingMaterial.HeatCapacity)));
+            return coefficient * (1 - Math.Exp(-(coordinate * Channel.FlowingMaterial.ViscosityIndex * _qAlpha) /
+                                               (Channel.Performance * Channel.FlowingMaterial.HeatCapacity))) +
+                   Math.Exp(Channel.FlowingMaterial.ViscosityIndex * (Channel.FlowingMaterial.MeltingTemperature -
+                                                                      Channel.FlowingMaterial.ReferenceTemperature -
+                                                                      coordinate * _qAlpha / (Channel.Performance *
+                                                                          Channel.FlowingMaterial.HeatCapacity)));
         }
 
         private double CalculateTemperature(int i)
         {
-            return FlowingMaterial.ReferenceTemperature +
-                   1 / FlowingMaterial.ViscosityIndex * Math.Log(_kappa[i]);
+            return Channel.FlowingMaterial.ReferenceTemperature +
+                   1 / Channel.FlowingMaterial.ViscosityIndex * Math.Log(_kappa[i]);
         }
 
         private double CalculateViscosity(int i)
         {
-            return FlowingMaterial.ConsistencyIndex *
-                   Math.Exp(-(FlowingMaterial.ViscosityIndex *
-                              (_temperature[i] - FlowingMaterial.ReferenceTemperature))) *
-                   Math.Pow(_gamma, FlowingMaterial.FlowIndex - 1);
+            return Channel.FlowingMaterial.ConsistencyIndex *
+                   Math.Exp(-(Channel.FlowingMaterial.ViscosityIndex *
+                              (_temperature[i] - Channel.FlowingMaterial.ReferenceTemperature))) *
+                   Math.Pow(_gamma, Channel.FlowingMaterial.FlowIndex - 1);
         }
     }
 }
