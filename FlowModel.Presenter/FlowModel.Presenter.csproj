@@ -60,6 +60,7 @@
     <Compile Include="Views\IFileMenuView.cs" />
     <Compile Include="Views\IHelpMenuView.cs" />
     <Compile Include="Views\ResearcherView\IResearcherView.cs" />
+    <Compile Include="Views\ResearcherView\ResearcherPresenter.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
