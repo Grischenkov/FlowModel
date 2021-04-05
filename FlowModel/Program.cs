@@ -14,10 +14,11 @@ namespace FlowModel
             Application.SetCompatibleTextRenderingDefault(false);
 
             IApplicationController controller = new ApplicationController(new LightInjectAdapter())
-                .RegisterView<IMainView, MainView>
+                //.RegisterView<IMainView, MainView>
                 .RegisterInstance(new ApplicationContext());
-            
-            controller.Run<MainPresenter>();
+
+            //controller.Run<MainPresenter>();
+            Application.Run(new ResearcherView());
         }
     }
 }
