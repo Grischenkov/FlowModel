@@ -62,20 +62,25 @@
   <ItemGroup>
     <Compile Include="Chart\Graph.cs" />
     <Compile Include="Chart\Series.cs" />
-    <Compile Include="Entities\ProcessDB\Coefficient.cs" />
-    <Compile Include="Entities\ProcessDB\Material.cs" />
-    <Compile Include="Entities\ProcessDB\MaterialCoefficients.cs" />
-    <Compile Include="Entities\ProcessDB\MaterialParameters.cs" />
-    <Compile Include="Entities\ProcessDB\Parameter.cs" />
-    <Compile Include="Entities\ProcessDB\Unit.cs" />
+    <Compile Include="DataBaseWorker\DataBaseContext.cs" />
+    <Compile Include="DataBaseWorker\Repository\IRepository.cs" />
+    <Compile Include="DataBaseWorker\Repository\Repository.cs" />
+    <Compile Include="DataBaseWorker\UnitOfWork\IUnitOfWork.cs" />
+    <Compile Include="DataBaseWorker\UnitOfWork\UnitOfWork.cs" />
+    <Compile Include="Entities\Coefficient.cs" />
+    <Compile Include="Entities\Material.cs" />
+    <Compile Include="Entities\MaterialCoefficients.cs" />
+    <Compile Include="Entities\MaterialParameters.cs" />
+    <Compile Include="Entities\Parameter.cs" />
+    <Compile Include="Entities\Report.cs" />
+    <Compile Include="Entities\Unit.cs" />
+    <Compile Include="Entities\User.cs" />
     <Compile Include="Parameters.cs" />
     <Compile Include="Process\Cap.cs" />
     <Compile Include="Process\Channel.cs" />
     <Compile Include="Process\FlowingMaterial.cs" />
     <Compile Include="Process\Process.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repository\IRepository.cs" />
-    <Compile Include="Repository\Repository.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -99,10 +104,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Entities\ReportsDB" />
-    <Folder Include="Entities\UsersDB" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
