@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace FlowModel.Model.Entities.ProcessDB
+namespace FlowModel.Model
 {
     public class Material
     {

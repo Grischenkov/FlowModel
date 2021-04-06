@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace FlowModel.Model.Repository
+namespace FlowModel.Model
 {
     public interface IRepository<TEntity> : IDisposable
         where TEntity : class
