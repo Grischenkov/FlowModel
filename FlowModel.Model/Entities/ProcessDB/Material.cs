@@ -1,13 +1,12 @@
 ﻿using System.Collections.Generic;
 
-namespace FlowModel.Model.Entities.ProcessDB
+namespace FlowModel.Model
 {
-    public class Material
+    public class Material : IEntity
     {
         public Material()
         {
             MaterialParameters = new HashSet<MaterialParameters>();
-            MaterialCoefficients = new HashSet<MaterialCoefficients>();
         }
 
         public int Id { get; set; }
@@ -15,6 +14,5 @@ namespace FlowModel.Model.Entities.ProcessDB
         public string Name { get; set; }
         
         public virtual ICollection<MaterialParameters> MaterialParameters { get; set; }
-        public virtual ICollection<MaterialCoefficients> MaterialCoefficients { get; set; }
     }
 }

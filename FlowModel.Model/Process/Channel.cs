@@ -8,7 +8,7 @@ namespace FlowModel.Model
         private readonly double _qChannel;
 
         public Cap Cap { get; }
-        private FlowingMaterial FlowingMaterial { get; }
+        public FlowingMaterial FlowingMaterial { get; }
 
         public double Width { get; }
         public double Depth { get; }
