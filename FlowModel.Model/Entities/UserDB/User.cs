@@ -1,6 +1,6 @@
 ﻿namespace FlowModel.Model
 {
-    public class User
+    public class User : IEntity
     {
         public int Id { get; set; }
         

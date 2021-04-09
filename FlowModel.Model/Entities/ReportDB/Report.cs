@@ -2,7 +2,7 @@
 
 namespace FlowModel.Model
 {
-    public class Report
+    public class Report : IEntity
     {
         public int Id { get; set; }
         
