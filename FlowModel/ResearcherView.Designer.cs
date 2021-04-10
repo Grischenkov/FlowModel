@@ -317,7 +317,7 @@
             this.lidSpeed_ParameterInput.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lidSpeed_ParameterInput.IsEnabled = true;
             this.lidSpeed_ParameterInput.Location = new System.Drawing.Point(3, 3);
-            this.lidSpeed_ParameterInput.MesuarmentUnit = "м/с";
+            this.lidSpeed_ParameterInput.MeasurementUnit = "м/с";
             this.lidSpeed_ParameterInput.Name = "lidSpeed_ParameterInput";
             this.lidSpeed_ParameterInput.ParameterName = "Скорость крышки";
             this.lidSpeed_ParameterInput.Size = new System.Drawing.Size(331, 74);
@@ -330,7 +330,7 @@
             this.lidTemperature_ParameterInput.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lidTemperature_ParameterInput.IsEnabled = true;
             this.lidTemperature_ParameterInput.Location = new System.Drawing.Point(3, 83);
-            this.lidTemperature_ParameterInput.MesuarmentUnit = "°C";
+            this.lidTemperature_ParameterInput.MeasurementUnit = "°C";
             this.lidTemperature_ParameterInput.Name = "lidTemperature_ParameterInput";
             this.lidTemperature_ParameterInput.ParameterName = "Температура крышки";
             this.lidTemperature_ParameterInput.Size = new System.Drawing.Size(331, 74);
@@ -370,7 +370,7 @@
             this.step_ParameterInput.Dock = System.Windows.Forms.DockStyle.Fill;
             this.step_ParameterInput.IsEnabled = true;
             this.step_ParameterInput.Location = new System.Drawing.Point(3, 3);
-            this.step_ParameterInput.MesuarmentUnit = "м";
+            this.step_ParameterInput.MeasurementUnit = "м";
             this.step_ParameterInput.Name = "step_ParameterInput";
             this.step_ParameterInput.ParameterName = "Шаг расчета по длине канала";
             this.step_ParameterInput.Size = new System.Drawing.Size(331, 93);
@@ -412,7 +412,7 @@
             this.length_ParameterInput.Dock = System.Windows.Forms.DockStyle.Fill;
             this.length_ParameterInput.IsEnabled = true;
             this.length_ParameterInput.Location = new System.Drawing.Point(3, 195);
-            this.length_ParameterInput.MesuarmentUnit = "м";
+            this.length_ParameterInput.MeasurementUnit = "м";
             this.length_ParameterInput.Name = "length_ParameterInput";
             this.length_ParameterInput.ParameterName = "Длина";
             this.length_ParameterInput.Size = new System.Drawing.Size(337, 92);
@@ -425,7 +425,7 @@
             this.depth_ParameterInput.Dock = System.Windows.Forms.DockStyle.Fill;
             this.depth_ParameterInput.IsEnabled = true;
             this.depth_ParameterInput.Location = new System.Drawing.Point(3, 99);
-            this.depth_ParameterInput.MesuarmentUnit = "м";
+            this.depth_ParameterInput.MeasurementUnit = "м";
             this.depth_ParameterInput.Name = "depth_ParameterInput";
             this.depth_ParameterInput.ParameterName = "Глубина";
             this.depth_ParameterInput.Size = new System.Drawing.Size(337, 90);
@@ -438,7 +438,7 @@
             this.width_ParameterInput.Dock = System.Windows.Forms.DockStyle.Fill;
             this.width_ParameterInput.IsEnabled = true;
             this.width_ParameterInput.Location = new System.Drawing.Point(3, 3);
-            this.width_ParameterInput.MesuarmentUnit = "м";
+            this.width_ParameterInput.MeasurementUnit = "м";
             this.width_ParameterInput.Name = "width_ParameterInput";
             this.width_ParameterInput.ParameterName = "Ширина";
             this.width_ParameterInput.Size = new System.Drawing.Size(337, 90);
@@ -482,7 +482,7 @@
             this.meltingTemperature_ParameterInput.Dock = System.Windows.Forms.DockStyle.Fill;
             this.meltingTemperature_ParameterInput.IsEnabled = false;
             this.meltingTemperature_ParameterInput.Location = new System.Drawing.Point(3, 214);
-            this.meltingTemperature_ParameterInput.MesuarmentUnit = "°C";
+            this.meltingTemperature_ParameterInput.MeasurementUnit = "°C";
             this.meltingTemperature_ParameterInput.Name = "meltingTemperature_ParameterInput";
             this.meltingTemperature_ParameterInput.ParameterName = "Температура плавления";
             this.meltingTemperature_ParameterInput.Size = new System.Drawing.Size(337, 73);
@@ -518,7 +518,7 @@
             this.heatCapacity_ParameterInput.Dock = System.Windows.Forms.DockStyle.Fill;
             this.heatCapacity_ParameterInput.IsEnabled = false;
             this.heatCapacity_ParameterInput.Location = new System.Drawing.Point(3, 137);
-            this.heatCapacity_ParameterInput.MesuarmentUnit = "Дж/(кг⋅°C)";
+            this.heatCapacity_ParameterInput.MeasurementUnit = "Дж/(кг⋅°C)";
             this.heatCapacity_ParameterInput.Name = "heatCapacity_ParameterInput";
             this.heatCapacity_ParameterInput.ParameterName = "Удельная теплоемкость";
             this.heatCapacity_ParameterInput.Size = new System.Drawing.Size(337, 71);
@@ -531,7 +531,7 @@
             this.density_ParameterInput.Dock = System.Windows.Forms.DockStyle.Fill;
             this.density_ParameterInput.IsEnabled = false;
             this.density_ParameterInput.Location = new System.Drawing.Point(3, 60);
-            this.density_ParameterInput.MesuarmentUnit = "кг/м^3";
+            this.density_ParameterInput.MeasurementUnit = "кг/м^3";
             this.density_ParameterInput.Name = "density_ParameterInput";
             this.density_ParameterInput.ParameterName = "Плотность";
             this.density_ParameterInput.Size = new System.Drawing.Size(337, 71);
@@ -578,7 +578,7 @@
             this.consistencyIndex_ParameterInput.Dock = System.Windows.Forms.DockStyle.Fill;
             this.consistencyIndex_ParameterInput.IsEnabled = true;
             this.consistencyIndex_ParameterInput.Location = new System.Drawing.Point(3, 3);
-            this.consistencyIndex_ParameterInput.MesuarmentUnit = "Па⋅с^n";
+            this.consistencyIndex_ParameterInput.MeasurementUnit = "Па⋅с^n";
             this.consistencyIndex_ParameterInput.Name = "consistencyIndex_ParameterInput";
             this.consistencyIndex_ParameterInput.ParameterName = "Коэффициент консистенции при температуре приведения";
             this.consistencyIndex_ParameterInput.Size = new System.Drawing.Size(339, 52);
@@ -591,7 +591,7 @@
             this.viscosityIndex_ParameterInput.Dock = System.Windows.Forms.DockStyle.Fill;
             this.viscosityIndex_ParameterInput.IsEnabled = true;
             this.viscosityIndex_ParameterInput.Location = new System.Drawing.Point(3, 61);
-            this.viscosityIndex_ParameterInput.MesuarmentUnit = "1/°C";
+            this.viscosityIndex_ParameterInput.MeasurementUnit = "1/°C";
             this.viscosityIndex_ParameterInput.Name = "viscosityIndex_ParameterInput";
             this.viscosityIndex_ParameterInput.ParameterName = "Температурный коэффициент вязкости";
             this.viscosityIndex_ParameterInput.Size = new System.Drawing.Size(339, 52);
@@ -604,7 +604,7 @@
             this.referenceTemperature_ParameterInput.Dock = System.Windows.Forms.DockStyle.Fill;
             this.referenceTemperature_ParameterInput.IsEnabled = true;
             this.referenceTemperature_ParameterInput.Location = new System.Drawing.Point(3, 119);
-            this.referenceTemperature_ParameterInput.MesuarmentUnit = "°C";
+            this.referenceTemperature_ParameterInput.MeasurementUnit = "°C";
             this.referenceTemperature_ParameterInput.Name = "referenceTemperature_ParameterInput";
             this.referenceTemperature_ParameterInput.ParameterName = "Температура приведения";
             this.referenceTemperature_ParameterInput.Size = new System.Drawing.Size(339, 52);
@@ -617,7 +617,7 @@
             this.flowIndex_ParameterInput.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowIndex_ParameterInput.IsEnabled = true;
             this.flowIndex_ParameterInput.Location = new System.Drawing.Point(3, 177);
-            this.flowIndex_ParameterInput.MesuarmentUnit = "";
+            this.flowIndex_ParameterInput.MeasurementUnit = "";
             this.flowIndex_ParameterInput.Name = "flowIndex_ParameterInput";
             this.flowIndex_ParameterInput.ParameterName = "Индекс течения";
             this.flowIndex_ParameterInput.Size = new System.Drawing.Size(339, 52);
@@ -630,7 +630,7 @@
             this.heatTransferIndex_ParameterInput.Dock = System.Windows.Forms.DockStyle.Fill;
             this.heatTransferIndex_ParameterInput.IsEnabled = true;
             this.heatTransferIndex_ParameterInput.Location = new System.Drawing.Point(3, 235);
-            this.heatTransferIndex_ParameterInput.MesuarmentUnit = "Вт/(м^2⋅°C)";
+            this.heatTransferIndex_ParameterInput.MeasurementUnit = "Вт/(м^2⋅°C)";
             this.heatTransferIndex_ParameterInput.Name = "heatTransferIndex_ParameterInput";
             this.heatTransferIndex_ParameterInput.ParameterName = "Коэффициент теплоотдачи от крышки канала к материалу";
             this.heatTransferIndex_ParameterInput.Size = new System.Drawing.Size(339, 52);
