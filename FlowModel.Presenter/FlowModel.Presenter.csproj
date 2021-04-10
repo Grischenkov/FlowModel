@@ -59,7 +59,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\IFileMenuView.cs" />
     <Compile Include="Views\IHelpMenuView.cs" />
+    <Compile Include="Views\IParameterInput.cs" />
     <Compile Include="Views\ResearcherView\IResearcherView.cs" />
+    <Compile Include="Views\ResearcherView\ObjectInterfaces\ICapParameters.cs" />
+    <Compile Include="Views\ResearcherView\ObjectInterfaces\IChannelParameters.cs" />
+    <Compile Include="Views\ResearcherView\ObjectInterfaces\IMaterialParameters.cs" />
+    <Compile Include="Views\ResearcherView\ObjectInterfaces\IMethodParameters.cs" />
     <Compile Include="Views\ResearcherView\ResearcherPresenter.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using FlowModel.Presenter;
 using FlowModel.Presenter.Views.ResearcherView;
 
 namespace FlowModel
@@ -17,36 +18,56 @@ namespace FlowModel
             set => material_ComboBox.SelectedItem = value;
         }
 
-        public new string Width => width_ParameterInput.Value;
-        public string Depth => depth_ParameterInput.Value;
-        public string Length => length_ParameterInput.Value;
+        public new IParameterInput Width => width_ParameterInput;
+        public IParameterInput Depth => depth_ParameterInput;
+        public IParameterInput Length => length_ParameterInput;
 
-        public string Density
+        public IParameterInput Density
         {
-            get => density_ParameterInput.Value; 
-            set => density_ParameterInput.Value = value;
+            get => density_ParameterInput; 
+            set => density_ParameterInput.Value = value.Value;
         }
-        public string HeatCapacity
+        public IParameterInput HeatCapacity
         {
-            get => heatCapacity_ParameterInput.Value; 
-            set => heatCapacity_ParameterInput.Value = value;
+            get => heatCapacity_ParameterInput; 
+            set => heatCapacity_ParameterInput.Value = value.Value;
         }
-        public string MeltingTemperature
+        public IParameterInput MeltingTemperature
         {
-            get => meltingTemperature_ParameterInput.Value; 
-            set => meltingTemperature_ParameterInput.Value = value;
+            get => meltingTemperature_ParameterInput; 
+            set => meltingTemperature_ParameterInput.Value = value.Value;
         }
 
-        public string LidSpeed => lidSpeed_ParameterInput.Value;
-        public string LidTemperature => lidTemperature_ParameterInput.Value;
+        public IParameterInput LidSpeed => lidSpeed_ParameterInput;
+        public IParameterInput LidTemperature => lidTemperature_ParameterInput;
 
-        public string Step => step_ParameterInput.Value;
+        public IParameterInput Step => step_ParameterInput;
 
-        public string FlowIndex { get; set; }
-        public string ViscosityIndex { get; set; }
-        public string ConsistencyIndex { get; set; }
-        public string HeatTransferIndex { get; set; }
-        public string ReferenceTemperature { get; set; }
+        public IParameterInput FlowIndex
+        {
+            get => flowIndex_ParameterInput; 
+            set => flowIndex_ParameterInput.Value = value.Value;
+        }
+        public IParameterInput ViscosityIndex
+        {
+            get => viscosityIndex_ParameterInput; 
+            set => viscosityIndex_ParameterInput.Value = value.Value;
+        }
+        public IParameterInput ConsistencyIndex
+        {
+            get => consistencyIndex_ParameterInput; 
+            set => consistencyIndex_ParameterInput.Value = value.Value;
+        }
+        public IParameterInput HeatTransferIndex
+        {
+            get => consistencyIndex_ParameterInput; 
+            set => consistencyIndex_ParameterInput.Value = value.Value;
+        }
+        public IParameterInput ReferenceTemperature
+        {
+            get => referenceTemperature_ParameterInput; 
+            set => referenceTemperature_ParameterInput.Value = value.Value;
+        }
 
         public string Viscosity
         {
