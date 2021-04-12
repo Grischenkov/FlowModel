@@ -9,5 +9,7 @@ namespace FlowModel.Presenter.Views.ChartView
         string XAxisName { get; set; }
         
         string YAxisName { get; set; }
+        
+        void DrawChart(double[][] table);
     }
 }
