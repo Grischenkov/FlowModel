@@ -13,7 +13,7 @@ namespace FlowModel.Model
         private readonly double[] _viscosity;
         private readonly double[] _temperature;
         
-        private Channel Channel { get; }
+        public Channel Channel { get; }
         
         public Parameters Parameters { get; }
 
@@ -26,15 +26,23 @@ namespace FlowModel.Model
             Parameters = new Parameters();
             
             Channel = channel;
+            
             _gamma = CalculateGammaCoefficient();
             _qGamma = CalculateQGamma();
             _qAlpha = CalculateQAlpha();
+            
             var size = CalculateSize();
+            
             _kappa = new double[size + 1];
             _viscosity = new double[size + 1];
             _temperature = new double[size + 1];
-            Parameters.Size = size;
+            
+            Parameters.Size = size + 1;
+            
             CalculateProcessParameters();
+            
+            Channel.FlowingMaterial.ResultViscosity = Parameters[size,1];
+            Channel.FlowingMaterial.ResultTemperature = Parameters[size,2];
         }
 
         private void CalculateProcessParameters()

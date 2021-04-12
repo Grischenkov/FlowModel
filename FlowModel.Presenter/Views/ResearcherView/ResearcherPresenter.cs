@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Linq;
 using FlowModel.Model;
 using FlowModel.Presenter.ParentInterfaces;
 using Process = FlowModel.Model.Process;
@@ -15,7 +16,9 @@ namespace FlowModel.Presenter.Views.ResearcherView
         private Graph _temperatureChart;
         private Graph _viscosityChart;
 
-        private readonly Stopwatch _time;
+        private MockProcessUnitOfWork _unitOfWork;
+
+        private Stopwatch _time;
 
         public ResearcherPresenter(IApplicationController controller, IResearcherView view) : base(controller, view)
         {
@@ -23,8 +26,15 @@ namespace FlowModel.Presenter.Views.ResearcherView
 
             _temperatureChart = new Graph();
             _viscosityChart = new Graph();
-            
-            _time = new Stopwatch();
+
+            _unitOfWork = new MockProcessUnitOfWork();
+
+            foreach (var material in _unitOfWork.Materials.GetList())
+            {
+                View.MaterialItem = material.Name;
+            }
+
+            View.SelectMaterial += SelectMaterial;
             
             View.Calculate += Calculate;
 
@@ -42,48 +52,47 @@ namespace FlowModel.Presenter.Views.ResearcherView
             View.About += About;
         }
 
+        private void SelectMaterial()
+        {
+            var material = _unitOfWork.Materials.GetList().First(x => x.Name == View.MaterialSelectedItem);
+
+            View.Density.Value = _unitOfWork.MaterialParameters.GetList().First(x => x.MaterialId == material.Id && x.Parameter.Name == "Density").ParameterValue.ToString();
+            View.HeatCapacity.Value = _unitOfWork.MaterialParameters.GetList().First(x => x.MaterialId == material.Id && x.Parameter.Name == "Heat capacity").ParameterValue.ToString();
+            View.MeltingTemperature.Value = _unitOfWork.MaterialParameters.GetList().First(x => x.MaterialId == material.Id && x.Parameter.Name == "Melting temperature").ParameterValue.ToString();
+
+            View.ConsistencyIndex.Value = _unitOfWork.MaterialParameters.GetList().First(x => x.MaterialId == material.Id && x.Parameter.Name == "Consistency index").ParameterValue.ToString();
+            View.ViscosityIndex.Value = _unitOfWork.MaterialParameters.GetList().First(x => x.MaterialId == material.Id && x.Parameter.Name == "Viscosity index").ParameterValue.ToString();
+            View.ReferenceTemperature.Value = _unitOfWork.MaterialParameters.GetList().First(x => x.MaterialId == material.Id && x.Parameter.Name == "Reference temperature").ParameterValue.ToString();
+            View.FlowIndex.Value = _unitOfWork.MaterialParameters.GetList().First(x => x.MaterialId == material.Id && x.Parameter.Name == "Flow index").ParameterValue.ToString();
+            View.HeatTransferIndex.Value = _unitOfWork.MaterialParameters.GetList().First(x => x.MaterialId == material.Id && x.Parameter.Name == "Heat transfer index").ParameterValue.ToString();
+        }
+        
         private void Calculate()
         {
             ParametersCheck();
 
+            _time = new Stopwatch();
             _time.Start();
             var startMemory = GC.GetAllocatedBytesForCurrentThread();
             
-            var cap = new Cap(Convert.ToDouble(View.LidTemperature), Convert.ToDouble(View.LidSpeed));
+            var cap = new Cap(Convert.ToDouble(View.LidTemperature.Value), Convert.ToDouble(View.LidSpeed.Value));
 
-            var flowingMaterial = new FlowingMaterial(Convert.ToDouble(View.MeltingTemperature),
-                Convert.ToDouble(View.HeatCapacity), Convert.ToDouble(View.ReferenceTemperature),
-                Convert.ToDouble(View.ViscosityIndex), Convert.ToDouble(View.HeatTransferIndex),
-                Convert.ToDouble(View.ConsistencyIndex), Convert.ToDouble(View.FlowIndex),
-                Convert.ToDouble(View.Density));
+            var flowingMaterial = new FlowingMaterial(Convert.ToDouble(View.MeltingTemperature.Value),
+                Convert.ToDouble(View.HeatCapacity.Value), Convert.ToDouble(View.ReferenceTemperature.Value),
+                Convert.ToDouble(View.ViscosityIndex.Value), Convert.ToDouble(View.HeatTransferIndex.Value),
+                Convert.ToDouble(View.ConsistencyIndex.Value), Convert.ToDouble(View.FlowIndex.Value),
+                Convert.ToDouble(View.Density.Value));
 
-            var channel = new Channel(Convert.ToDouble(View.Width), Convert.ToDouble(View.Depth),
-                Convert.ToDouble(View.Length), Convert.ToDouble(View.Step), cap, flowingMaterial);
+            var channel = new Channel(Convert.ToDouble(View.Width.Value), Convert.ToDouble(View.Depth.Value),
+                Convert.ToDouble(View.Length.Value), Convert.ToDouble(View.Step.Value), cap, flowingMaterial);
 
             _process = new Process(channel);
 
-            _temperatureChart = new Graph
-            {
-                Name = "Температура",
-                XAxisName = "Координата, м",
-                YAxisName = "Температура, °C",
-                Series = new Series
-                {
-                    XAxis = _process.Parameters[0],
-                    YAxis = _process.Parameters[1]   
-                }
-            };
-            _viscosityChart = new Graph
-            {
-                Name = "Вязкость",
-                XAxisName = "Координата, м",
-                YAxisName = "Вязкость, Па*с",
-                Series = new Series
-                {
-                    XAxis = _process.Parameters[0],
-                    YAxis = _process.Parameters[2]
-                }
-            };
+            _temperatureChart = new Graph("Температура", "Координата, м", "Температура, °C",
+                new Series(_process.Parameters[0], _process.Parameters[1]));
+            
+            _viscosityChart = new Graph("Вязкость", "Координата, м", "Вязкость, Па*с",
+                new Series(_process.Parameters[0], _process.Parameters[2]));
             
             var endMemory = GC.GetAllocatedBytesForCurrentThread();
             _memory = endMemory - startMemory;
@@ -94,12 +103,12 @@ namespace FlowModel.Presenter.Views.ResearcherView
 
         private void ViewResults()
         {
-            View.Time = (_time.ElapsedMilliseconds * 1000).ToString();
-            View.Memory = _memory.ToString();
+            View.Time = (_time.ElapsedMilliseconds / 1000).ToString();
+            View.Memory = (_memory / 1000).ToString();
 
-            View.Performance = Process.Channel.Performance.ToString();
-            View.Viscosity = Process.Viscosity.ToString();
-            View.Temperature = Process.Temperature.ToString();
+            View.Performance = _process.Channel.Performance.ToString();
+            View.Viscosity = _process.Channel.FlowingMaterial.ResultViscosity.ToString();
+            View.Temperature = _process.Channel.FlowingMaterial.ResultTemperature.ToString();
         }
         
         private void ParametersCheck()

@@ -3,6 +3,9 @@ namespace FlowModel.Model
 {
     public class FlowingMaterial
     {
+        public double ResultViscosity { get; set; }
+        public double ResultTemperature { get; set; }
+        
         public double Density { get; }
         public double FlowIndex { get; }
         public double HeatCapacity { get; }

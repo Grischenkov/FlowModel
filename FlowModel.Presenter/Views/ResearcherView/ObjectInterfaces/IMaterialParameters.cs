@@ -1,4 +1,6 @@
-﻿namespace FlowModel.Presenter.Views.ResearcherView
+﻿using System;
+
+namespace FlowModel.Presenter.Views.ResearcherView
 {
     public interface IMaterialParameters
     {
@@ -8,5 +10,7 @@
         IParameterInput Density { get; set; }
         IParameterInput HeatCapacity { get; set; }
         IParameterInput MeltingTemperature { get; set; }
+
+        event Action SelectMaterial;
     }
 }

@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using FlowModel.Presenter;
 using FlowModel.Presenter.ParentInterfaces;
+using FlowModel.Presenter.Views.ResearcherView;
 
 namespace FlowModel
 {
@@ -14,11 +15,10 @@ namespace FlowModel
             Application.SetCompatibleTextRenderingDefault(false);
 
             IApplicationController controller = new ApplicationController(new LightInjectAdapter())
-                //.RegisterView<IMainView, MainView>
+                .RegisterView<IResearcherView, ResearcherView>()
                 .RegisterInstance(new ApplicationContext());
 
-            //controller.Run<MainPresenter>();
-            Application.Run(new ResearcherView());
+            controller.Run<ResearcherPresenter>();
         }
     }
 }

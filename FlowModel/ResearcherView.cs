@@ -60,8 +60,8 @@ namespace FlowModel
         }
         public IParameterInput HeatTransferIndex
         {
-            get => consistencyIndex_ParameterInput; 
-            set => consistencyIndex_ParameterInput.Value = value.Value;
+            get => heatTransferIndex_ParameterInput; 
+            set => heatTransferIndex_ParameterInput.Value = value.Value;
         }
         public IParameterInput ReferenceTemperature
         {
@@ -104,6 +104,8 @@ namespace FlowModel
             about_ToolStrip.Click += (sender, args) => Action(About);
             setting_ToolStrip.Click += (sender, args) => Action(Settings);
 
+            material_ComboBox.SelectedIndexChanged += (sender, args) => Action(SelectMaterial);
+            
             calculate_Button.Click += (sender, args) => Action(Calculate);
 
             showValueTable_Button.Click += (sender, args) => Action(ShowValueTable);
@@ -137,6 +139,8 @@ namespace FlowModel
         public event Action Help;
         public event Action About;
         public event Action Settings;
+
+        public event Action SelectMaterial;
         
         public event Action Calculate;
         

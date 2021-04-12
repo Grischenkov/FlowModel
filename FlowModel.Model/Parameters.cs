@@ -21,5 +21,18 @@
         }
 
         public double this[int i, int j] { get => Table[i][j]; set => Table[i][j] = value; }
+        
+        public double[] this[int i]
+        {
+            get
+            {
+                var arr = new double[Size];
+                for (var j = 0; j < _size; j++)
+                {
+                    arr[j] = Table[j][i];
+                }
+                return arr;
+            }
+        }
     }
 }

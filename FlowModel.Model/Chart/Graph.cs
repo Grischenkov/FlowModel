@@ -9,6 +9,10 @@
         public string XAxisName { get; }
         
         public string YAxisName { get; }
+
+        public Graph()
+        {
+        }
         
         public Graph(string name, string xAxisName, string yAxisName, Series series)
         {

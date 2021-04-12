@@ -323,7 +323,7 @@
             this.lidSpeed_ParameterInput.Size = new System.Drawing.Size(331, 74);
             this.lidSpeed_ParameterInput.TabIndex = 0;
             this.lidSpeed_ParameterInput.TabStop = false;
-            this.lidSpeed_ParameterInput.Value = "";
+            this.lidSpeed_ParameterInput.Value = "1,2";
             // 
             // lidTemperature_ParameterInput
             // 
@@ -336,7 +336,7 @@
             this.lidTemperature_ParameterInput.Size = new System.Drawing.Size(331, 74);
             this.lidTemperature_ParameterInput.TabIndex = 1;
             this.lidTemperature_ParameterInput.TabStop = false;
-            this.lidTemperature_ParameterInput.Value = "";
+            this.lidTemperature_ParameterInput.Value = "150";
             // 
             // methodInput_GroupBox
             // 
@@ -376,7 +376,7 @@
             this.step_ParameterInput.Size = new System.Drawing.Size(331, 93);
             this.step_ParameterInput.TabIndex = 0;
             this.step_ParameterInput.TabStop = false;
-            this.step_ParameterInput.Value = "";
+            this.step_ParameterInput.Value = "0,1";
             // 
             // geometryInput_GroupBox
             // 
@@ -418,7 +418,7 @@
             this.length_ParameterInput.Size = new System.Drawing.Size(337, 92);
             this.length_ParameterInput.TabIndex = 1;
             this.length_ParameterInput.TabStop = false;
-            this.length_ParameterInput.Value = "";
+            this.length_ParameterInput.Value = "4";
             // 
             // depth_ParameterInput
             // 
@@ -431,7 +431,7 @@
             this.depth_ParameterInput.Size = new System.Drawing.Size(337, 90);
             this.depth_ParameterInput.TabIndex = 2;
             this.depth_ParameterInput.TabStop = false;
-            this.depth_ParameterInput.Value = "";
+            this.depth_ParameterInput.Value = "0,005";
             // 
             // width_ParameterInput
             // 
@@ -444,7 +444,7 @@
             this.width_ParameterInput.Size = new System.Drawing.Size(337, 90);
             this.width_ParameterInput.TabIndex = 3;
             this.width_ParameterInput.TabStop = false;
-            this.width_ParameterInput.Value = "";
+            this.width_ParameterInput.Value = "0,2";
             // 
             // materialInput_GroupBox
             // 
