@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using FlowModel.Presenter;
 using FlowModel.Presenter.ParentInterfaces;
+using FlowModel.Presenter.Views.AddDataTable;
 using FlowModel.Presenter.Views.ChartView;
 using FlowModel.Presenter.Views.ResearcherView;
 
@@ -17,6 +18,7 @@ namespace FlowModel
 
             IApplicationController controller = new ApplicationController(new LightInjectAdapter())
                 .RegisterView<IResearcherView, ResearcherView>()
+                .RegisterView<IDataTableView, DataTableView>()
                 .RegisterView<IChartView, ChartView>()
                 .RegisterInstance(new ApplicationContext());
 
