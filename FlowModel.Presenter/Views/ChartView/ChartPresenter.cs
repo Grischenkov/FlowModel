@@ -9,15 +9,15 @@ namespace FlowModel.Presenter.Views.ChartView
         
         public ChartPresenter(IApplicationController controller, IChartView view) : base(controller, view)
         {
-            View.ChartName = _graph.Name;
-            View.XAxisName = _graph.XAxisName;
-            View.YAxisName = _graph.YAxisName;
-            Draw();
         }
 
         public override void Run(Graph graph)
         {
             _graph = graph;
+            View.ChartName = _graph.Name;
+            View.XAxisName = _graph.XAxisName;
+            View.YAxisName = _graph.YAxisName;
+            Draw();
             View.Show();
         }
 

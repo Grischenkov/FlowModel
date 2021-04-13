@@ -4,11 +4,11 @@ namespace FlowModel.Presenter.Views.ChartView
 {
     public interface IChartView : IView
     {
-        string ChartName { get; set; }
+        string ChartName { set; }
         
-        string XAxisName { get; set; }
+        string XAxisName { set; }
         
-        string YAxisName { get; set; }
+        string YAxisName { set; }
         
         void DrawChart(double[][] table);
     }

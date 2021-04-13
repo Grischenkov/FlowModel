@@ -1,5 +1,6 @@
 ﻿using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
+using FlowModel.Presenter.Views.ChartView;
 
 namespace FlowModel
 {
@@ -7,32 +8,17 @@ namespace FlowModel
     {
         public string ChartName
         {
-            get => ChartName;
-            set
-            {
-                ChartName = value;
-                InitializeChart();
-            }
+            set => InitializeChart(value);
         }
 
         public string XAxisName
         {
-            get => XAxisName;
-            set
-            {
-                XAxisName = value;
-                InitializeChart();
-            }
+            set => chart.ChartAreas[0].AxisX.Name = value;
         }
 
         public string YAxisName
         {
-            get => YAxisName;
-            set
-            {
-                YAxisName = value;
-                InitializeChart();
-            }
+            set => chart.ChartAreas[0].AxisY.Name = value;
         }
 
         private Series _series;
@@ -40,14 +26,28 @@ namespace FlowModel
         public ChartView()
         {
             InitializeComponent();
-            InitializeChart();
         }
         
         public new void Show()
         {
-            this.ShowDialog();
+            ShowDialog();
         }
-        
+
+        public void ShowError(string errorMessage)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void ShowWarning(string warningMessage)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void ShowSuccess(string successMessage)
+        {
+            throw new System.NotImplementedException();
+        }
+
         public void DrawChart(double[][] table)
         {
             chart.Series[0].Points.Clear();
@@ -57,27 +57,18 @@ namespace FlowModel
             }
         }
 
-        private void InitializeChart()
+        private void InitializeChart(string name)
         {
-            Name = ChartName;
+            Name = name;
             Text = Name;
             
             _series = new Series(Name);
-
-            var chartArea = new ChartArea(Name)
-            {
-                AxisX =
-                {
-                    Name = XAxisName
-                }, 
-                AxisY =
-                {
-                    Name = YAxisName
-                }
-            };
-
-            chart.ChartAreas.Clear();
-            chart.ChartAreas.Add(chartArea);
+            _series.ChartType = SeriesChartType.Line;
+            
+            chart.Series.Clear();
+            chart.Series.Add(_series);
+            chart.ChartAreas[0].AxisX.MajorGrid.Enabled = false;
+            chart.ChartAreas[0].AxisY.MajorGrid.Enabled = false;
         }
     }
 }
