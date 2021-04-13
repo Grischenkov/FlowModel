@@ -17,6 +17,7 @@ namespace FlowModel
 
             IApplicationController controller = new ApplicationController(new LightInjectAdapter())
                 .RegisterView<IResearcherView, ResearcherView>()
+                .RegisterView<IDataTableView, DataTableView>()
                 .RegisterView<IChartView, ChartView>()
                 .RegisterInstance(new ApplicationContext());
 
