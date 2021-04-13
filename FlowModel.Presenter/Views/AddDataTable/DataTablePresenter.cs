@@ -11,7 +11,7 @@ namespace FlowModel.Presenter.Views.AddDataTable
 
         public override void Run(Parameters parameters)
         {
-            var arr = new double[][parameters.Size];
+            var arr = new double[parameters.Size][];
             for (var i = 0; i < arr.Length; i++)
             {
                 arr[i] = new double[3];

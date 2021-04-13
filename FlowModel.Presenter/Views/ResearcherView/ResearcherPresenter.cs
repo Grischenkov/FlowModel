@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.Linq;
 using FlowModel.Model;
 using FlowModel.Presenter.ParentInterfaces;
+using FlowModel.Presenter.Views.AddDataTable;
 using FlowModel.Presenter.Views.ChartView;
 using Process = FlowModel.Model.Process;
 
@@ -157,7 +158,7 @@ namespace FlowModel.Presenter.Views.ResearcherView
         
         private void ShowValueTable()
         {
-            //Controller.Run<ValueTablePresenter, Parameters>(_process.Parameters);
+            Controller.Run<DataTablePresenter, Parameters>(_process.Parameters);
         }
 
         private void ShowTemperatureChart()
