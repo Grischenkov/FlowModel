@@ -716,7 +716,6 @@
             // 
             this.showValueTable_Button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.showValueTable_Button.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.showValueTable_Button.Enabled = false;
             this.showValueTable_Button.Location = new System.Drawing.Point(3, 16);
             this.showValueTable_Button.Name = "showValueTable_Button";
             this.showValueTable_Button.Size = new System.Drawing.Size(220, 27);
@@ -741,7 +740,6 @@
             // 
             this.showTemperatureChart_Button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.showTemperatureChart_Button.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.showTemperatureChart_Button.Enabled = false;
             this.showTemperatureChart_Button.Location = new System.Drawing.Point(3, 16);
             this.showTemperatureChart_Button.Name = "showTemperatureChart_Button";
             this.showTemperatureChart_Button.Size = new System.Drawing.Size(220, 27);
@@ -766,7 +764,6 @@
             // 
             this.showViscosityChart_Button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.showViscosityChart_Button.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.showViscosityChart_Button.Enabled = false;
             this.showViscosityChart_Button.Location = new System.Drawing.Point(3, 16);
             this.showViscosityChart_Button.Name = "showViscosityChart_Button";
             this.showViscosityChart_Button.Size = new System.Drawing.Size(220, 27);

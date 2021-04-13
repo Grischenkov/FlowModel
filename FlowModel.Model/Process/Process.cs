@@ -41,8 +41,8 @@ namespace FlowModel.Model
             
             CalculateProcessParameters();
             
-            Channel.FlowingMaterial.ResultViscosity = Parameters[size,1];
-            Channel.FlowingMaterial.ResultTemperature = Parameters[size,2];
+            Channel.FlowingMaterial.ResultViscosity = Parameters[size,2];
+            Channel.FlowingMaterial.ResultTemperature = Parameters[size,1];
         }
 
         private void CalculateProcessParameters()
@@ -62,13 +62,13 @@ namespace FlowModel.Model
 
         private double CalculateGammaCoefficient()
         {
-            return Channel.Cap.Speed * Channel.Depth;
+            return Channel.Cap.Speed / Channel.Depth;
         }
 
         private double CalculateQGamma()
         {
             return Channel.Width * Channel.Depth * Channel.FlowingMaterial.ConsistencyIndex *
-                   Math.Pow(_gamma, Channel.FlowingMaterial.FlowIndex - 1);
+                   Math.Pow(_gamma, Channel.FlowingMaterial.FlowIndex + 1);
         }
 
         private double CalculateQAlpha()
@@ -93,10 +93,10 @@ namespace FlowModel.Model
         private double CalculateKappaCoefficient(double coefficient, double coordinate)
         {
             return coefficient * (1 - Math.Exp(-(coordinate * Channel.FlowingMaterial.ViscosityIndex * _qAlpha) /
-                                               (Channel.Performance * Channel.FlowingMaterial.HeatCapacity))) +
+                                               ((Channel.Performance / 3600) * Channel.FlowingMaterial.HeatCapacity))) +
                    Math.Exp(Channel.FlowingMaterial.ViscosityIndex * (Channel.FlowingMaterial.MeltingTemperature -
                                                                       Channel.FlowingMaterial.ReferenceTemperature -
-                                                                      coordinate * _qAlpha / (Channel.Performance *
+                                                                      coordinate * _qAlpha / ((Channel.Performance/3600) *
                                                                           Channel.FlowingMaterial.HeatCapacity)));
         }
 
@@ -110,7 +110,7 @@ namespace FlowModel.Model
         {
             return Channel.FlowingMaterial.ConsistencyIndex *
                    Math.Exp(-(Channel.FlowingMaterial.ViscosityIndex *
-                              (_temperature[i] - Channel.FlowingMaterial.ReferenceTemperature))) *
+                              (_temperature[i] - Channel.FlowingMaterial.MeltingTemperature))) *
                    Math.Pow(_gamma, Channel.FlowingMaterial.FlowIndex - 1);
         }
     }

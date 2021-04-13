@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.Linq;
 using FlowModel.Model;
 using FlowModel.Presenter.ParentInterfaces;
+using FlowModel.Presenter.Views.ChartView;
 using Process = FlowModel.Model.Process;
 
 namespace FlowModel.Presenter.Views.ResearcherView
@@ -103,7 +104,7 @@ namespace FlowModel.Presenter.Views.ResearcherView
 
         private void ViewResults()
         {
-            View.Time = (_time.ElapsedMilliseconds / 1000).ToString();
+            View.Time = _time.ElapsedMilliseconds.ToString();
             View.Memory = (_memory / 1000).ToString();
 
             View.Performance = _process.Channel.Performance.ToString();
@@ -161,12 +162,12 @@ namespace FlowModel.Presenter.Views.ResearcherView
 
         private void ShowTemperatureChart()
         {
-            //Controller.Run<TemperatureChartPresenter, Chart>(_temperatureChart);
+            Controller.Run<ChartPresenter, Graph>(_temperatureChart);
         }
 
         private void ShowViscosityChart()
         {
-            //Controller.Run<ViscosityChartPresenter, Chart>(_viscosityChart);
+            Controller.Run<ChartPresenter, Graph>(_viscosityChart);
         }
 
         private void Open()

@@ -16,7 +16,7 @@ namespace FlowModel.Model
 
         public double CalculationStep { get; }
 
-        public double Performance => FlowingMaterial.Density * _qChannel;
+        public double Performance => Math.Round(FlowingMaterial.Density * _qChannel * 3600, 2);
 
         public Channel(double width, double depth, double length, double calculationStep, Cap cap, FlowingMaterial flowingMaterial)
         {
