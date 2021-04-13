@@ -56,6 +56,12 @@
     <Compile Include="ChartView.Designer.cs">
       <DependentUpon>ChartView.cs</DependentUpon>
     </Compile>
+    <Compile Include="DataTableView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataTableView.Designer.cs">
+      <DependentUpon>DataTableView.cs</DependentUpon>
+    </Compile>
     <Compile Include="ParameterInput.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -73,6 +79,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="ChartView.resx">
       <DependentUpon>ChartView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataTableView.resx">
+      <DependentUpon>DataTableView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ParameterInput.resx">
       <DependentUpon>ParameterInput.cs</DependentUpon>
