@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using FlowModel.Presenter;
 using FlowModel.Presenter.ParentInterfaces;
+using FlowModel.Presenter.Views.AddDataTable;
 using FlowModel.Presenter.Views.ChartView;
 using FlowModel.Presenter.Views.ResearcherView;
 

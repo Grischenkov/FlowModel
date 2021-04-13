@@ -4,6 +4,6 @@ namespace FlowModel.Presenter.Views.AddDataTable
 {
     public interface IDataTableView : IView
     {
-        void DrawTable(double[,] table);
+        void DrawTable(double[][] table);
     }
 }
