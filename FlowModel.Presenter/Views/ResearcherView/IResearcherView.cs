@@ -5,14 +5,9 @@ namespace FlowModel.Presenter.Views.ResearcherView
     public interface IResearcherView : IFileMenuView, IHelpMenuView,
         IChannelParameters, IMaterialParameters, ICapParameters, IMethodParameters
     {
-        IParameterInput Step { get; }
-
-        string Viscosity { set; }
-        string Temperature { set; }
-        string Performance { set; }
+        IParameterInput Step { get; set; }
         
-        string Time { set; }
-        string Memory { set; }
+        bool IsProcessing { set; }
         
         event Action Calculate;
 

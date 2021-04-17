@@ -49,6 +49,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -60,8 +61,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Chart\Graph.cs" />
-    <Compile Include="Chart\Series.cs" />
     <Compile Include="DataBaseWorker\ProcessDbContext.cs" />
     <Compile Include="DataBaseWorker\ReportDbContext.cs" />
     <Compile Include="DataBaseWorker\Repository\IRepository.cs" />
@@ -90,6 +89,7 @@
     <Compile Include="Process\FlowingMaterial.cs" />
     <Compile Include="Process\Process.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewReport.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

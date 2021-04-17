@@ -50,23 +50,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ChartView.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ChartView.Designer.cs">
-      <DependentUpon>ChartView.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DataTableView.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DataTableView.Designer.cs">
-      <DependentUpon>DataTableView.cs</DependentUpon>
-    </Compile>
     <Compile Include="ParameterInput.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="ParameterInput.Designer.cs">
       <DependentUpon>ParameterInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportView.Designer.cs">
+      <DependentUpon>ReportView.cs</DependentUpon>
     </Compile>
     <Compile Include="ResearcherView.cs">
       <SubType>Form</SubType>
@@ -77,12 +71,6 @@
     <Compile Include="LightInjectAdapter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="ChartView.resx">
-      <DependentUpon>ChartView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DataTableView.resx">
-      <DependentUpon>DataTableView.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ParameterInput.resx">
       <DependentUpon>ParameterInput.cs</DependentUpon>
     </EmbeddedResource>
@@ -95,6 +83,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ReportView.resx">
+      <DependentUpon>ReportView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ResearcherView.resx">
       <DependentUpon>ResearcherView.cs</DependentUpon>
     </EmbeddedResource>

@@ -4,7 +4,7 @@
     {
         private int _size; 
 
-        private double[][] Table { get; set; }
+        public double[][] Table { get; set; }
         
         public int Size
         {

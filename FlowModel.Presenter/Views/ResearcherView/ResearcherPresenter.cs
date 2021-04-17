@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
 using FlowModel.Model;
 using FlowModel.Presenter.ParentInterfaces;
-using FlowModel.Presenter.Views.AddDataTable;
-using FlowModel.Presenter.Views.ChartView;
+using FlowModel.Presenter.Views.ReportView;
 using Process = FlowModel.Model.Process;
 
 namespace FlowModel.Presenter.Views.ResearcherView
@@ -15,8 +16,7 @@ namespace FlowModel.Presenter.Views.ResearcherView
         
         private Process _process;
 
-        private Graph _temperatureChart;
-        private Graph _viscosityChart;
+        private ViewReport _report;
 
         private MockProcessUnitOfWork _unitOfWork;
 
@@ -25,9 +25,6 @@ namespace FlowModel.Presenter.Views.ResearcherView
         public ResearcherPresenter(IApplicationController controller, IResearcherView view) : base(controller, view)
         {
             _process = new Process();
-
-            _temperatureChart = new Graph();
-            _viscosityChart = new Graph();
 
             _unitOfWork = new MockProcessUnitOfWork();
 
@@ -68,11 +65,9 @@ namespace FlowModel.Presenter.Views.ResearcherView
             View.FlowIndex.Value = _unitOfWork.MaterialParameters.GetList().First(x => x.MaterialId == material.Id && x.Parameter.Name == "Flow index").ParameterValue.ToString();
             View.HeatTransferIndex.Value = _unitOfWork.MaterialParameters.GetList().First(x => x.MaterialId == material.Id && x.Parameter.Name == "Heat transfer index").ParameterValue.ToString();
         }
-        
-        private void Calculate()
-        {
-            ParametersCheck();
 
+        private void Calculation()
+        {
             _time = new Stopwatch();
             _time.Start();
             var startMemory = GC.GetAllocatedBytesForCurrentThread();
@@ -89,28 +84,25 @@ namespace FlowModel.Presenter.Views.ResearcherView
                 Convert.ToDouble(View.Length.Value), Convert.ToDouble(View.Step.Value), cap, flowingMaterial);
 
             _process = new Process(channel);
-
-            _temperatureChart = new Graph("Температура", "Координата, м", "Температура, °C",
-                new Series(_process.Parameters[0], _process.Parameters[1]));
-            
-            _viscosityChart = new Graph("Вязкость", "Координата, м", "Вязкость, Па*с",
-                new Series(_process.Parameters[0], _process.Parameters[2]));
-            
+         
             var endMemory = GC.GetAllocatedBytesForCurrentThread();
             _memory = endMemory - startMemory;
             _time.Stop();
 
-            ViewResults();
+            _report = new ViewReport(_process, _memory, _time.ElapsedMilliseconds);
         }
-
-        private void ViewResults()
+        
+        private void Calculate()
         {
-            View.Time = _time.ElapsedMilliseconds.ToString();
-            View.Memory = (_memory / 1000).ToString();
+            ParametersCheck();
+           
+            Task calculation = Task.Run(Calculation);
+            View.IsProcessing = true;
+            calculation.Wait();
+            View.IsProcessing = false;
 
-            View.Performance = _process.Channel.Performance.ToString();
-            View.Viscosity = _process.Channel.FlowingMaterial.ResultViscosity.ToString();
-            View.Temperature = _process.Channel.FlowingMaterial.ResultTemperature.ToString();
+            Controller.Run<ReportPresenter, ViewReport>(_report);
+           
         }
         
         private void ParametersCheck()
@@ -133,6 +125,10 @@ namespace FlowModel.Presenter.Views.ResearcherView
             ValueCheck(View.ConsistencyIndex);
             ValueCheck(View.HeatTransferIndex);
             ValueCheck(View.ReferenceTemperature);
+
+            if (!(Convert.ToDouble(View.Length.Value) / Convert.ToDouble(View.Step.Value) > 5000)) return;
+            View.Step.Value = (Convert.ToDouble(View.Length.Value) / 5000).ToString();
+            throw new ArgumentException("Количество шагов не может привышать 5000. Значение шага увеличено.", View.Step.ParameterName);
         }
         
         private void ValueCheck(IParameterInput parameter)
@@ -146,29 +142,33 @@ namespace FlowModel.Presenter.Views.ResearcherView
                 catch (Exception e)
                 {
                     parameter.IsIncorrect = true;
-                    throw new ArgumentException("Недопустимый формат параметра: " + parameter.Name);
+                    throw new ArgumentException("Недопустимый формат параметра: " + parameter.ParameterName);
+                }
+                if (Convert.ToDouble(parameter.Value) < 0.001)
+                {
+                    throw new ArgumentException("Параметр не может быть меньше 0,001:" + parameter.ParameterName);
                 }
             }
             else
             {
                 parameter.IsIncorrect = true;
-                throw new ArgumentNullException(parameter.Name);
+                throw new ArgumentNullException(parameter.ParameterName);
             }
         }
         
         private void ShowValueTable()
         {
-            Controller.Run<DataTablePresenter, Parameters>(_process.Parameters);
+            //Controller.Run<DataTablePresenter, Parameters>(_process.Parameters);
         }
 
         private void ShowTemperatureChart()
         {
-            Controller.Run<ChartPresenter, Graph>(_temperatureChart);
+            //Controller.Run<ChartPresenter, Graph>(_temperatureChart);
         }
 
         private void ShowViscosityChart()
         {
-            Controller.Run<ChartPresenter, Graph>(_viscosityChart);
+            //Controller.Run<ChartPresenter, Graph>(_viscosityChart);
         }
 
         private void Open()

@@ -11,6 +11,8 @@
         IApplicationController RegisterService<TService, TImplementation>()
             where TImplementation : class, TService;
 
+        TPresenter GetRun<TPresenter>() where TPresenter : class, IPresenter;
+        
         void Run<TPresenter>()
             where TPresenter : class, IPresenter;
 

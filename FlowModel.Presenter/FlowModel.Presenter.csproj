@@ -39,6 +39,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -57,13 +58,11 @@
     <Compile Include="ParentInterfaces\IPresenter.cs" />
     <Compile Include="ParentInterfaces\IView.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Views\AddDataTable\DataTablePresenter.cs" />
-    <Compile Include="Views\AddDataTable\IDataTableView.cs" />
-    <Compile Include="Views\ChartView\ChartPresenter.cs" />
-    <Compile Include="Views\ChartView\IChartView.cs" />
     <Compile Include="Views\IFileMenuView.cs" />
     <Compile Include="Views\IHelpMenuView.cs" />
     <Compile Include="Views\IParameterInput.cs" />
+    <Compile Include="Views\ReportView\IReportView.cs" />
+    <Compile Include="Views\ReportView\ReportPresenter.cs" />
     <Compile Include="Views\ResearcherView\IResearcherView.cs" />
     <Compile Include="Views\ResearcherView\ObjectInterfaces\ICapParameters.cs" />
     <Compile Include="Views\ResearcherView\ObjectInterfaces\IChannelParameters.cs" />

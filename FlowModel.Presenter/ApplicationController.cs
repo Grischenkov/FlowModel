@@ -42,13 +42,21 @@ namespace FlowModel.Presenter
             presenter.Run();
         }
 
-        public void Run<TPresenter, TArgument>(TArgument argumnent) where TPresenter : class, IPresenter<TArgument>
+        public TPresenter GetRun<TPresenter>() where TPresenter : class, IPresenter
+        {
+            if (!_container.IsRegistered<TPresenter>())
+                _container.Register<TPresenter>();
+
+            return _container.Resolve<TPresenter>();
+        }
+
+        public void Run<TPresenter, TArgument>(TArgument argument) where TPresenter : class, IPresenter<TArgument>
         {
             if (!_container.IsRegistered<TPresenter>())
                 _container.Register<TPresenter>();
 
             var presenter = _container.Resolve<TPresenter>();
-            presenter.Run(argumnent);
+            presenter.Run(argument);
         }
     }
 }

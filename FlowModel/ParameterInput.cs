@@ -34,7 +34,13 @@ namespace FlowModel
 
         public bool IsIncorrect
         {
-            set => value_TextBox.BackColor = value ? Color.Red : Color.White;
+            set
+            {
+                if (value_TextBox.Enabled)
+                {
+                    value_TextBox.BackColor = value ? Color.Red : Color.White; 
+                }
+            }
         }
 
         public ParameterInput()
@@ -44,8 +50,7 @@ namespace FlowModel
 
         private void DoubleInput(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '-' && e.KeyChar != '.' &&
-                e.KeyChar != ',')
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.' && e.KeyChar != ',')
             {
                 e.Handled = true;
             }
