@@ -83,6 +83,8 @@
     <Compile Include="Entities\ProcessDB\Unit.cs" />
     <Compile Include="Entities\ReportDB\Report.cs" />
     <Compile Include="Entities\UserDB\User.cs" />
+    <Compile Include="LoginService\ILoginService.cs" />
+    <Compile Include="LoginService\LoginService.cs" />
     <Compile Include="Parameters.cs" />
     <Compile Include="Process\Cap.cs" />
     <Compile Include="Process\Channel.cs" />

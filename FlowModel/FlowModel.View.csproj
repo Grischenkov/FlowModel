@@ -103,6 +103,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\FlowModel.Model\FlowModel.Model.csproj">
+      <Project>{6fd9188e-5fa8-4080-b8f4-247cda6aca13}</Project>
+      <Name>FlowModel.Model</Name>
+    </ProjectReference>
     <ProjectReference Include="..\FlowModel.Presenter\FlowModel.Presenter.csproj">
       <Project>{2a45cca6-bb36-434a-bae5-08ed0aec713c}</Project>
       <Name>FlowModel.Presenter</Name>
