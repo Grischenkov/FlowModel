@@ -3,6 +3,7 @@ using System.Windows.Forms;
 using FlowModel.Model.LoginService;
 using FlowModel.Presenter;
 using FlowModel.Presenter.ParentInterfaces;
+using FlowModel.Presenter.Views;
 using FlowModel.Presenter.Views.ReportView;
 using FlowModel.Presenter.Views.ResearcherView;
 
