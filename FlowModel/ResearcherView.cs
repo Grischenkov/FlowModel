@@ -8,6 +8,8 @@ namespace FlowModel
 {
     public partial class ResearcherView : Form, IResearcherView
     {
+        private readonly ApplicationContext _context;
+        
         public bool IsProcessing
         {
             set
@@ -90,8 +92,10 @@ namespace FlowModel
             set => referenceTemperature_ParameterInput.Value = value.Value;
         }
 
-        public ResearcherView()
+        public ResearcherView(ApplicationContext context)
         {
+            _context = context;
+            
             InitializeComponent();
 
             progressBar.Style = ProgressBarStyle.Marquee;
@@ -114,7 +118,8 @@ namespace FlowModel
 
         public new void Show()
         {
-            Application.Run(this);
+            _context.MainForm = this;
+            base.Show();
         }
 
         public void ShowError(string errorMessage)

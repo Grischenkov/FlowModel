@@ -5,6 +5,8 @@ namespace FlowModel
 {
     public partial class LoginView : Form, ILoginView
     {
+        private readonly ApplicationContext _context;
+        
         public string Login
         {
             get => login_TextBox.Text;
@@ -15,8 +17,10 @@ namespace FlowModel
             get => password_TextBox.Text;
         }
 
-        public LoginView()
+        public LoginView(ApplicationContext context)
         {
+            _context = context;
+            
             InitializeComponent();
 
             login_Button.Click += (sender, args) => Action(Log);
@@ -24,7 +28,8 @@ namespace FlowModel
 
         public new void Show()
         {
-            Application.Run(this);
+            _context.MainForm = this;
+            Application.Run(_context);
         }
 
         public void ShowError(string errorMessage)

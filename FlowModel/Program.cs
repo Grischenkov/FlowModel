@@ -19,6 +19,7 @@ namespace FlowModel
             IApplicationController controller = new ApplicationController(new LightInjectAdapter())
                 .RegisterView<IResearcherView, ResearcherView>()
                 .RegisterView<IReportView, ReportView>()
+                .RegisterView<ILoginView, LoginView>()
                 .RegisterService<ILoginService, LoginService>()
                 .RegisterInstance(new ApplicationContext());
 
