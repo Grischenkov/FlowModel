@@ -61,6 +61,8 @@
     <Compile Include="Views\IFileMenuView.cs" />
     <Compile Include="Views\IHelpMenuView.cs" />
     <Compile Include="Views\IParameterInput.cs" />
+    <Compile Include="Views\LoginView\ILoginView.cs" />
+    <Compile Include="Views\LoginView\LoginPresenter.cs" />
     <Compile Include="Views\ReportView\IReportView.cs" />
     <Compile Include="Views\ReportView\ReportPresenter.cs" />
     <Compile Include="Views\ResearcherView\IResearcherView.cs" />

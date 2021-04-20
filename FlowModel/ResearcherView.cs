@@ -8,6 +8,8 @@ namespace FlowModel
 {
     public partial class ResearcherView : Form, IResearcherView
     {
+        private readonly ApplicationContext _context;
+        
         public bool IsProcessing
         {
             set
@@ -90,8 +92,10 @@ namespace FlowModel
             set => referenceTemperature_ParameterInput.Value = value.Value;
         }
 
-        public ResearcherView()
+        public ResearcherView(ApplicationContext context)
         {
+            _context = context;
+            
             InitializeComponent();
 
             progressBar.Style = ProgressBarStyle.Marquee;
@@ -114,7 +118,8 @@ namespace FlowModel
 
         public new void Show()
         {
-            Application.Run(this);
+            _context.MainForm = this;
+            base.Show();
         }
 
         public void ShowError(string errorMessage)
@@ -159,38 +164,6 @@ namespace FlowModel
             {
                 ShowError(e.Message);
             }
-        }
-
-        private async Task AsyncAction(Action action)
-        {
-            try
-            {
-                await Task.Run(action);
-            }
-            catch (Exception e)
-            {
-                ShowError(e.Message);
-            }
-        }
-
-        private void performanceOutput_GroupBox_Enter(object sender, EventArgs e)
-        {
-        }
-
-        private void temperatureOutput_GroupBox_Enter(object sender, EventArgs e)
-        {
-        }
-
-        private void viscosityOutput_GroupBox_Enter(object sender, EventArgs e)
-        {
-        }
-
-        private void time_Label_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void memoryOutput_GroupBox_Enter(object sender, EventArgs e)
-        {
         }
     }
 }

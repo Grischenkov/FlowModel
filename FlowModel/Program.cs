@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Windows.Forms;
+using FlowModel.Model.LoginService;
 using FlowModel.Presenter;
 using FlowModel.Presenter.ParentInterfaces;
+using FlowModel.Presenter.Views;
 using FlowModel.Presenter.Views.ReportView;
 using FlowModel.Presenter.Views.ResearcherView;
 
@@ -18,6 +20,8 @@ namespace FlowModel
             IApplicationController controller = new ApplicationController(new LightInjectAdapter())
                 .RegisterView<IResearcherView, ResearcherView>()
                 .RegisterView<IReportView, ReportView>()
+                .RegisterView<ILoginView, LoginView>()
+                .RegisterService<ILoginService, LoginService>()
                 .RegisterInstance(new ApplicationContext());
 
             controller.Run<ResearcherPresenter>();
