@@ -2,6 +2,6 @@ namespace FlowModel.Model.LoginService
 {
     public interface ILoginService
     {
-        bool Login(User user);
+        User Login(User user);
     }
 }
