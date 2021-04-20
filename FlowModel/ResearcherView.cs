@@ -160,37 +160,5 @@ namespace FlowModel
                 ShowError(e.Message);
             }
         }
-
-        private async Task AsyncAction(Action action)
-        {
-            try
-            {
-                await Task.Run(action);
-            }
-            catch (Exception e)
-            {
-                ShowError(e.Message);
-            }
-        }
-
-        private void performanceOutput_GroupBox_Enter(object sender, EventArgs e)
-        {
-        }
-
-        private void temperatureOutput_GroupBox_Enter(object sender, EventArgs e)
-        {
-        }
-
-        private void viscosityOutput_GroupBox_Enter(object sender, EventArgs e)
-        {
-        }
-
-        private void time_Label_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void memoryOutput_GroupBox_Enter(object sender, EventArgs e)
-        {
-        }
     }
 }
