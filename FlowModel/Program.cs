@@ -24,7 +24,7 @@ namespace FlowModel
                 .RegisterService<ILoginService, LoginService>()
                 .RegisterInstance(new ApplicationContext());
 
-            controller.Run<ResearcherPresenter>();
+            controller.Run<LoginPresenter>();
         }
     }
 }

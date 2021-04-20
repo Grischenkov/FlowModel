@@ -53,6 +53,7 @@ namespace FlowModel.Presenter.Views
                 {
                     Controller.Run<ResearcherPresenter>();
                 }
+                View.Close();
             }
             catch
             {
