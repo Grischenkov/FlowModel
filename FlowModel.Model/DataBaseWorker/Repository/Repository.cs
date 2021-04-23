@@ -7,7 +7,7 @@ using System.Linq;
 // ReSharper disable MemberCanBePrivate.Global
 namespace FlowModel.Model
 {
-    public class Repository<TEntity, TContext> : IRepository<TEntity> 
+    public class Repository<TEntity, TContext> : IRepository<TEntity>
         where TEntity : class
         where TContext : DbContext
     {
