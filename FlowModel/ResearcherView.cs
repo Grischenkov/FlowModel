@@ -102,14 +102,14 @@ namespace FlowModel
             progressBar.MarqueeAnimationSpeed = 0;
             progressBar.Visible = false;
 
-            open_ToolStrip.Click += (sender, args) => Action(Open);
-            save_ToolStrip.Click += (sender, args) => Action(Save);
-            exit_ToolStrip.Click += (sender, args) => Action(Exit);
-            export_ToolStrip.Click += (sender, args) => Action(Export);
+                open_ToolStrip.Click += (sender, args) => Action(Open);
+                save_ToolStrip.Click += (sender, args) => Action(Save);
+                exit_ToolStrip.Click += (sender, args) => Action(Exit);
+                export_ToolStrip.Click += (sender, args) => Action(Export);
 
-            help_ToolStrip.Click += (sender, args) => Action(Help);
-            about_ToolStrip.Click += (sender, args) => Action(About);
-            setting_ToolStrip.Click += (sender, args) => Action(Settings);
+                help_ToolStrip.Click += (sender, args) => Action(Help);
+                about_ToolStrip.Click += (sender, args) => Action(About);
+                setting_ToolStrip.Click += (sender, args) => Action(Settings);
 
             material_ComboBox.SelectedIndexChanged += (sender, args) => Action(SelectMaterial);
 
