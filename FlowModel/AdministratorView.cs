@@ -250,7 +250,7 @@ namespace FlowModel
         {
             if (records.Length == 0) return;
             reports_DataGridView.RowCount = records.Length + 1;
-            for (var i = 0; i <= records.Length; i++)
+            for (var i = 0; i < records.Length; i++)
             {
                 reports_DataGridView.Rows[i].Cells[0].Value = records[i][0];
                 reports_DataGridView.Rows[i].Cells[1].Value = records[i][1];
@@ -264,13 +264,13 @@ namespace FlowModel
             UserId = users_DataGridView.Rows[e.RowIndex].Cells[0].Value.ToString();
             UserLogin = users_DataGridView.Rows[e.RowIndex].Cells[1].Value.ToString();
             UserPassword = users_DataGridView.Rows[e.RowIndex].Cells[2].Value.ToString();
-            UserStatus = (bool)users_DataGridView.Rows[e.RowIndex].Cells[3].Value;
+            UserStatus = users_DataGridView.Rows[e.RowIndex].Cells[3].Value.ToString() == "True";
         }
         public void FillUsersRecords(string[][] records)
         {
             if (records.Length == 0) return;
             users_DataGridView.RowCount = records.Length + 1;
-            for (var i = 0; i <= records.Length; i++)
+            for (var i = 0; i < records.Length; i++)
             {
                 users_DataGridView.Rows[i].Cells[0].Value = records[i][0];
                 users_DataGridView.Rows[i].Cells[1].Value = records[i][1];
@@ -289,7 +289,7 @@ namespace FlowModel
         {
             if (records.Length == 0) return;
             units_DataGridView.RowCount = records.Length + 1;
-            for (var i = 0; i <= records.Length; i++)
+            for (var i = 0; i < records.Length; i++)
             {
                 units_DataGridView.Rows[i].Cells[0].Value = records[i][0];
                 units_DataGridView.Rows[i].Cells[1].Value = records[i][1];
@@ -306,7 +306,7 @@ namespace FlowModel
         {
             if (records.Length == 0) return;
             types_DataGridView.RowCount = records.Length + 1;
-            for (var i = 0; i <= records.Length; i++)
+            for (var i = 0; i < records.Length; i++)
             {
                 types_DataGridView.Rows[i].Cells[0].Value = records[i][0];
                 types_DataGridView.Rows[i].Cells[1].Value = records[i][1];
@@ -325,7 +325,7 @@ namespace FlowModel
         {
             if (records.Length == 0) return;
             parameters_DataGridView.RowCount = records.Length + 1;
-            for (var i = 0; i <= records.Length; i++)
+            for (var i = 0; i < records.Length; i++)
             {
                 parameters_DataGridView.Rows[i].Cells[0].Value = records[i][0];
                 parameters_DataGridView.Rows[i].Cells[1].Value = records[i][1];
@@ -346,7 +346,7 @@ namespace FlowModel
         {
             if (records.Length == 0) return;
             materialParameters_DataGridView.RowCount = records.Length + 1;
-            for (var i = 0; i <= records.Length; i++)
+            for (var i = 0; i < records.Length; i++)
             {
                 materialParameters_DataGridView.Rows[i].Cells[0].Value = records[i][0];
                 materialParameters_DataGridView.Rows[i].Cells[1].Value = records[i][1];
@@ -365,7 +365,7 @@ namespace FlowModel
         {
             if (records.Length == 0) return;
             materials_DataGridView.RowCount = records.Length + 1;
-            for (var i = 0; i <= records.Length; i++)
+            for (var i = 0; i < records.Length; i++)
             {
                 materials_DataGridView.Rows[i].Cells[0].Value = records[i][0];
                 materials_DataGridView.Rows[i].Cells[1].Value = records[i][1];

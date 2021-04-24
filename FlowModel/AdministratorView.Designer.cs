@@ -56,6 +56,8 @@ namespace FlowModel
             this.tableLayoutPanel23 = new System.Windows.Forms.TableLayoutPanel();
             this.addMaterial_Button = new System.Windows.Forms.Button();
             this.materials_DataGridView = new System.Windows.Forms.DataGridView();
+            this.materialId_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.materialName_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.materialParameters_TabPage = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
@@ -73,6 +75,10 @@ namespace FlowModel
             this.material_GroupBox = new System.Windows.Forms.GroupBox();
             this.material_ComboBox = new System.Windows.Forms.ComboBox();
             this.materialParameters_DataGridView = new System.Windows.Forms.DataGridView();
+            this.materialParameterId_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.material_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.parameter_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.parameterValue_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.parameters_TabPage = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
@@ -90,6 +96,10 @@ namespace FlowModel
             this.parameterName_GroupBox = new System.Windows.Forms.GroupBox();
             this.parameterName_TextBox = new System.Windows.Forms.TextBox();
             this.parameters_DataGridView = new System.Windows.Forms.DataGridView();
+            this.parameterId_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.parameterName_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.parameterType_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.parameterUnit_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.types_TabPage = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
@@ -103,6 +113,8 @@ namespace FlowModel
             this.typeName_GroupBox = new System.Windows.Forms.GroupBox();
             this.typeName_TextBox = new System.Windows.Forms.TextBox();
             this.types_DataGridView = new System.Windows.Forms.DataGridView();
+            this.typeId_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.typeName_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.units_TabPage = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel13 = new System.Windows.Forms.TableLayoutPanel();
@@ -116,6 +128,8 @@ namespace FlowModel
             this.unitName_GroupBox = new System.Windows.Forms.GroupBox();
             this.unitName_TextBox = new System.Windows.Forms.TextBox();
             this.units_DataGridView = new System.Windows.Forms.DataGridView();
+            this.unitId_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.unitName_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.users_TabPage = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel14 = new System.Windows.Forms.TableLayoutPanel();
@@ -146,27 +160,13 @@ namespace FlowModel
             this.reportDate_GroupBox = new System.Windows.Forms.GroupBox();
             this.reportDate_TextBox = new System.Windows.Forms.TextBox();
             this.reports_DataGridView = new System.Windows.Forms.DataGridView();
-            this.materialId_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.materialName_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.materialParameterId_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.material_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.parameter_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.parameterValue_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.parameterId_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.parameterName_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.parameterType_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.parameterUnit_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.typeId_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.typeName_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.unitId_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.unitName_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userId_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userLogin_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userPassword_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userStatus_Column = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.reportId_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.reportDate_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.reportName_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userId_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userLogin_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userPassword_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userStatus_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabControl.SuspendLayout();
@@ -178,7 +178,7 @@ namespace FlowModel
             this.tableLayoutPanel16.SuspendLayout();
             this.tableLayoutPanel24.SuspendLayout();
             this.tableLayoutPanel23.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.materials_DataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.materials_DataGridView)).BeginInit();
             this.materialParameters_TabPage.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
@@ -189,7 +189,7 @@ namespace FlowModel
             this.parameter_GroupBox.SuspendLayout();
             this.materialParametersId_GroupBox.SuspendLayout();
             this.material_GroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.materialParameters_DataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.materialParameters_DataGridView)).BeginInit();
             this.parameters_TabPage.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
@@ -200,7 +200,7 @@ namespace FlowModel
             this.parameterType_GroupBox.SuspendLayout();
             this.parameterId_GroupBox.SuspendLayout();
             this.parameterName_GroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.parameters_DataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.parameters_DataGridView)).BeginInit();
             this.types_TabPage.SuspendLayout();
             this.tableLayoutPanel8.SuspendLayout();
             this.tableLayoutPanel12.SuspendLayout();
@@ -209,7 +209,7 @@ namespace FlowModel
             this.tableLayoutPanel29.SuspendLayout();
             this.typeId_GroupBox.SuspendLayout();
             this.typeName_GroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.types_DataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.types_DataGridView)).BeginInit();
             this.units_TabPage.SuspendLayout();
             this.tableLayoutPanel9.SuspendLayout();
             this.tableLayoutPanel13.SuspendLayout();
@@ -218,7 +218,7 @@ namespace FlowModel
             this.tableLayoutPanel31.SuspendLayout();
             this.unitId_GroupBox.SuspendLayout();
             this.unitName_GroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.units_DataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.units_DataGridView)).BeginInit();
             this.users_TabPage.SuspendLayout();
             this.tableLayoutPanel10.SuspendLayout();
             this.tableLayoutPanel14.SuspendLayout();
@@ -229,7 +229,7 @@ namespace FlowModel
             this.userPassword_GroupBox.SuspendLayout();
             this.userId_GroupBox.SuspendLayout();
             this.userLogin_GroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.users_DataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.users_DataGridView)).BeginInit();
             this.report_TabPage.SuspendLayout();
             this.tableLayoutPanel11.SuspendLayout();
             this.tableLayoutPanel15.SuspendLayout();
@@ -238,15 +238,13 @@ namespace FlowModel
             this.reportName_GroupBox.SuspendLayout();
             this.reportId_GroupBox.SuspendLayout();
             this.reportDate_GroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.reports_DataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.reports_DataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip
             // 
             this.menuStrip.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem,
-            this.helpToolStripMenuItem});
+            this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {this.fileToolStripMenuItem, this.helpToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Size = new System.Drawing.Size(1017, 24);
@@ -255,12 +253,7 @@ namespace FlowModel
             // 
             // fileToolStripMenuItem
             // 
-            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.open_ToolStrip,
-            this.save_ToolStrip,
-            this.export_ToolStrip,
-            this.toolStripMenuItem2,
-            this.exit_ToolStrip});
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {this.open_ToolStrip, this.save_ToolStrip, this.export_ToolStrip, this.toolStripMenuItem2, this.exit_ToolStrip});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
             this.fileToolStripMenuItem.Text = "Файл";
@@ -268,21 +261,21 @@ namespace FlowModel
             // open_ToolStrip
             // 
             this.open_ToolStrip.Name = "open_ToolStrip";
-            this.open_ToolStrip.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
+            this.open_ToolStrip.ShortcutKeys = ((System.Windows.Forms.Keys) ((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
             this.open_ToolStrip.Size = new System.Drawing.Size(173, 22);
             this.open_ToolStrip.Text = "Открыть";
             // 
             // save_ToolStrip
             // 
             this.save_ToolStrip.Name = "save_ToolStrip";
-            this.save_ToolStrip.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
+            this.save_ToolStrip.ShortcutKeys = ((System.Windows.Forms.Keys) ((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
             this.save_ToolStrip.Size = new System.Drawing.Size(173, 22);
             this.save_ToolStrip.Text = "Сохранить";
             // 
             // export_ToolStrip
             // 
             this.export_ToolStrip.Name = "export_ToolStrip";
-            this.export_ToolStrip.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
+            this.export_ToolStrip.ShortcutKeys = ((System.Windows.Forms.Keys) ((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
             this.export_ToolStrip.Size = new System.Drawing.Size(173, 22);
             this.export_ToolStrip.Text = "Экспорт";
             // 
@@ -294,17 +287,13 @@ namespace FlowModel
             // exit_ToolStrip
             // 
             this.exit_ToolStrip.Name = "exit_ToolStrip";
-            this.exit_ToolStrip.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Q)));
+            this.exit_ToolStrip.ShortcutKeys = ((System.Windows.Forms.Keys) ((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Q)));
             this.exit_ToolStrip.Size = new System.Drawing.Size(173, 22);
             this.exit_ToolStrip.Text = "Выход";
             // 
             // helpToolStripMenuItem
             // 
-            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.setting_ToolStrip,
-            this.helpToolStripMenuItem1,
-            this.help_ToolStrip,
-            this.about_ToolStrip});
+            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {this.setting_ToolStrip, this.helpToolStripMenuItem1, this.help_ToolStrip, this.about_ToolStrip});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
             this.helpToolStripMenuItem.Text = "Помощь";
@@ -312,8 +301,7 @@ namespace FlowModel
             // setting_ToolStrip
             // 
             this.setting_ToolStrip.Name = "setting_ToolStrip";
-            this.setting_ToolStrip.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.S)));
+            this.setting_ToolStrip.ShortcutKeys = ((System.Windows.Forms.Keys) (((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) | System.Windows.Forms.Keys.S)));
             this.setting_ToolStrip.Size = new System.Drawing.Size(206, 22);
             this.setting_ToolStrip.Text = "Настройки";
             // 
@@ -325,14 +313,14 @@ namespace FlowModel
             // help_ToolStrip
             // 
             this.help_ToolStrip.Name = "help_ToolStrip";
-            this.help_ToolStrip.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.H)));
+            this.help_ToolStrip.ShortcutKeys = ((System.Windows.Forms.Keys) ((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.H)));
             this.help_ToolStrip.Size = new System.Drawing.Size(206, 22);
             this.help_ToolStrip.Text = "Помощь";
             // 
             // about_ToolStrip
             // 
             this.about_ToolStrip.Name = "about_ToolStrip";
-            this.about_ToolStrip.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
+            this.about_ToolStrip.ShortcutKeys = ((System.Windows.Forms.Keys) ((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
             this.about_ToolStrip.Size = new System.Drawing.Size(206, 22);
             this.about_ToolStrip.Text = "О программе";
             // 
@@ -347,7 +335,7 @@ namespace FlowModel
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 425F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 327F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1017, 327);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
@@ -390,7 +378,7 @@ namespace FlowModel
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 352F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 289F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(997, 289);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
@@ -463,7 +451,7 @@ namespace FlowModel
             this.tableLayoutPanel16.Name = "tableLayoutPanel16";
             this.tableLayoutPanel16.RowCount = 1;
             this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 112F));
+            this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 89F));
             this.tableLayoutPanel16.Size = new System.Drawing.Size(386, 89);
             this.tableLayoutPanel16.TabIndex = 2;
             // 
@@ -526,9 +514,7 @@ namespace FlowModel
             this.materials_DataGridView.AllowUserToAddRows = false;
             this.materials_DataGridView.AllowUserToDeleteRows = false;
             this.materials_DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.materials_DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.materialId_Column,
-            this.materialName_Column});
+            this.materials_DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {this.materialId_Column, this.materialName_Column});
             this.materials_DataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materials_DataGridView.Location = new System.Drawing.Point(401, 3);
             this.materials_DataGridView.Name = "materials_DataGridView";
@@ -536,6 +522,20 @@ namespace FlowModel
             this.materials_DataGridView.Size = new System.Drawing.Size(593, 283);
             this.materials_DataGridView.TabIndex = 2;
             this.materials_DataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.MaterialsRecordSelect);
+            // 
+            // materialId_Column
+            // 
+            this.materialId_Column.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.materialId_Column.HeaderText = "Id";
+            this.materialId_Column.Name = "materialId_Column";
+            this.materialId_Column.ReadOnly = true;
+            // 
+            // materialName_Column
+            // 
+            this.materialName_Column.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.materialName_Column.HeaderText = "Наименование";
+            this.materialName_Column.Name = "materialName_Column";
+            this.materialName_Column.ReadOnly = true;
             // 
             // materialParameters_TabPage
             // 
@@ -560,7 +560,7 @@ namespace FlowModel
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 352F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 289F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(997, 289);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
@@ -598,7 +598,7 @@ namespace FlowModel
             this.tableLayoutPanel17.Name = "tableLayoutPanel17";
             this.tableLayoutPanel17.RowCount = 1;
             this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 112F));
+            this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 89F));
             this.tableLayoutPanel17.Size = new System.Drawing.Size(386, 89);
             this.tableLayoutPanel17.TabIndex = 3;
             // 
@@ -741,11 +741,7 @@ namespace FlowModel
             this.materialParameters_DataGridView.AllowUserToAddRows = false;
             this.materialParameters_DataGridView.AllowUserToDeleteRows = false;
             this.materialParameters_DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.materialParameters_DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.materialParameterId_Column,
-            this.material_Column,
-            this.parameter_Column,
-            this.parameterValue_Column});
+            this.materialParameters_DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {this.materialParameterId_Column, this.material_Column, this.parameter_Column, this.parameterValue_Column});
             this.materialParameters_DataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialParameters_DataGridView.Location = new System.Drawing.Point(401, 3);
             this.materialParameters_DataGridView.Name = "materialParameters_DataGridView";
@@ -753,6 +749,34 @@ namespace FlowModel
             this.materialParameters_DataGridView.Size = new System.Drawing.Size(593, 283);
             this.materialParameters_DataGridView.TabIndex = 3;
             this.materialParameters_DataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.MaterialParametersRecordSelect);
+            // 
+            // materialParameterId_Column
+            // 
+            this.materialParameterId_Column.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.materialParameterId_Column.HeaderText = "Id";
+            this.materialParameterId_Column.Name = "materialParameterId_Column";
+            this.materialParameterId_Column.ReadOnly = true;
+            // 
+            // material_Column
+            // 
+            this.material_Column.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.material_Column.HeaderText = "Материал";
+            this.material_Column.Name = "material_Column";
+            this.material_Column.ReadOnly = true;
+            // 
+            // parameter_Column
+            // 
+            this.parameter_Column.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.parameter_Column.HeaderText = "Параметр";
+            this.parameter_Column.Name = "parameter_Column";
+            this.parameter_Column.ReadOnly = true;
+            // 
+            // parameterValue_Column
+            // 
+            this.parameterValue_Column.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.parameterValue_Column.HeaderText = "Значение параметра";
+            this.parameterValue_Column.Name = "parameterValue_Column";
+            this.parameterValue_Column.ReadOnly = true;
             // 
             // parameters_TabPage
             // 
@@ -777,7 +801,7 @@ namespace FlowModel
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 352F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 289F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(997, 289);
             this.tableLayoutPanel4.TabIndex = 0;
             // 
@@ -815,7 +839,7 @@ namespace FlowModel
             this.tableLayoutPanel18.Name = "tableLayoutPanel18";
             this.tableLayoutPanel18.RowCount = 1;
             this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 112F));
+            this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 89F));
             this.tableLayoutPanel18.Size = new System.Drawing.Size(386, 89);
             this.tableLayoutPanel18.TabIndex = 3;
             // 
@@ -958,11 +982,7 @@ namespace FlowModel
             this.parameters_DataGridView.AllowUserToAddRows = false;
             this.parameters_DataGridView.AllowUserToDeleteRows = false;
             this.parameters_DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.parameters_DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.parameterId_Column,
-            this.parameterName_Column,
-            this.parameterType_Column,
-            this.parameterUnit_Column});
+            this.parameters_DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {this.parameterId_Column, this.parameterName_Column, this.parameterType_Column, this.parameterUnit_Column});
             this.parameters_DataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.parameters_DataGridView.Location = new System.Drawing.Point(401, 3);
             this.parameters_DataGridView.Name = "parameters_DataGridView";
@@ -970,6 +990,34 @@ namespace FlowModel
             this.parameters_DataGridView.Size = new System.Drawing.Size(593, 283);
             this.parameters_DataGridView.TabIndex = 3;
             this.parameters_DataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ParametersRecordSelect);
+            // 
+            // parameterId_Column
+            // 
+            this.parameterId_Column.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.parameterId_Column.HeaderText = "Id";
+            this.parameterId_Column.Name = "parameterId_Column";
+            this.parameterId_Column.ReadOnly = true;
+            // 
+            // parameterName_Column
+            // 
+            this.parameterName_Column.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.parameterName_Column.HeaderText = "Наименование";
+            this.parameterName_Column.Name = "parameterName_Column";
+            this.parameterName_Column.ReadOnly = true;
+            // 
+            // parameterType_Column
+            // 
+            this.parameterType_Column.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.parameterType_Column.HeaderText = "Тип";
+            this.parameterType_Column.Name = "parameterType_Column";
+            this.parameterType_Column.ReadOnly = true;
+            // 
+            // parameterUnit_Column
+            // 
+            this.parameterUnit_Column.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.parameterUnit_Column.HeaderText = "Единица измерения";
+            this.parameterUnit_Column.Name = "parameterUnit_Column";
+            this.parameterUnit_Column.ReadOnly = true;
             // 
             // types_TabPage
             // 
@@ -994,7 +1042,7 @@ namespace FlowModel
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 1;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 352F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 289F));
             this.tableLayoutPanel8.Size = new System.Drawing.Size(997, 289);
             this.tableLayoutPanel8.TabIndex = 0;
             // 
@@ -1030,7 +1078,7 @@ namespace FlowModel
             this.tableLayoutPanel19.Name = "tableLayoutPanel19";
             this.tableLayoutPanel19.RowCount = 1;
             this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 112F));
+            this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 89F));
             this.tableLayoutPanel19.Size = new System.Drawing.Size(386, 89);
             this.tableLayoutPanel19.TabIndex = 3;
             // 
@@ -1131,9 +1179,7 @@ namespace FlowModel
             this.types_DataGridView.AllowUserToAddRows = false;
             this.types_DataGridView.AllowUserToDeleteRows = false;
             this.types_DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.types_DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.typeId_Column,
-            this.typeName_Column});
+            this.types_DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {this.typeId_Column, this.typeName_Column});
             this.types_DataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.types_DataGridView.Location = new System.Drawing.Point(401, 3);
             this.types_DataGridView.Name = "types_DataGridView";
@@ -1141,6 +1187,20 @@ namespace FlowModel
             this.types_DataGridView.Size = new System.Drawing.Size(593, 283);
             this.types_DataGridView.TabIndex = 3;
             this.types_DataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TypesRecordSelect);
+            // 
+            // typeId_Column
+            // 
+            this.typeId_Column.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.typeId_Column.HeaderText = "Id";
+            this.typeId_Column.Name = "typeId_Column";
+            this.typeId_Column.ReadOnly = true;
+            // 
+            // typeName_Column
+            // 
+            this.typeName_Column.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.typeName_Column.HeaderText = "Наименование";
+            this.typeName_Column.Name = "typeName_Column";
+            this.typeName_Column.ReadOnly = true;
             // 
             // units_TabPage
             // 
@@ -1165,7 +1225,7 @@ namespace FlowModel
             this.tableLayoutPanel9.Name = "tableLayoutPanel9";
             this.tableLayoutPanel9.RowCount = 1;
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 352F));
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 289F));
             this.tableLayoutPanel9.Size = new System.Drawing.Size(997, 289);
             this.tableLayoutPanel9.TabIndex = 0;
             // 
@@ -1201,7 +1261,7 @@ namespace FlowModel
             this.tableLayoutPanel20.Name = "tableLayoutPanel20";
             this.tableLayoutPanel20.RowCount = 1;
             this.tableLayoutPanel20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 112F));
+            this.tableLayoutPanel20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 89F));
             this.tableLayoutPanel20.Size = new System.Drawing.Size(386, 89);
             this.tableLayoutPanel20.TabIndex = 3;
             // 
@@ -1302,9 +1362,7 @@ namespace FlowModel
             this.units_DataGridView.AllowUserToAddRows = false;
             this.units_DataGridView.AllowUserToDeleteRows = false;
             this.units_DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.units_DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.unitId_Column,
-            this.unitName_Column});
+            this.units_DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {this.unitId_Column, this.unitName_Column});
             this.units_DataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.units_DataGridView.Location = new System.Drawing.Point(401, 3);
             this.units_DataGridView.Name = "units_DataGridView";
@@ -1312,6 +1370,20 @@ namespace FlowModel
             this.units_DataGridView.Size = new System.Drawing.Size(593, 283);
             this.units_DataGridView.TabIndex = 3;
             this.units_DataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.UnitsRecordSelect);
+            // 
+            // unitId_Column
+            // 
+            this.unitId_Column.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.unitId_Column.HeaderText = "Id";
+            this.unitId_Column.Name = "unitId_Column";
+            this.unitId_Column.ReadOnly = true;
+            // 
+            // unitName_Column
+            // 
+            this.unitName_Column.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.unitName_Column.HeaderText = "Наименование";
+            this.unitName_Column.Name = "unitName_Column";
+            this.unitName_Column.ReadOnly = true;
             // 
             // users_TabPage
             // 
@@ -1336,7 +1408,7 @@ namespace FlowModel
             this.tableLayoutPanel10.Name = "tableLayoutPanel10";
             this.tableLayoutPanel10.RowCount = 1;
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 352F));
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 289F));
             this.tableLayoutPanel10.Size = new System.Drawing.Size(997, 289);
             this.tableLayoutPanel10.TabIndex = 0;
             // 
@@ -1374,7 +1446,7 @@ namespace FlowModel
             this.tableLayoutPanel21.Name = "tableLayoutPanel21";
             this.tableLayoutPanel21.RowCount = 1;
             this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 112F));
+            this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 89F));
             this.tableLayoutPanel21.Size = new System.Drawing.Size(386, 89);
             this.tableLayoutPanel21.TabIndex = 3;
             // 
@@ -1516,11 +1588,7 @@ namespace FlowModel
             this.users_DataGridView.AllowUserToAddRows = false;
             this.users_DataGridView.AllowUserToDeleteRows = false;
             this.users_DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.users_DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.userId_Column,
-            this.userLogin_Column,
-            this.userPassword_Column,
-            this.userStatus_Column});
+            this.users_DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {this.userId_Column, this.userLogin_Column, this.userPassword_Column, this.userStatus_Column});
             this.users_DataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.users_DataGridView.Location = new System.Drawing.Point(401, 3);
             this.users_DataGridView.Name = "users_DataGridView";
@@ -1552,7 +1620,7 @@ namespace FlowModel
             this.tableLayoutPanel11.Name = "tableLayoutPanel11";
             this.tableLayoutPanel11.RowCount = 1;
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 387F));
+            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 289F));
             this.tableLayoutPanel11.Size = new System.Drawing.Size(997, 289);
             this.tableLayoutPanel11.TabIndex = 0;
             // 
@@ -1588,7 +1656,7 @@ namespace FlowModel
             this.tableLayoutPanel22.Name = "tableLayoutPanel22";
             this.tableLayoutPanel22.RowCount = 1;
             this.tableLayoutPanel22.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel22.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 123F));
+            this.tableLayoutPanel22.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 89F));
             this.tableLayoutPanel22.Size = new System.Drawing.Size(386, 89);
             this.tableLayoutPanel22.TabIndex = 3;
             // 
@@ -1684,10 +1752,7 @@ namespace FlowModel
             this.reports_DataGridView.AllowUserToAddRows = false;
             this.reports_DataGridView.AllowUserToDeleteRows = false;
             this.reports_DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.reports_DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.reportId_Column,
-            this.reportDate_Column,
-            this.reportName_Column});
+            this.reports_DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {this.reportId_Column, this.reportDate_Column, this.reportName_Column});
             this.reports_DataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.reports_DataGridView.Location = new System.Drawing.Point(401, 3);
             this.reports_DataGridView.Name = "reports_DataGridView";
@@ -1696,103 +1761,26 @@ namespace FlowModel
             this.reports_DataGridView.TabIndex = 3;
             this.reports_DataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ReportsRecordSelect);
             // 
-            // materialId_Column
+            // reportId_Column
             // 
-            this.materialId_Column.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.materialId_Column.HeaderText = "Id";
-            this.materialId_Column.Name = "materialId_Column";
-            this.materialId_Column.ReadOnly = true;
+            this.reportId_Column.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.reportId_Column.HeaderText = "Id";
+            this.reportId_Column.Name = "reportId_Column";
+            this.reportId_Column.ReadOnly = true;
             // 
-            // materialName_Column
+            // reportDate_Column
             // 
-            this.materialName_Column.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.materialName_Column.HeaderText = "Наименование";
-            this.materialName_Column.Name = "materialName_Column";
-            this.materialName_Column.ReadOnly = true;
+            this.reportDate_Column.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.reportDate_Column.HeaderText = "Дата";
+            this.reportDate_Column.Name = "reportDate_Column";
+            this.reportDate_Column.ReadOnly = true;
             // 
-            // materialParameterId_Column
+            // reportName_Column
             // 
-            this.materialParameterId_Column.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.materialParameterId_Column.HeaderText = "Id";
-            this.materialParameterId_Column.Name = "materialParameterId_Column";
-            this.materialParameterId_Column.ReadOnly = true;
-            // 
-            // material_Column
-            // 
-            this.material_Column.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.material_Column.HeaderText = "Материал";
-            this.material_Column.Name = "material_Column";
-            this.material_Column.ReadOnly = true;
-            // 
-            // parameter_Column
-            // 
-            this.parameter_Column.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.parameter_Column.HeaderText = "Параметр";
-            this.parameter_Column.Name = "parameter_Column";
-            this.parameter_Column.ReadOnly = true;
-            // 
-            // parameterValue_Column
-            // 
-            this.parameterValue_Column.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.parameterValue_Column.HeaderText = "Значение параметра";
-            this.parameterValue_Column.Name = "parameterValue_Column";
-            this.parameterValue_Column.ReadOnly = true;
-            // 
-            // parameterId_Column
-            // 
-            this.parameterId_Column.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.parameterId_Column.HeaderText = "Id";
-            this.parameterId_Column.Name = "parameterId_Column";
-            this.parameterId_Column.ReadOnly = true;
-            // 
-            // parameterName_Column
-            // 
-            this.parameterName_Column.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.parameterName_Column.HeaderText = "Наименование";
-            this.parameterName_Column.Name = "parameterName_Column";
-            this.parameterName_Column.ReadOnly = true;
-            // 
-            // parameterType_Column
-            // 
-            this.parameterType_Column.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.parameterType_Column.HeaderText = "Тип";
-            this.parameterType_Column.Name = "parameterType_Column";
-            this.parameterType_Column.ReadOnly = true;
-            // 
-            // parameterUnit_Column
-            // 
-            this.parameterUnit_Column.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.parameterUnit_Column.HeaderText = "Единица измерения";
-            this.parameterUnit_Column.Name = "parameterUnit_Column";
-            this.parameterUnit_Column.ReadOnly = true;
-            // 
-            // typeId_Column
-            // 
-            this.typeId_Column.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.typeId_Column.HeaderText = "Id";
-            this.typeId_Column.Name = "typeId_Column";
-            this.typeId_Column.ReadOnly = true;
-            // 
-            // typeName_Column
-            // 
-            this.typeName_Column.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.typeName_Column.HeaderText = "Наименование";
-            this.typeName_Column.Name = "typeName_Column";
-            this.typeName_Column.ReadOnly = true;
-            // 
-            // unitId_Column
-            // 
-            this.unitId_Column.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.unitId_Column.HeaderText = "Id";
-            this.unitId_Column.Name = "unitId_Column";
-            this.unitId_Column.ReadOnly = true;
-            // 
-            // unitName_Column
-            // 
-            this.unitName_Column.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.unitName_Column.HeaderText = "Наименование";
-            this.unitName_Column.Name = "unitName_Column";
-            this.unitName_Column.ReadOnly = true;
+            this.reportName_Column.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.reportName_Column.HeaderText = "Имя";
+            this.reportName_Column.Name = "reportName_Column";
+            this.reportName_Column.ReadOnly = true;
             // 
             // userId_Column
             // 
@@ -1821,27 +1809,8 @@ namespace FlowModel
             this.userStatus_Column.HeaderText = "Статус";
             this.userStatus_Column.Name = "userStatus_Column";
             this.userStatus_Column.ReadOnly = true;
-            // 
-            // reportId_Column
-            // 
-            this.reportId_Column.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.reportId_Column.HeaderText = "Id";
-            this.reportId_Column.Name = "reportId_Column";
-            this.reportId_Column.ReadOnly = true;
-            // 
-            // reportDate_Column
-            // 
-            this.reportDate_Column.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.reportDate_Column.HeaderText = "Дата";
-            this.reportDate_Column.Name = "reportDate_Column";
-            this.reportDate_Column.ReadOnly = true;
-            // 
-            // reportName_Column
-            // 
-            this.reportName_Column.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.reportName_Column.HeaderText = "Имя";
-            this.reportName_Column.Name = "reportName_Column";
-            this.reportName_Column.ReadOnly = true;
+            this.userStatus_Column.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.userStatus_Column.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // AdministratorView
             // 
@@ -1868,7 +1837,7 @@ namespace FlowModel
             this.tableLayoutPanel16.ResumeLayout(false);
             this.tableLayoutPanel24.ResumeLayout(false);
             this.tableLayoutPanel23.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.materials_DataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.materials_DataGridView)).EndInit();
             this.materialParameters_TabPage.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel6.ResumeLayout(false);
@@ -1881,7 +1850,7 @@ namespace FlowModel
             this.materialParametersId_GroupBox.ResumeLayout(false);
             this.materialParametersId_GroupBox.PerformLayout();
             this.material_GroupBox.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.materialParameters_DataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.materialParameters_DataGridView)).EndInit();
             this.parameters_TabPage.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel7.ResumeLayout(false);
@@ -1894,7 +1863,7 @@ namespace FlowModel
             this.parameterId_GroupBox.PerformLayout();
             this.parameterName_GroupBox.ResumeLayout(false);
             this.parameterName_GroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.parameters_DataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.parameters_DataGridView)).EndInit();
             this.types_TabPage.ResumeLayout(false);
             this.tableLayoutPanel8.ResumeLayout(false);
             this.tableLayoutPanel12.ResumeLayout(false);
@@ -1905,7 +1874,7 @@ namespace FlowModel
             this.typeId_GroupBox.PerformLayout();
             this.typeName_GroupBox.ResumeLayout(false);
             this.typeName_GroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.types_DataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.types_DataGridView)).EndInit();
             this.units_TabPage.ResumeLayout(false);
             this.tableLayoutPanel9.ResumeLayout(false);
             this.tableLayoutPanel13.ResumeLayout(false);
@@ -1916,7 +1885,7 @@ namespace FlowModel
             this.unitId_GroupBox.PerformLayout();
             this.unitName_GroupBox.ResumeLayout(false);
             this.unitName_GroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.units_DataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.units_DataGridView)).EndInit();
             this.users_TabPage.ResumeLayout(false);
             this.tableLayoutPanel10.ResumeLayout(false);
             this.tableLayoutPanel14.ResumeLayout(false);
@@ -1931,7 +1900,7 @@ namespace FlowModel
             this.userId_GroupBox.PerformLayout();
             this.userLogin_GroupBox.ResumeLayout(false);
             this.userLogin_GroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.users_DataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.users_DataGridView)).EndInit();
             this.report_TabPage.ResumeLayout(false);
             this.tableLayoutPanel11.ResumeLayout(false);
             this.tableLayoutPanel15.ResumeLayout(false);
@@ -1943,11 +1912,15 @@ namespace FlowModel
             this.reportId_GroupBox.PerformLayout();
             this.reportDate_GroupBox.ResumeLayout(false);
             this.reportDate_GroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.reports_DataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.reports_DataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
+
+        private System.Windows.Forms.DataGridViewTextBoxColumn userId_Column;
+        private System.Windows.Forms.DataGridViewTextBoxColumn userLogin_Column;
+        private System.Windows.Forms.DataGridViewTextBoxColumn userPassword_Column;
+        private System.Windows.Forms.DataGridViewTextBoxColumn userStatus_Column;
 
         #endregion
         private System.Windows.Forms.MenuStrip menuStrip;
@@ -2081,10 +2054,6 @@ namespace FlowModel
         private System.Windows.Forms.DataGridViewTextBoxColumn typeName_Column;
         private System.Windows.Forms.DataGridViewTextBoxColumn unitId_Column;
         private System.Windows.Forms.DataGridViewTextBoxColumn unitName_Column;
-        private System.Windows.Forms.DataGridViewTextBoxColumn userId_Column;
-        private System.Windows.Forms.DataGridViewTextBoxColumn userLogin_Column;
-        private System.Windows.Forms.DataGridViewTextBoxColumn userPassword_Column;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn userStatus_Column;
         private System.Windows.Forms.DataGridViewTextBoxColumn reportId_Column;
         private System.Windows.Forms.DataGridViewTextBoxColumn reportDate_Column;
         private System.Windows.Forms.DataGridViewTextBoxColumn reportName_Column;

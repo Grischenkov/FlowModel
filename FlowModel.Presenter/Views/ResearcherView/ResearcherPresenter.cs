@@ -18,7 +18,7 @@ namespace FlowModel.Presenter.Views.ResearcherView
 
         private ViewReport _report;
 
-        private MockProcessUnitOfWork _unitOfWork;
+        private readonly MockProcessUnitOfWork _unitOfWork;
 
         private Stopwatch _time;
 
@@ -36,10 +36,6 @@ namespace FlowModel.Presenter.Views.ResearcherView
             View.SelectMaterial += SelectMaterial;
             
             View.Calculate += Calculate;
-
-            View.ShowValueTable += ShowValueTable;
-            View.ShowTemperatureChart += ShowTemperatureChart;
-            View.ShowViscosityChart += ShowViscosityChart;
 
             View.Open += Open;
             View.Save += Save;
@@ -154,21 +150,6 @@ namespace FlowModel.Presenter.Views.ResearcherView
                 parameter.IsIncorrect = true;
                 throw new ArgumentNullException(parameter.ParameterName);
             }
-        }
-        
-        private void ShowValueTable()
-        {
-            //Controller.Run<DataTablePresenter, Parameters>(_process.Parameters);
-        }
-
-        private void ShowTemperatureChart()
-        {
-            //Controller.Run<ChartPresenter, Graph>(_temperatureChart);
-        }
-
-        private void ShowViscosityChart()
-        {
-            //Controller.Run<ChartPresenter, Graph>(_viscosityChart);
         }
 
         private void Open()

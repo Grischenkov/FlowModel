@@ -58,6 +58,7 @@
     <Compile Include="ParentInterfaces\IPresenter.cs" />
     <Compile Include="ParentInterfaces\IView.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\AdministratorView\AdministratorPresenter.cs" />
     <Compile Include="Views\AdministratorView\EntityInterfaces\IMaterial.cs" />
     <Compile Include="Views\AdministratorView\EntityInterfaces\IMaterialParameters.cs" />
     <Compile Include="Views\AdministratorView\EntityInterfaces\IParameters.cs" />
