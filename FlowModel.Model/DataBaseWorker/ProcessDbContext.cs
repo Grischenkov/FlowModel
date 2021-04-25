@@ -14,10 +14,5 @@ namespace FlowModel.Model
         public DbSet<Material> Materials { get; set; }
         public DbSet<Parameter> Parameters { get; set; }
         public DbSet<MaterialParameters> MaterialParameters { get; set; }
-
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        {
-            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
-        }
     }
 }

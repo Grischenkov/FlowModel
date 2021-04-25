@@ -27,7 +27,7 @@ namespace FlowModel.Presenter.Views.ResearcherView
             _process = new Process();
 
             _unitOfWork = new MockProcessUnitOfWork();
-
+            
             foreach (var material in _unitOfWork.Materials.GetList())
             {
                 View.MaterialItem = material.Name;
