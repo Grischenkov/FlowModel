@@ -18,7 +18,7 @@ namespace FlowModel.Presenter.Views.ResearcherView
 
         private ViewReport _report;
 
-        private MockProcessUnitOfWork _unitOfWork;
+        private readonly ProcessUnitOfWork _unitOfWork;
 
         private Stopwatch _time;
 
@@ -26,7 +26,7 @@ namespace FlowModel.Presenter.Views.ResearcherView
         {
             _process = new Process();
 
-            _unitOfWork = new MockProcessUnitOfWork();
+            _unitOfWork = new ProcessUnitOfWork(new ProcessDbContext());
             
             foreach (var material in _unitOfWork.Materials.GetList())
             {
@@ -36,10 +36,6 @@ namespace FlowModel.Presenter.Views.ResearcherView
             View.SelectMaterial += SelectMaterial;
             
             View.Calculate += Calculate;
-
-            View.ShowValueTable += ShowValueTable;
-            View.ShowTemperatureChart += ShowTemperatureChart;
-            View.ShowViscosityChart += ShowViscosityChart;
 
             View.Open += Open;
             View.Save += Save;
@@ -55,15 +51,15 @@ namespace FlowModel.Presenter.Views.ResearcherView
         {
             var material = _unitOfWork.Materials.GetList().First(x => x.Name == View.MaterialSelectedItem);
 
-            View.Density.Value = _unitOfWork.MaterialParameters.GetList().First(x => x.MaterialId == material.Id && x.Parameter.Name == "Density").ParameterValue.ToString();
-            View.HeatCapacity.Value = _unitOfWork.MaterialParameters.GetList().First(x => x.MaterialId == material.Id && x.Parameter.Name == "Heat capacity").ParameterValue.ToString();
-            View.MeltingTemperature.Value = _unitOfWork.MaterialParameters.GetList().First(x => x.MaterialId == material.Id && x.Parameter.Name == "Melting temperature").ParameterValue.ToString();
+            View.Density.Value = _unitOfWork.MaterialParameters.GetList().First(x => x.MaterialId == material.Id && x.Parameter.Name == "Плотность").ParameterValue.ToString();
+            View.HeatCapacity.Value = _unitOfWork.MaterialParameters.GetList().First(x => x.MaterialId == material.Id && x.Parameter.Name == "Теплоемкость").ParameterValue.ToString();
+            View.MeltingTemperature.Value = _unitOfWork.MaterialParameters.GetList().First(x => x.MaterialId == material.Id && x.Parameter.Name == "Температура плавления").ParameterValue.ToString();
 
-            View.ConsistencyIndex.Value = _unitOfWork.MaterialParameters.GetList().First(x => x.MaterialId == material.Id && x.Parameter.Name == "Consistency index").ParameterValue.ToString();
-            View.ViscosityIndex.Value = _unitOfWork.MaterialParameters.GetList().First(x => x.MaterialId == material.Id && x.Parameter.Name == "Viscosity index").ParameterValue.ToString();
-            View.ReferenceTemperature.Value = _unitOfWork.MaterialParameters.GetList().First(x => x.MaterialId == material.Id && x.Parameter.Name == "Reference temperature").ParameterValue.ToString();
-            View.FlowIndex.Value = _unitOfWork.MaterialParameters.GetList().First(x => x.MaterialId == material.Id && x.Parameter.Name == "Flow index").ParameterValue.ToString();
-            View.HeatTransferIndex.Value = _unitOfWork.MaterialParameters.GetList().First(x => x.MaterialId == material.Id && x.Parameter.Name == "Heat transfer index").ParameterValue.ToString();
+            View.ConsistencyIndex.Value = _unitOfWork.MaterialParameters.GetList().First(x => x.MaterialId == material.Id && x.Parameter.Name == "Коэффициент консистенции при температуре приведения").ParameterValue.ToString();
+            View.ViscosityIndex.Value = _unitOfWork.MaterialParameters.GetList().First(x => x.MaterialId == material.Id && x.Parameter.Name == "Температурный коэффициент вязкости").ParameterValue.ToString();
+            View.ReferenceTemperature.Value = _unitOfWork.MaterialParameters.GetList().First(x => x.MaterialId == material.Id && x.Parameter.Name == "Температура приведения").ParameterValue.ToString();
+            View.FlowIndex.Value = _unitOfWork.MaterialParameters.GetList().First(x => x.MaterialId == material.Id && x.Parameter.Name == "Индекс течения").ParameterValue.ToString();
+            View.HeatTransferIndex.Value = _unitOfWork.MaterialParameters.GetList().First(x => x.MaterialId == material.Id && x.Parameter.Name == "Коэффициент теплоотдачи от крышки канала к материалу").ParameterValue.ToString();
         }
 
         private void Calculation()
@@ -154,21 +150,6 @@ namespace FlowModel.Presenter.Views.ResearcherView
                 parameter.IsIncorrect = true;
                 throw new ArgumentNullException(parameter.ParameterName);
             }
-        }
-        
-        private void ShowValueTable()
-        {
-            //Controller.Run<DataTablePresenter, Parameters>(_process.Parameters);
-        }
-
-        private void ShowTemperatureChart()
-        {
-            //Controller.Run<ChartPresenter, Graph>(_temperatureChart);
-        }
-
-        private void ShowViscosityChart()
-        {
-            //Controller.Run<ChartPresenter, Graph>(_viscosityChart);
         }
 
         private void Open()

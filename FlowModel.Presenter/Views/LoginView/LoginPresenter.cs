@@ -3,6 +3,7 @@ using System.Security.Authentication;
 using FlowModel.Model;
 using FlowModel.Model.LoginService;
 using FlowModel.Presenter.ParentInterfaces;
+using FlowModel.Presenter.Views.AdministratorView;
 using FlowModel.Presenter.Views.ResearcherView;
 
 namespace FlowModel.Presenter.Views
@@ -44,10 +45,10 @@ namespace FlowModel.Presenter.Views
         {
             try
             {
-                _loginService.Login(user);
+                user = _loginService.Login(user);
                 if (user.IsAdministrator)
                 {
-                    //Controller.Run<AdministratorPresenter>();
+                    Controller.Run<AdministratorPresenter>();
                 }
                 else
                 {

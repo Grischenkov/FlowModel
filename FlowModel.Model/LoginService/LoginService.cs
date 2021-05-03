@@ -7,7 +7,7 @@ namespace FlowModel.Model.LoginService
     {
         public User Login(User user)
         {
-            var userUnitOfWork = new MockUserUnitOfWork();
+            var userUnitOfWork = new UserUnitOfWork(new UserDbContext());
             var users = userUnitOfWork.Users.GetList().ToList();
 
             foreach (var x in users.Where(x => x.Login == user.Login).Where(x => x.Password == user.Password))

@@ -52,6 +52,12 @@ namespace FlowModel.Model
 
         }
 
+        public void Delete(object id)
+        {
+            //TODO
+            throw new System.NotImplementedException();
+        }
+
         public void Delete(TEntity entity)
         {
             var obj = ((List<TEntity>) _entities[typeof(TEntity)]).First(x =>
@@ -125,12 +131,12 @@ namespace FlowModel.Model
             new Type
             {
                 Id = 1,
-                Name = "MaterialParameter"
+                Name = "Параметр материала"
             },
             new Type
             {
                 Id = 2,
-                Name = "ModelCoefficient"
+                Name = "Коэффициент модели"
             }
         };
 
@@ -139,7 +145,7 @@ namespace FlowModel.Model
             new Material
             {
                 Id = 1,
-                Name = "Материал"
+                Name = "Материал 1"
             }
         };
 
@@ -148,74 +154,58 @@ namespace FlowModel.Model
             new Parameter
             {
                 Id = 1,
-                Name = "Density",
+                Name = "Плотность",
                 TypeId = 1,
-                Type = _types.First(x => x.Id == 1),
-                UnitId = 2,
-                Unit = _units.First(x => x.Id == 2)
+                UnitId = 2
             },
             new Parameter
             {
                 Id = 2,
-                Name = "Heat capacity",
+                Name = "Теплоемкость",
                 TypeId = 1,
-                Type = _types.First(x => x.Id == 1),
-                UnitId = 3,
-                Unit = _units.First(x => x.Id == 3)
+                UnitId = 3
             },
             new Parameter
             {
                 Id = 3,
-                Name = "Melting temperature",
+                Name = "Температура плавления",
                 TypeId = 1,
-                Type = _types.First(x => x.Id == 1),
-                UnitId = 4,
-                Unit = _units.First(x => x.Id == 4)
+                UnitId = 4
             },
             new Parameter
             {
                 Id = 4,
-                Name = "Consistency index",
+                Name = "Коэффициент консистенции при температуре приведения",
                 TypeId = 2,
-                Type = _types.First(x => x.Id == 2),
-                UnitId = 5,
-                Unit = _units.First(x => x.Id == 5)
+                UnitId = 5
             },
             new Parameter
             {
                 Id = 5,
-                Name = "Viscosity index",
+                Name = "Температурный коэффициент вязкости",
                 TypeId = 2,
-                Type = _types.First(x => x.Id == 2),
-                UnitId = 6,
-                Unit = _units.First(x => x.Id == 6)
+                UnitId = 6
             },
             new Parameter
             {
                 Id = 6,
-                Name = "Reference temperature",
+                Name = "Температура приведения",
                 TypeId = 2,
-                Type = _types.First(x => x.Id == 2),
-                UnitId = 4,
-                Unit = _units.First(x => x.Id == 4)
+                UnitId = 4
             },
             new Parameter
             {
                 Id = 7,
-                Name = "Flow index",
+                Name = "Индекс течения",
                 TypeId = 2,
-                Type = _types.First(x => x.Id == 2),
-                UnitId = 1,
-                Unit = _units.First(x => x.Id == 1)
+                UnitId = 1
             },
             new Parameter
             {
                 Id = 8,
-                Name = "Heat transfer index",
+                Name = "Коэффициент теплоотдачи от крышки канала к материалу",
                 TypeId = 2,
-                Type = _types.First(x => x.Id == 2),
-                UnitId = 7,
-                Unit = _units.First(x => x.Id == 7)
+                UnitId = 7
             }
         };
 
@@ -225,72 +215,56 @@ namespace FlowModel.Model
             {
                 Id = 1,
                 MaterialId = 1,
-                Material = _materials.First(x => x.Id == 1),
                 ParameterId = 1,
-                Parameter = _parameters.First(x => x.Id == 1),
                 ParameterValue = 920
             },
             new MaterialParameters
             {
                 Id = 2,
                 MaterialId = 1,
-                Material = _materials.First(x => x.Id == 1),
                 ParameterId = 2,
-                Parameter = _parameters.First(x => x.Id == 2),
                 ParameterValue = 2300
             },
             new MaterialParameters
             {
                 Id = 3,
                 MaterialId = 1,
-                Material = _materials.First(x => x.Id == 1),
                 ParameterId = 3,
-                Parameter = _parameters.First(x => x.Id == 3),
                 ParameterValue = 120
             },
             new MaterialParameters
             {
                 Id = 4,
                 MaterialId = 1,
-                Material = _materials.First(x => x.Id == 1),
                 ParameterId = 4,
-                Parameter = _parameters.First(x => x.Id == 4),
                 ParameterValue = 50000
             },
             new MaterialParameters
             {
                 Id = 5,
                 MaterialId = 1,
-                Material = _materials.First(x => x.Id == 1),
                 ParameterId = 5,
-                Parameter = _parameters.First(x => x.Id == 5),
                 ParameterValue = 0.03
             },
             new MaterialParameters
             {
                 Id = 6,
                 MaterialId = 1,
-                Material = _materials.First(x => x.Id == 1),
                 ParameterId = 6,
-                Parameter = _parameters.First(x => x.Id == 6),
                 ParameterValue = 120
             },
             new MaterialParameters
             {
                 Id = 7,
                 MaterialId = 1,
-                Material = _materials.First(x => x.Id == 1),
                 ParameterId = 7,
-                Parameter = _parameters.First(x => x.Id == 7),
                 ParameterValue = 0.35
             },
             new MaterialParameters
             {
                 Id = 8,
                 MaterialId = 1,
-                Material = _materials.First(x => x.Id == 1),
                 ParameterId = 8,
-                Parameter = _parameters.First(x => x.Id == 8),
                 ParameterValue = 250
             }
         };

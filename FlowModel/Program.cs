@@ -4,6 +4,7 @@ using FlowModel.Model.LoginService;
 using FlowModel.Presenter;
 using FlowModel.Presenter.ParentInterfaces;
 using FlowModel.Presenter.Views;
+using FlowModel.Presenter.Views.AdministratorView;
 using FlowModel.Presenter.Views.ReportView;
 using FlowModel.Presenter.Views.ResearcherView;
 
@@ -18,6 +19,7 @@ namespace FlowModel
             Application.SetCompatibleTextRenderingDefault(false);
 
             IApplicationController controller = new ApplicationController(new LightInjectAdapter())
+                .RegisterView<IAdministratorView, AdministratorView>()
                 .RegisterView<IResearcherView, ResearcherView>()
                 .RegisterView<IReportView, ReportView>()
                 .RegisterView<ILoginView, LoginView>()

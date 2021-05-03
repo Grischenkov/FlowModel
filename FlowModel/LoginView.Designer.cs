@@ -95,6 +95,7 @@
             this.password_TextBox.Name = "password_TextBox";
             this.password_TextBox.Size = new System.Drawing.Size(553, 20);
             this.password_TextBox.TabIndex = 0;
+            this.password_TextBox.UseSystemPasswordChar = true;
             // 
             // tableLayoutPanel2
             // 
@@ -132,6 +133,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "LoginView";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Вход";
             this.login_GroupBox.ResumeLayout(false);
             this.login_GroupBox.PerformLayout();
@@ -140,7 +142,6 @@
             this.password_GroupBox.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
-
         }
 
         #endregion
