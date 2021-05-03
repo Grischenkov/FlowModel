@@ -5,9 +5,9 @@ namespace FlowModel.Presenter.Views.AdministratorView.EntityInterfaces
     public interface IReports
     {
         void FillReportsRecords(string[][] records);
-        string ReportId { set; }
-        string ReportDate { set; }
-        string ReportName { set; }
+        string ReportId { get; set; }
+        string ReportDate { get; set; }
+        string ReportName { get; set; }
         event Action DeleteReport;
     }
 }

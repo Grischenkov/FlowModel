@@ -32,6 +32,7 @@ namespace FlowModel
             get => material_ComboBox.SelectedItem.ToString();
             set => material_ComboBox.Items.Add(value);
         }
+        public void MaterialItemsClear() {material_ComboBox.Items.Clear();}
         public string MaterialParametersMaterial
         {
             get => material_ComboBox.SelectedItem.ToString();
@@ -42,12 +43,13 @@ namespace FlowModel
             get => parameter_ComboBox.SelectedItem.ToString();
             set => parameter_ComboBox.Items.Add(value);
         }
+        public void ParameterItemsClear() {parameter_ComboBox.Items.Clear();}
         public string MaterialParametersParameter
         {
             get => parameter_ComboBox.SelectedItem.ToString(); 
             set => parameter_ComboBox.SelectedItem = value;
         }
-        public string MaterialParametersParameterValue
+        public string ParameterValue
         {
             get => parameterValue_TextBox.Text; 
             set => parameterValue_TextBox.Text = value;
@@ -71,6 +73,7 @@ namespace FlowModel
             get => parameterType_ComboBox.SelectedItem.ToString();
             set => parameterType_ComboBox.Items.Add(value);
         }
+        public void TypeItemsClear() {parameter_ComboBox.Items.Clear();}
         public string ParameterType
         {
             get => parameterType_ComboBox.SelectedItem.ToString();
@@ -81,6 +84,7 @@ namespace FlowModel
             get => parameterUnit_ComboBox.SelectedItem.ToString();
             set => parameterUnit_ComboBox.Items.Add(value);
         }
+        public void UnitItemsClear() {parameterUnit_ComboBox.Items.Clear();}
         public string ParameterUnit
         {
             get => parameterUnit_ComboBox.SelectedItem.ToString();
@@ -144,14 +148,17 @@ namespace FlowModel
         
         public string ReportId
         {
+            get => reportId_TextBox.Text;
             set => reportId_TextBox.Text = value;
         }
         public string ReportDate
         {
+            get => reportDate_TextBox.Text;
             set => reportDate_TextBox.Text = value;
         }
         public string ReportName
         {
+            get => reportName_TextBox.Text;
             set => reportName_TextBox.Text = value;
         }
         public event Action DeleteReport;
@@ -249,6 +256,7 @@ namespace FlowModel
         public void FillReportsRecords(string[][] records)
         {
             if (records.Length == 0) return;
+            reports_DataGridView.RowCount = 0;
             reports_DataGridView.RowCount = records.Length + 1;
             for (var i = 0; i < records.Length; i++)
             {
@@ -269,6 +277,7 @@ namespace FlowModel
         public void FillUsersRecords(string[][] records)
         {
             if (records.Length == 0) return;
+            users_DataGridView.RowCount = 0;
             users_DataGridView.RowCount = records.Length + 1;
             for (var i = 0; i < records.Length; i++)
             {
@@ -288,6 +297,7 @@ namespace FlowModel
         public void FillUnitsRecords(string[][] records)
         {
             if (records.Length == 0) return;
+            units_DataGridView.RowCount = 0;
             units_DataGridView.RowCount = records.Length + 1;
             for (var i = 0; i < records.Length; i++)
             {
@@ -305,6 +315,7 @@ namespace FlowModel
         public void FillTypesRecords(string[][] records)
         {
             if (records.Length == 0) return;
+            types_DataGridView.RowCount = 0;
             types_DataGridView.RowCount = records.Length + 1;
             for (var i = 0; i < records.Length; i++)
             {
@@ -324,6 +335,7 @@ namespace FlowModel
         public void FillParametersRecords(string[][] records)
         {
             if (records.Length == 0) return;
+            parameters_DataGridView.RowCount = 0;
             parameters_DataGridView.RowCount = records.Length + 1;
             for (var i = 0; i < records.Length; i++)
             {
@@ -340,11 +352,12 @@ namespace FlowModel
             MaterialParametersId = materialParameters_DataGridView.Rows[e.RowIndex].Cells[0].Value.ToString();
             MaterialParametersMaterial = materialParameters_DataGridView.Rows[e.RowIndex].Cells[1].Value.ToString();
             MaterialParametersParameter = materialParameters_DataGridView.Rows[e.RowIndex].Cells[2].Value.ToString();
-            MaterialParametersParameterValue = materialParameters_DataGridView.Rows[e.RowIndex].Cells[3].Value.ToString();
+            ParameterValue = materialParameters_DataGridView.Rows[e.RowIndex].Cells[3].Value.ToString();
         }
         public void FillMaterialParametersRecords(string[][] records)
         {
             if (records.Length == 0) return;
+            materialParameters_DataGridView.RowCount = 0;
             materialParameters_DataGridView.RowCount = records.Length + 1;
             for (var i = 0; i < records.Length; i++)
             {
@@ -364,6 +377,7 @@ namespace FlowModel
         public void FillMaterialsRecords(string[][] records)
         {
             if (records.Length == 0) return;
+            materials_DataGridView.RowCount = 0;
             materials_DataGridView.RowCount = records.Length + 1;
             for (var i = 0; i < records.Length; i++)
             {
