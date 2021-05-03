@@ -10,10 +10,5 @@ namespace FlowModel.Model
         }
 
         public DbSet<Report> Reports { get; set; }
-
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        {
-            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
-        }
     }
 }

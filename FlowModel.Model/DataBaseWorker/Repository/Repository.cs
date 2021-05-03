@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 
@@ -7,10 +8,11 @@ using System.Linq;
 // ReSharper disable MemberCanBePrivate.Global
 namespace FlowModel.Model
 {
-    public class Repository<TEntity, TContext> : IRepository<TEntity> 
+    public class Repository<TEntity, TContext> : IRepository<TEntity>, IDisposable
         where TEntity : class
         where TContext : DbContext
     {
+        private bool _disposed = false;
         internal DbContext Context;
         internal DbSet<TEntity> DbSet;
 
@@ -41,14 +43,38 @@ namespace FlowModel.Model
             Context.Entry(entity).State = EntityState.Modified;
         }
 
-        public virtual void Delete(TEntity entity)
+        public virtual void Delete(object id)
         {
-            if (Context.Entry(entity).State == EntityState.Detached)
+            TEntity entityToDelete = DbSet.Find(id);
+            Delete(entityToDelete);
+        }
+
+        public virtual void Delete(TEntity entityToDelete)
+        {
+            if (Context.Entry(entityToDelete).State == EntityState.Detached)
             {
-                DbSet.Attach(entity);
+                DbSet.Attach(entityToDelete);
+            }
+            DbSet.Remove(entityToDelete);
+        }
+
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (!_disposed)
+            {
+                if (disposing)
+                {
+                    Context.Dispose();
+                }
             }
 
-            DbSet.Remove(entity);
+            _disposed = true;
         }
     }
 }

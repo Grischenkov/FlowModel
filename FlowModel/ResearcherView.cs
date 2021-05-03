@@ -8,6 +8,8 @@ namespace FlowModel
 {
     public partial class ResearcherView : Form, IResearcherView
     {
+        private readonly ApplicationContext _context;
+        
         public bool IsProcessing
         {
             set
@@ -90,22 +92,24 @@ namespace FlowModel
             set => referenceTemperature_ParameterInput.Value = value.Value;
         }
 
-        public ResearcherView()
+        public ResearcherView(ApplicationContext context)
         {
+            _context = context;
+            
             InitializeComponent();
 
             progressBar.Style = ProgressBarStyle.Marquee;
             progressBar.MarqueeAnimationSpeed = 0;
             progressBar.Visible = false;
 
-            open_ToolStrip.Click += (sender, args) => Action(Open);
-            save_ToolStrip.Click += (sender, args) => Action(Save);
-            exit_ToolStrip.Click += (sender, args) => Action(Exit);
-            export_ToolStrip.Click += (sender, args) => Action(Export);
+                open_ToolStrip.Click += (sender, args) => Action(Open);
+                save_ToolStrip.Click += (sender, args) => Action(Save);
+                exit_ToolStrip.Click += (sender, args) => Action(Exit);
+                export_ToolStrip.Click += (sender, args) => Action(Export);
 
-            help_ToolStrip.Click += (sender, args) => Action(Help);
-            about_ToolStrip.Click += (sender, args) => Action(About);
-            setting_ToolStrip.Click += (sender, args) => Action(Settings);
+                help_ToolStrip.Click += (sender, args) => Action(Help);
+                about_ToolStrip.Click += (sender, args) => Action(About);
+                setting_ToolStrip.Click += (sender, args) => Action(Settings);
 
             material_ComboBox.SelectedIndexChanged += (sender, args) => Action(SelectMaterial);
 
@@ -114,7 +118,8 @@ namespace FlowModel
 
         public new void Show()
         {
-            Application.Run(this);
+            _context.MainForm = this;
+            base.Show();
         }
 
         public void ShowError(string errorMessage)
@@ -159,38 +164,6 @@ namespace FlowModel
             {
                 ShowError(e.Message);
             }
-        }
-
-        private async Task AsyncAction(Action action)
-        {
-            try
-            {
-                await Task.Run(action);
-            }
-            catch (Exception e)
-            {
-                ShowError(e.Message);
-            }
-        }
-
-        private void performanceOutput_GroupBox_Enter(object sender, EventArgs e)
-        {
-        }
-
-        private void temperatureOutput_GroupBox_Enter(object sender, EventArgs e)
-        {
-        }
-
-        private void viscosityOutput_GroupBox_Enter(object sender, EventArgs e)
-        {
-        }
-
-        private void time_Label_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void memoryOutput_GroupBox_Enter(object sender, EventArgs e)
-        {
         }
     }
 }

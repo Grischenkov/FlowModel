@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridView = new System.Windows.Forms.DataGridView();
@@ -61,10 +61,10 @@
             this.time_Label = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.dataGridView)).BeginInit();
             this.tableLayoutPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.viscosity_Chart)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.temperature_Chart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.viscosity_Chart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.temperature_Chart)).BeginInit();
             this.tableLayoutPanel4.SuspendLayout();
             this.memoryOutput_GroupBox.SuspendLayout();
             this.tableLayoutPanel18.SuspendLayout();
@@ -114,10 +114,7 @@
             this.dataGridView.AllowUserToAddRows = false;
             this.dataGridView.AllowUserToDeleteRows = false;
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Coordinate,
-            this.Temperature,
-            this.Viscosity});
+            this.dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {this.Coordinate, this.Temperature, this.Viscosity});
             this.dataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView.Location = new System.Drawing.Point(3, 3);
             this.dataGridView.Name = "dataGridView";
@@ -164,34 +161,34 @@
             // 
             // viscosity_Chart
             // 
-            chartArea3.Name = "ChartArea1";
-            this.viscosity_Chart.ChartAreas.Add(chartArea3);
+            chartArea1.Name = "ChartArea1";
+            this.viscosity_Chart.ChartAreas.Add(chartArea1);
             this.viscosity_Chart.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend3.Name = "Legend1";
-            this.viscosity_Chart.Legends.Add(legend3);
+            legend1.Name = "Legend1";
+            this.viscosity_Chart.Legends.Add(legend1);
             this.viscosity_Chart.Location = new System.Drawing.Point(3, 181);
             this.viscosity_Chart.Name = "viscosity_Chart";
-            series3.ChartArea = "ChartArea1";
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.viscosity_Chart.Series.Add(series3);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.viscosity_Chart.Series.Add(series1);
             this.viscosity_Chart.Size = new System.Drawing.Size(665, 173);
             this.viscosity_Chart.TabIndex = 2;
             this.viscosity_Chart.Text = "chart1";
             // 
             // temperature_Chart
             // 
-            chartArea4.Name = "ChartArea1";
-            this.temperature_Chart.ChartAreas.Add(chartArea4);
+            chartArea2.Name = "ChartArea1";
+            this.temperature_Chart.ChartAreas.Add(chartArea2);
             this.temperature_Chart.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend4.Name = "Legend1";
-            this.temperature_Chart.Legends.Add(legend4);
+            legend2.Name = "Legend1";
+            this.temperature_Chart.Legends.Add(legend2);
             this.temperature_Chart.Location = new System.Drawing.Point(3, 3);
             this.temperature_Chart.Name = "temperature_Chart";
-            series4.ChartArea = "ChartArea1";
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            this.temperature_Chart.Series.Add(series4);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.temperature_Chart.Series.Add(series2);
             this.temperature_Chart.Size = new System.Drawing.Size(665, 172);
             this.temperature_Chart.TabIndex = 1;
             this.temperature_Chart.Text = "chart";
@@ -214,7 +211,7 @@
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 86F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(1128, 86);
             this.tableLayoutPanel4.TabIndex = 1;
             // 
@@ -248,7 +245,7 @@
             // 
             this.memory_Label.AutoSize = true;
             this.memory_Label.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.memory_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.memory_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
             this.memory_Label.Location = new System.Drawing.Point(3, 0);
             this.memory_Label.Name = "memory_Label";
             this.memory_Label.Size = new System.Drawing.Size(210, 61);
@@ -259,7 +256,7 @@
             // 
             this.viscosityOutput_GroupBox.Controls.Add(this.tableLayoutPanel13);
             this.viscosityOutput_GroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.viscosityOutput_GroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.viscosityOutput_GroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
             this.viscosityOutput_GroupBox.Location = new System.Drawing.Point(228, 3);
             this.viscosityOutput_GroupBox.Name = "viscosityOutput_GroupBox";
             this.viscosityOutput_GroupBox.Size = new System.Drawing.Size(219, 80);
@@ -286,7 +283,7 @@
             // 
             this.viscosity_Label.AutoSize = true;
             this.viscosity_Label.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.viscosity_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.viscosity_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
             this.viscosity_Label.Location = new System.Drawing.Point(3, 0);
             this.viscosity_Label.Name = "viscosity_Label";
             this.viscosity_Label.Size = new System.Drawing.Size(207, 61);
@@ -297,7 +294,7 @@
             // 
             this.temperatureOutput_GroupBox.Controls.Add(this.tableLayoutPanel14);
             this.temperatureOutput_GroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.temperatureOutput_GroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.temperatureOutput_GroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
             this.temperatureOutput_GroupBox.Location = new System.Drawing.Point(453, 3);
             this.temperatureOutput_GroupBox.Name = "temperatureOutput_GroupBox";
             this.temperatureOutput_GroupBox.Size = new System.Drawing.Size(219, 80);
@@ -324,7 +321,7 @@
             // 
             this.temperature_Label.AutoSize = true;
             this.temperature_Label.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.temperature_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.temperature_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
             this.temperature_Label.Location = new System.Drawing.Point(3, 0);
             this.temperature_Label.Name = "temperature_Label";
             this.temperature_Label.Size = new System.Drawing.Size(207, 61);
@@ -335,7 +332,7 @@
             // 
             this.performanceOutput_GroupBox.Controls.Add(this.tableLayoutPanel15);
             this.performanceOutput_GroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.performanceOutput_GroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.performanceOutput_GroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
             this.performanceOutput_GroupBox.Location = new System.Drawing.Point(3, 3);
             this.performanceOutput_GroupBox.Name = "performanceOutput_GroupBox";
             this.performanceOutput_GroupBox.Size = new System.Drawing.Size(219, 80);
@@ -362,7 +359,7 @@
             // 
             this.performance_Label.AutoSize = true;
             this.performance_Label.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.performance_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.performance_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
             this.performance_Label.Location = new System.Drawing.Point(3, 0);
             this.performance_Label.Name = "performance_Label";
             this.performance_Label.Size = new System.Drawing.Size(207, 61);
@@ -399,7 +396,7 @@
             // 
             this.time_Label.AutoSize = true;
             this.time_Label.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.time_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.time_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
             this.time_Label.Location = new System.Drawing.Point(3, 0);
             this.time_Label.Name = "time_Label";
             this.time_Label.Size = new System.Drawing.Size(207, 61);
@@ -414,13 +411,14 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.MinimumSize = new System.Drawing.Size(1150, 500);
             this.Name = "ReportView";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ReportView";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.dataGridView)).EndInit();
             this.tableLayoutPanel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.viscosity_Chart)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.temperature_Chart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.viscosity_Chart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.temperature_Chart)).EndInit();
             this.tableLayoutPanel4.ResumeLayout(false);
             this.memoryOutput_GroupBox.ResumeLayout(false);
             this.tableLayoutPanel18.ResumeLayout(false);
@@ -438,7 +436,6 @@
             this.tableLayoutPanel17.ResumeLayout(false);
             this.tableLayoutPanel17.PerformLayout();
             this.ResumeLayout(false);
-
         }
 
         #endregion

@@ -2,6 +2,7 @@
 {
     public class MaterialParameters : IEntity
     {
+        [System.ComponentModel.DataAnnotations.Schema.DatabaseGenerated(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption.None)]
         public int Id { get; set; }
         
         public int MaterialId { get; set; }
