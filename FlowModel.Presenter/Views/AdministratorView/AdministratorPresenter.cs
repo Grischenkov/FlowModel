@@ -4,6 +4,7 @@ using System.Data.Entity;
 using System.Linq;
 using FlowModel.Model;
 using FlowModel.Presenter.ParentInterfaces;
+using FlowModel.Presenter.Views.AboutView;
 
 namespace FlowModel.Presenter.Views.AdministratorView
 {
@@ -469,7 +470,7 @@ namespace FlowModel.Presenter.Views.AdministratorView
 
         private void About()
         {
-            //Controller.Run<AboutPresenter>();
+            Controller.Run<AboutPresenter>();
         }
     }
 }

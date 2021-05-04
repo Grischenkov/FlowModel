@@ -5,6 +5,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using FlowModel.Model;
 using FlowModel.Presenter.ParentInterfaces;
+using FlowModel.Presenter.Views.AboutView;
 using FlowModel.Presenter.Views.ReportView;
 using Process = FlowModel.Model.Process;
 
@@ -179,7 +180,7 @@ namespace FlowModel.Presenter.Views.ResearcherView
 
         private void About()
         {
-            //Controller.Run<AboutPresenter>();
+            Controller.Run<AboutPresenter>();
         }
     }
 }
