@@ -114,7 +114,7 @@ namespace FlowModel.Presenter.Views.ResearcherView
 
             _report = new ViewReport(_process, _memory, _time.ElapsedMilliseconds);
             
-            //Export(DateTime.Now);
+            Export(DateTime.Now);
         }
 
         private void Calculate()
@@ -234,6 +234,53 @@ namespace FlowModel.Presenter.Views.ResearcherView
             }
         }
         
+        private void Export(DateTime dateTime)
+        {
+            string str = "Report_" + dateTime.Year + "-" + dateTime.Month + "-" +
+                         dateTime.Day + "-" + dateTime.Hour + "-" + dateTime.Minute + "-" + dateTime.Second;
+            string filePath = Directory.GetCurrentDirectory() + "\\" + str;
+
+            Application excel = new Application();
+            Workbook workbook = GenerateWorkbook(ref excel);
+
+            workbook.SaveAs(filePath);
+            try
+            {
+                workbook.Close();
+                excel.Quit();
+            }
+            catch (Exception)
+            {
+                // ignored
+            }
+
+            byte[] rep = File.ReadAllBytes(filePath + ".xlsx");
+            using (var unit = new ReportUnitOfWork(new ReportDbContext()))
+            {
+                int maxId = 1;
+                try
+                {
+                    maxId = unit.Reports.GetList().Max(x => x.Id) + 1;
+                }
+                catch (Exception e)
+                {
+                    // ignored
+                }
+
+
+                unit.Reports.Insert(new Report
+                {
+                    Id = maxId,
+                    Name = filePath,
+                    DateTime = dateTime,
+                    File = rep
+                });
+                
+                unit.Commit();
+            }
+            File.Delete(filePath + ".xlsx");
+            View.ShowSuccess("Отчет сохранен в базе данных!");
+        }
         
         private Workbook GenerateWorkbook(ref Application excel)
         {
