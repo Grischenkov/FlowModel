@@ -80,6 +80,8 @@
     <Compile Include="Views\AdministratorView\EntityInterfaces\IUnits.cs" />
     <Compile Include="Views\AdministratorView\EntityInterfaces\IUsers.cs" />
     <Compile Include="Views\AdministratorView\IAdministratorView.cs" />
+    <Compile Include="Views\HistoryView\HistoryPresenter.cs" />
+    <Compile Include="Views\HistoryView\IHistoryView.cs" />
     <Compile Include="Views\IFileMenuView.cs" />
     <Compile Include="Views\IHelpMenuView.cs" />
     <Compile Include="Views\IParameterInput.cs" />

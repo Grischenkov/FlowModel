@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using FlowModel.Model;
 using FlowModel.Presenter.ParentInterfaces;
 using FlowModel.Presenter.Views.AboutView;
+using FlowModel.Presenter.Views.HistoryView;
 using FlowModel.Presenter.Views.ReportView;
 using Process = FlowModel.Model.Process;
 using Microsoft.Office.Interop.Excel;
@@ -184,7 +185,7 @@ namespace FlowModel.Presenter.Views.ResearcherView
 
         private void Open()
         {
-            //TODO Implement loading functionality
+            Controller.Run<HistoryPresenter>();
         }
 
         private void Save()
@@ -271,7 +272,7 @@ namespace FlowModel.Presenter.Views.ResearcherView
                 unit.Reports.Insert(new Report
                 {
                     Id = maxId,
-                    Name = filePath,
+                    Name = str,
                     DateTime = dateTime,
                     File = rep
                 });

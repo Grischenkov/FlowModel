@@ -72,6 +72,12 @@
     <Compile Include="AdministratorView.Designer.cs">
       <DependentUpon>AdministratorView.cs</DependentUpon>
     </Compile>
+    <Compile Include="HistoryView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HistoryView.Designer.cs">
+      <DependentUpon>HistoryView.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +110,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdministratorView.resx">
       <DependentUpon>AdministratorView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HistoryView.resx">
+      <DependentUpon>HistoryView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginView.resx">
       <DependentUpon>LoginView.cs</DependentUpon>

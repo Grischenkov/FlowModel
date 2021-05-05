@@ -147,6 +147,10 @@ namespace FlowModel
             this.userLogin_GroupBox = new System.Windows.Forms.GroupBox();
             this.userLogin_TextBox = new System.Windows.Forms.TextBox();
             this.users_DataGridView = new System.Windows.Forms.DataGridView();
+            this.userId_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userLogin_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userPassword_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userStatus_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.report_TabPage = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
@@ -163,10 +167,6 @@ namespace FlowModel
             this.reportId_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.reportDate_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.reportName_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userId_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userLogin_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userPassword_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userStatus_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabControl.SuspendLayout();
@@ -260,6 +260,7 @@ namespace FlowModel
             // 
             // open_ToolStrip
             // 
+            this.open_ToolStrip.Enabled = false;
             this.open_ToolStrip.Name = "open_ToolStrip";
             this.open_ToolStrip.ShortcutKeys = ((System.Windows.Forms.Keys) ((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
             this.open_ToolStrip.Size = new System.Drawing.Size(173, 22);
@@ -267,6 +268,7 @@ namespace FlowModel
             // 
             // save_ToolStrip
             // 
+            this.save_ToolStrip.Enabled = false;
             this.save_ToolStrip.Name = "save_ToolStrip";
             this.save_ToolStrip.ShortcutKeys = ((System.Windows.Forms.Keys) ((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
             this.save_ToolStrip.Size = new System.Drawing.Size(173, 22);
@@ -274,6 +276,7 @@ namespace FlowModel
             // 
             // export_ToolStrip
             // 
+            this.export_ToolStrip.Enabled = false;
             this.export_ToolStrip.Name = "export_ToolStrip";
             this.export_ToolStrip.ShortcutKeys = ((System.Windows.Forms.Keys) ((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
             this.export_ToolStrip.Size = new System.Drawing.Size(173, 22);
@@ -300,6 +303,7 @@ namespace FlowModel
             // 
             // setting_ToolStrip
             // 
+            this.setting_ToolStrip.Enabled = false;
             this.setting_ToolStrip.Name = "setting_ToolStrip";
             this.setting_ToolStrip.ShortcutKeys = ((System.Windows.Forms.Keys) (((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) | System.Windows.Forms.Keys.S)));
             this.setting_ToolStrip.Size = new System.Drawing.Size(206, 22);
@@ -312,6 +316,7 @@ namespace FlowModel
             // 
             // help_ToolStrip
             // 
+            this.help_ToolStrip.Enabled = false;
             this.help_ToolStrip.Name = "help_ToolStrip";
             this.help_ToolStrip.ShortcutKeys = ((System.Windows.Forms.Keys) ((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.H)));
             this.help_ToolStrip.Size = new System.Drawing.Size(206, 22);
@@ -1597,6 +1602,36 @@ namespace FlowModel
             this.users_DataGridView.TabIndex = 3;
             this.users_DataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.UsersRecordSelect);
             // 
+            // userId_Column
+            // 
+            this.userId_Column.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.userId_Column.HeaderText = "Id";
+            this.userId_Column.Name = "userId_Column";
+            this.userId_Column.ReadOnly = true;
+            // 
+            // userLogin_Column
+            // 
+            this.userLogin_Column.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.userLogin_Column.HeaderText = "Логин";
+            this.userLogin_Column.Name = "userLogin_Column";
+            this.userLogin_Column.ReadOnly = true;
+            // 
+            // userPassword_Column
+            // 
+            this.userPassword_Column.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.userPassword_Column.HeaderText = "Пароль";
+            this.userPassword_Column.Name = "userPassword_Column";
+            this.userPassword_Column.ReadOnly = true;
+            // 
+            // userStatus_Column
+            // 
+            this.userStatus_Column.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.userStatus_Column.HeaderText = "Статус";
+            this.userStatus_Column.Name = "userStatus_Column";
+            this.userStatus_Column.ReadOnly = true;
+            this.userStatus_Column.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.userStatus_Column.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
             // report_TabPage
             // 
             this.report_TabPage.Controls.Add(this.tableLayoutPanel11);
@@ -1781,36 +1816,6 @@ namespace FlowModel
             this.reportName_Column.HeaderText = "Имя";
             this.reportName_Column.Name = "reportName_Column";
             this.reportName_Column.ReadOnly = true;
-            // 
-            // userId_Column
-            // 
-            this.userId_Column.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.userId_Column.HeaderText = "Id";
-            this.userId_Column.Name = "userId_Column";
-            this.userId_Column.ReadOnly = true;
-            // 
-            // userLogin_Column
-            // 
-            this.userLogin_Column.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.userLogin_Column.HeaderText = "Логин";
-            this.userLogin_Column.Name = "userLogin_Column";
-            this.userLogin_Column.ReadOnly = true;
-            // 
-            // userPassword_Column
-            // 
-            this.userPassword_Column.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.userPassword_Column.HeaderText = "Пароль";
-            this.userPassword_Column.Name = "userPassword_Column";
-            this.userPassword_Column.ReadOnly = true;
-            // 
-            // userStatus_Column
-            // 
-            this.userStatus_Column.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.userStatus_Column.HeaderText = "Статус";
-            this.userStatus_Column.Name = "userStatus_Column";
-            this.userStatus_Column.ReadOnly = true;
-            this.userStatus_Column.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.userStatus_Column.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // AdministratorView
             // 
