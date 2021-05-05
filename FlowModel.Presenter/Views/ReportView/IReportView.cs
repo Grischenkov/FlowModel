@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms.DataVisualization.Charting;
+﻿using System;
+using System.Windows.Forms.DataVisualization.Charting;
 using FlowModel.Presenter.ParentInterfaces;
 
 namespace FlowModel.Presenter.Views.ReportView

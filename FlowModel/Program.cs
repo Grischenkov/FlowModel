@@ -6,6 +6,7 @@ using FlowModel.Presenter.ParentInterfaces;
 using FlowModel.Presenter.Views;
 using FlowModel.Presenter.Views.AboutView;
 using FlowModel.Presenter.Views.AdministratorView;
+using FlowModel.Presenter.Views.HistoryView;
 using FlowModel.Presenter.Views.ReportView;
 using FlowModel.Presenter.Views.ResearcherView;
 
@@ -25,6 +26,7 @@ namespace FlowModel
                 .RegisterView<IReportView, ReportView>()
                 .RegisterView<ILoginView, LoginView>()
                 .RegisterView<IAboutView, AboutView>()
+                .RegisterView<IHistoryView, HistoryView>()
                 .RegisterService<ILoginService, LoginService>()
                 .RegisterInstance(new ApplicationContext());
 

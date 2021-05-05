@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 using FlowModel.Presenter.Views.ReportView;
 
@@ -29,17 +30,17 @@ namespace FlowModel
 
         public void ShowError(string errorMessage)
         {
-            throw new System.NotImplementedException();
+            MessageBox.Show(errorMessage, @"Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         public void ShowWarning(string warningMessage)
         {
-            throw new System.NotImplementedException();
+            MessageBox.Show(warningMessage, @"Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         public void ShowSuccess(string successMessage)
         {
-            throw new System.NotImplementedException();
+            MessageBox.Show(successMessage, @"Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void InitializeChart()
