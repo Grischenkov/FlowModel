@@ -305,7 +305,7 @@ namespace FlowModel.Presenter.Views.AdministratorView
             
             var report = new Report()
             {
-                Id = Convert.ToInt32(View.UserId)
+                Id = Convert.ToInt32(View.ReportId)
             };
 
             ProcessEntity(report, new ReportDbContext(), action);    

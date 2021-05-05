@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using FlowModel.Model;
+﻿using FlowModel.Model;
 using FlowModel.Presenter.ParentInterfaces;
 
 namespace FlowModel.Presenter.Views.ReportView
