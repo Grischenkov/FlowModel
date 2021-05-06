@@ -16,16 +16,26 @@ namespace FlowModel
         private Series _temperatureSeries;
         private Series _viscositySeries;
 
+        public event Action Export;
+
         public ReportView()
         {
             InitializeComponent();
+            export_Button.Click += (sender, args) => Action(Export);
             DoubleBuffered = true;
             InitializeChart();
         }
 
-        public new void Show()
+        private void Action(Action action)
         {
-            ShowDialog();
+            try
+            {
+                action?.Invoke();
+            }
+            catch (Exception e)
+            {
+                ShowError(e.Message);
+            }
         }
 
         public void ShowError(string errorMessage)

@@ -136,10 +136,12 @@
             // 
             // export_ToolStrip
             // 
+            this.export_ToolStrip.Enabled = false;
             this.export_ToolStrip.Name = "export_ToolStrip";
             this.export_ToolStrip.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
             this.export_ToolStrip.Size = new System.Drawing.Size(262, 22);
             this.export_ToolStrip.Text = "Экспорт";
+            this.export_ToolStrip.Visible = false;
             // 
             // logout_ToolStrip
             // 

@@ -14,5 +14,7 @@ namespace FlowModel.Presenter.Views.ReportView
         string ResultViscosity { set; }
         
         void DrawResults(double[][] results);
+
+        event Action Export;
     }
 }

@@ -31,6 +31,7 @@ namespace FlowModel.Presenter.Views.HistoryView
             File.WriteAllBytes(filePath, report.File);
             
             View.ShowSuccess("Отчет успешно скачан в папку " + '"' + "Документы" + '"' + '!');
+            System.Diagnostics.Process.Start("explorer", "/select, " + filePath);
         }
         
         private void InitializeTable()

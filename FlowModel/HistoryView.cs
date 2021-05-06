@@ -14,7 +14,6 @@ namespace FlowModel
         
         public HistoryView()
         {
-            //reports_DataGridView.CellDoubleClick += (sender, args) => Action(SelectReport);
             InitializeComponent();
         }
         
