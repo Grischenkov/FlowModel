@@ -45,6 +45,7 @@ namespace FlowModel.Presenter.Views.AdministratorView
             View.Open += Open;
             View.Save += Save;
             View.Export += Export;
+            View.Logout += Logout;
             View.Exit += Exit;
 
             View.Settings += Settings;
@@ -52,6 +53,12 @@ namespace FlowModel.Presenter.Views.AdministratorView
             View.About += About;
         }
 
+        private void Logout()
+        {
+            Controller.Run<LoginPresenter>();
+            View.Close();
+        }
+        
         private void Action<TEntity>(TEntity entity, DbContext context, Actions action) where TEntity : class, IEntity
         {
             using (var repository = new Repository<TEntity, DbContext>(context))

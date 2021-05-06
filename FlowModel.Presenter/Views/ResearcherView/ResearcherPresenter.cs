@@ -52,6 +52,7 @@ namespace FlowModel.Presenter.Views.ResearcherView
             View.Open += Open;
             View.Save += Save;
             View.Export += Export;
+            View.Logout += Logout;
             View.Exit += Exit;
 
             View.Settings += Settings;
@@ -59,6 +60,13 @@ namespace FlowModel.Presenter.Views.ResearcherView
             View.About += About;
         }
 
+
+        private void Logout()
+        {
+            Controller.Run<LoginPresenter>();
+            View.Close();
+        }
+        
         private void SelectMaterial()
         {
             var material = _unitOfWork.Materials.GetList().First(x => x.Name == View.MaterialSelectedItem);
@@ -237,7 +245,7 @@ namespace FlowModel.Presenter.Views.ResearcherView
         
         private void Export(DateTime dateTime)
         {
-            string str = "Report_" + dateTime.Year + "-" + dateTime.Month + "-" +
+            string str = "Report_" + View.MaterialItem.Replace(' ', '_') + "_" + dateTime.Year + "-" + dateTime.Month + "-" +
                          dateTime.Day + "-" + dateTime.Hour + "-" + dateTime.Minute + "-" + dateTime.Second;
             string filePath = Directory.GetCurrentDirectory() + "\\" + str;
 

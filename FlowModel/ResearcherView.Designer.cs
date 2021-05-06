@@ -33,6 +33,7 @@
             this.open_ToolStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.save_ToolStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.export_ToolStrip = new System.Windows.Forms.ToolStripMenuItem();
+            this.logout_ToolStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
             this.exit_ToolStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -95,7 +96,9 @@
             // menuStrip
             // 
             this.menuStrip.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {this.fileToolStripMenuItem, this.helpToolStripMenuItem});
+            this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem,
+            this.helpToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Size = new System.Drawing.Size(1434, 24);
@@ -104,7 +107,13 @@
             // 
             // fileToolStripMenuItem
             // 
-            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {this.open_ToolStrip, this.save_ToolStrip, this.export_ToolStrip, this.toolStripMenuItem2, this.exit_ToolStrip});
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.open_ToolStrip,
+            this.save_ToolStrip,
+            this.export_ToolStrip,
+            this.logout_ToolStrip,
+            this.toolStripMenuItem2,
+            this.exit_ToolStrip});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
             this.fileToolStripMenuItem.Text = "Файл";
@@ -112,7 +121,7 @@
             // open_ToolStrip
             // 
             this.open_ToolStrip.Name = "open_ToolStrip";
-            this.open_ToolStrip.ShortcutKeys = ((System.Windows.Forms.Keys) ((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
+            this.open_ToolStrip.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
             this.open_ToolStrip.Size = new System.Drawing.Size(262, 22);
             this.open_ToolStrip.Text = "Открыть историю отчетов";
             // 
@@ -120,16 +129,24 @@
             // 
             this.save_ToolStrip.Enabled = false;
             this.save_ToolStrip.Name = "save_ToolStrip";
-            this.save_ToolStrip.ShortcutKeys = ((System.Windows.Forms.Keys) ((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
+            this.save_ToolStrip.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
             this.save_ToolStrip.Size = new System.Drawing.Size(262, 22);
             this.save_ToolStrip.Text = "Сохранить";
+            this.save_ToolStrip.Visible = false;
             // 
             // export_ToolStrip
             // 
             this.export_ToolStrip.Name = "export_ToolStrip";
-            this.export_ToolStrip.ShortcutKeys = ((System.Windows.Forms.Keys) ((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
+            this.export_ToolStrip.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
             this.export_ToolStrip.Size = new System.Drawing.Size(262, 22);
             this.export_ToolStrip.Text = "Экспорт";
+            // 
+            // logout_ToolStrip
+            // 
+            this.logout_ToolStrip.Name = "logout_ToolStrip";
+            this.logout_ToolStrip.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.L)));
+            this.logout_ToolStrip.Size = new System.Drawing.Size(262, 22);
+            this.logout_ToolStrip.Text = "Сменить пользователя";
             // 
             // toolStripMenuItem2
             // 
@@ -139,13 +156,17 @@
             // exit_ToolStrip
             // 
             this.exit_ToolStrip.Name = "exit_ToolStrip";
-            this.exit_ToolStrip.ShortcutKeys = ((System.Windows.Forms.Keys) ((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Q)));
+            this.exit_ToolStrip.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Q)));
             this.exit_ToolStrip.Size = new System.Drawing.Size(262, 22);
             this.exit_ToolStrip.Text = "Выход";
             // 
             // helpToolStripMenuItem
             // 
-            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {this.setting_ToolStrip, this.helpToolStripMenuItem1, this.help_ToolStrip, this.about_ToolStrip});
+            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.setting_ToolStrip,
+            this.helpToolStripMenuItem1,
+            this.help_ToolStrip,
+            this.about_ToolStrip});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
             this.helpToolStripMenuItem.Text = "Помощь";
@@ -154,7 +175,8 @@
             // 
             this.setting_ToolStrip.Enabled = false;
             this.setting_ToolStrip.Name = "setting_ToolStrip";
-            this.setting_ToolStrip.ShortcutKeys = ((System.Windows.Forms.Keys) (((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) | System.Windows.Forms.Keys.S)));
+            this.setting_ToolStrip.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.S)));
             this.setting_ToolStrip.Size = new System.Drawing.Size(206, 22);
             this.setting_ToolStrip.Text = "Настройки";
             // 
@@ -167,14 +189,14 @@
             // 
             this.help_ToolStrip.Enabled = false;
             this.help_ToolStrip.Name = "help_ToolStrip";
-            this.help_ToolStrip.ShortcutKeys = ((System.Windows.Forms.Keys) ((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.H)));
+            this.help_ToolStrip.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.H)));
             this.help_ToolStrip.Size = new System.Drawing.Size(206, 22);
             this.help_ToolStrip.Text = "Помощь";
             // 
             // about_ToolStrip
             // 
             this.about_ToolStrip.Name = "about_ToolStrip";
-            this.about_ToolStrip.ShortcutKeys = ((System.Windows.Forms.Keys) ((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
+            this.about_ToolStrip.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
             this.about_ToolStrip.Size = new System.Drawing.Size(206, 22);
             this.about_ToolStrip.Text = "О программе";
             // 
@@ -198,7 +220,7 @@
             this.input_GroupBox.Controls.Add(this.tableLayoutPanel2);
             this.input_GroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.input_GroupBox.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.input_GroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
+            this.input_GroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.input_GroupBox.ForeColor = System.Drawing.SystemColors.ControlText;
             this.input_GroupBox.Location = new System.Drawing.Point(3, 3);
             this.input_GroupBox.Name = "input_GroupBox";
@@ -247,7 +269,7 @@
             // 
             this.modeInput_GroupBox.Controls.Add(this.tableLayoutPanel8);
             this.modeInput_GroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.modeInput_GroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
+            this.modeInput_GroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.modeInput_GroupBox.Location = new System.Drawing.Point(3, 3);
             this.modeInput_GroupBox.Name = "modeInput_GroupBox";
             this.modeInput_GroupBox.Size = new System.Drawing.Size(343, 238);
@@ -301,7 +323,7 @@
             // 
             this.methodInput_GroupBox.Controls.Add(this.tableLayoutPanel12);
             this.methodInput_GroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.methodInput_GroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
+            this.methodInput_GroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.methodInput_GroupBox.Location = new System.Drawing.Point(3, 247);
             this.methodInput_GroupBox.Name = "methodInput_GroupBox";
             this.methodInput_GroupBox.Size = new System.Drawing.Size(343, 157);
@@ -341,7 +363,7 @@
             // 
             this.geometryInput_GroupBox.Controls.Add(this.tableLayoutPanel10);
             this.geometryInput_GroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.geometryInput_GroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
+            this.geometryInput_GroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.geometryInput_GroupBox.Location = new System.Drawing.Point(3, 3);
             this.geometryInput_GroupBox.Name = "geometryInput_GroupBox";
             this.geometryInput_GroupBox.Size = new System.Drawing.Size(349, 407);
@@ -409,7 +431,7 @@
             // 
             this.materialInput_GroupBox.Controls.Add(this.tableLayoutPanel9);
             this.materialInput_GroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.materialInput_GroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
+            this.materialInput_GroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.materialInput_GroupBox.Location = new System.Drawing.Point(358, 3);
             this.materialInput_GroupBox.Name = "materialInput_GroupBox";
             this.materialInput_GroupBox.Size = new System.Drawing.Size(349, 407);
@@ -502,7 +524,7 @@
             // 
             this.coefficientInput_GroupBox.Controls.Add(this.tableLayoutPanel11);
             this.coefficientInput_GroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.coefficientInput_GroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
+            this.coefficientInput_GroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.coefficientInput_GroupBox.Location = new System.Drawing.Point(1068, 3);
             this.coefficientInput_GroupBox.Name = "coefficientInput_GroupBox";
             this.coefficientInput_GroupBox.Size = new System.Drawing.Size(351, 407);
@@ -663,6 +685,7 @@
             this.tableLayoutPanel4.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         #endregion
@@ -712,6 +735,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.Button calculate_Button;
         private System.Windows.Forms.ProgressBar progressBar;
+        private System.Windows.Forms.ToolStripMenuItem logout_ToolStrip;
     }
 }
 

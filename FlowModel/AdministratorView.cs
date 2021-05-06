@@ -167,6 +167,7 @@ namespace FlowModel
         public event Action Open;
         public event Action Save;
         public event Action Export;
+        public event Action Logout;
         public event Action Exit;
 
         
@@ -204,6 +205,7 @@ namespace FlowModel
             open_ToolStrip.Click += (sender, args) => Action(Open);
             save_ToolStrip.Click += (sender, args) => Action(Save);
             exit_ToolStrip.Click += (sender, args) => Action(Exit);
+            logout_ToolStrip.Click += (sender, args) => Action(Logout);
             export_ToolStrip.Click += (sender, args) => Action(Export);
 
             help_ToolStrip.Click += (sender, args) => Action(Help);

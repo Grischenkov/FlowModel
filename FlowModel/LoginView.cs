@@ -29,8 +29,16 @@ namespace FlowModel
 
         public new void Show()
         {
-            _context.MainForm = this;
-            Application.Run(_context);
+            try
+            {
+                _context.MainForm = this;
+                Application.Run(_context);
+            }
+            catch
+            {
+                _context.MainForm = this;
+                base.Show();
+            }
         }
 
         public void ShowError(string errorMessage)

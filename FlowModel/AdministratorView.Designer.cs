@@ -34,6 +34,7 @@ namespace FlowModel
             this.open_ToolStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.save_ToolStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.export_ToolStrip = new System.Windows.Forms.ToolStripMenuItem();
+            this.logout_ToolStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
             this.exit_ToolStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -253,7 +254,7 @@ namespace FlowModel
             // 
             // fileToolStripMenuItem
             // 
-            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {this.open_ToolStrip, this.save_ToolStrip, this.export_ToolStrip, this.toolStripMenuItem2, this.exit_ToolStrip});
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {this.open_ToolStrip, this.save_ToolStrip, this.export_ToolStrip, this.logout_ToolStrip, this.toolStripMenuItem2, this.exit_ToolStrip});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
             this.fileToolStripMenuItem.Text = "Файл";
@@ -263,15 +264,16 @@ namespace FlowModel
             this.open_ToolStrip.Enabled = false;
             this.open_ToolStrip.Name = "open_ToolStrip";
             this.open_ToolStrip.ShortcutKeys = ((System.Windows.Forms.Keys) ((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.open_ToolStrip.Size = new System.Drawing.Size(173, 22);
+            this.open_ToolStrip.Size = new System.Drawing.Size(240, 22);
             this.open_ToolStrip.Text = "Открыть";
+            this.open_ToolStrip.Visible = false;
             // 
             // save_ToolStrip
             // 
             this.save_ToolStrip.Enabled = false;
             this.save_ToolStrip.Name = "save_ToolStrip";
             this.save_ToolStrip.ShortcutKeys = ((System.Windows.Forms.Keys) ((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.save_ToolStrip.Size = new System.Drawing.Size(173, 22);
+            this.save_ToolStrip.Size = new System.Drawing.Size(240, 22);
             this.save_ToolStrip.Text = "Сохранить";
             // 
             // export_ToolStrip
@@ -279,19 +281,26 @@ namespace FlowModel
             this.export_ToolStrip.Enabled = false;
             this.export_ToolStrip.Name = "export_ToolStrip";
             this.export_ToolStrip.ShortcutKeys = ((System.Windows.Forms.Keys) ((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
-            this.export_ToolStrip.Size = new System.Drawing.Size(173, 22);
+            this.export_ToolStrip.Size = new System.Drawing.Size(240, 22);
             this.export_ToolStrip.Text = "Экспорт";
+            // 
+            // logout_ToolStrip
+            // 
+            this.logout_ToolStrip.Name = "logout_ToolStrip";
+            this.logout_ToolStrip.ShortcutKeys = ((System.Windows.Forms.Keys) ((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.L)));
+            this.logout_ToolStrip.Size = new System.Drawing.Size(240, 22);
+            this.logout_ToolStrip.Text = "Сменить пользователя";
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(170, 6);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(237, 6);
             // 
             // exit_ToolStrip
             // 
             this.exit_ToolStrip.Name = "exit_ToolStrip";
             this.exit_ToolStrip.ShortcutKeys = ((System.Windows.Forms.Keys) ((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Q)));
-            this.exit_ToolStrip.Size = new System.Drawing.Size(173, 22);
+            this.exit_ToolStrip.Size = new System.Drawing.Size(240, 22);
             this.exit_ToolStrip.Text = "Выход";
             // 
             // helpToolStripMenuItem
@@ -1921,6 +1930,8 @@ namespace FlowModel
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.ToolStripMenuItem logout_ToolStrip;
 
         private System.Windows.Forms.DataGridViewTextBoxColumn userId_Column;
         private System.Windows.Forms.DataGridViewTextBoxColumn userLogin_Column;

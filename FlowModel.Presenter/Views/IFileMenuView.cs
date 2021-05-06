@@ -8,6 +8,7 @@ namespace FlowModel.Presenter.Views
         event Action Open;
         event Action Save;
         event Action Export;
+        event Action Logout;
         event Action Exit;
     }
 }
