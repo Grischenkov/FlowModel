@@ -4,6 +4,7 @@ using System.Data.Entity;
 using System.Linq;
 using FlowModel.Model;
 using FlowModel.Presenter.ParentInterfaces;
+using FlowModel.Presenter.Views.AboutView;
 
 namespace FlowModel.Presenter.Views.AdministratorView
 {
@@ -44,6 +45,7 @@ namespace FlowModel.Presenter.Views.AdministratorView
             View.Open += Open;
             View.Save += Save;
             View.Export += Export;
+            View.Logout += Logout;
             View.Exit += Exit;
 
             View.Settings += Settings;
@@ -51,6 +53,12 @@ namespace FlowModel.Presenter.Views.AdministratorView
             View.About += About;
         }
 
+        private void Logout()
+        {
+            Controller.Run<LoginPresenter>();
+            View.Close();
+        }
+        
         private void Action<TEntity>(TEntity entity, DbContext context, Actions action) where TEntity : class, IEntity
         {
             using (var repository = new Repository<TEntity, DbContext>(context))
@@ -304,7 +312,7 @@ namespace FlowModel.Presenter.Views.AdministratorView
             
             var report = new Report()
             {
-                Id = Convert.ToInt32(View.UserId)
+                Id = Convert.ToInt32(View.ReportId)
             };
 
             ProcessEntity(report, new ReportDbContext(), action);    
@@ -469,7 +477,7 @@ namespace FlowModel.Presenter.Views.AdministratorView
 
         private void About()
         {
-            //Controller.Run<AboutPresenter>();
+            Controller.Run<AboutPresenter>();
         }
     }
 }

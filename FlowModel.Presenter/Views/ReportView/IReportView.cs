@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms.DataVisualization.Charting;
+﻿using System;
+using System.Windows.Forms.DataVisualization.Charting;
 using FlowModel.Presenter.ParentInterfaces;
 
 namespace FlowModel.Presenter.Views.ReportView
@@ -13,5 +14,7 @@ namespace FlowModel.Presenter.Views.ReportView
         string ResultViscosity { set; }
         
         void DrawResults(double[][] results);
+
+        event Action Export;
     }
 }

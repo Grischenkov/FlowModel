@@ -167,6 +167,7 @@ namespace FlowModel
         public event Action Open;
         public event Action Save;
         public event Action Export;
+        public event Action Logout;
         public event Action Exit;
 
         
@@ -204,6 +205,7 @@ namespace FlowModel
             open_ToolStrip.Click += (sender, args) => Action(Open);
             save_ToolStrip.Click += (sender, args) => Action(Save);
             exit_ToolStrip.Click += (sender, args) => Action(Exit);
+            logout_ToolStrip.Click += (sender, args) => Action(Logout);
             export_ToolStrip.Click += (sender, args) => Action(Export);
 
             help_ToolStrip.Click += (sender, args) => Action(Help);
@@ -255,9 +257,9 @@ namespace FlowModel
         }
         public void FillReportsRecords(string[][] records)
         {
-            if (records.Length == 0) return;
             reports_DataGridView.RowCount = 0;
             reports_DataGridView.RowCount = records.Length + 1;
+            if (records.Length == 0) return;
             for (var i = 0; i < records.Length; i++)
             {
                 reports_DataGridView.Rows[i].Cells[0].Value = records[i][0];
@@ -276,9 +278,9 @@ namespace FlowModel
         }
         public void FillUsersRecords(string[][] records)
         {
-            if (records.Length == 0) return;
             users_DataGridView.RowCount = 0;
             users_DataGridView.RowCount = records.Length + 1;
+            if (records.Length == 0) return;
             for (var i = 0; i < records.Length; i++)
             {
                 users_DataGridView.Rows[i].Cells[0].Value = records[i][0];
@@ -296,9 +298,9 @@ namespace FlowModel
         }
         public void FillUnitsRecords(string[][] records)
         {
-            if (records.Length == 0) return;
             units_DataGridView.RowCount = 0;
             units_DataGridView.RowCount = records.Length + 1;
+            if (records.Length == 0) return;
             for (var i = 0; i < records.Length; i++)
             {
                 units_DataGridView.Rows[i].Cells[0].Value = records[i][0];
@@ -314,9 +316,9 @@ namespace FlowModel
         }
         public void FillTypesRecords(string[][] records)
         {
-            if (records.Length == 0) return;
             types_DataGridView.RowCount = 0;
             types_DataGridView.RowCount = records.Length + 1;
+            if (records.Length == 0) return;
             for (var i = 0; i < records.Length; i++)
             {
                 types_DataGridView.Rows[i].Cells[0].Value = records[i][0];
@@ -334,9 +336,9 @@ namespace FlowModel
         }
         public void FillParametersRecords(string[][] records)
         {
-            if (records.Length == 0) return;
             parameters_DataGridView.RowCount = 0;
             parameters_DataGridView.RowCount = records.Length + 1;
+            if (records.Length == 0) return;
             for (var i = 0; i < records.Length; i++)
             {
                 parameters_DataGridView.Rows[i].Cells[0].Value = records[i][0];
@@ -356,9 +358,9 @@ namespace FlowModel
         }
         public void FillMaterialParametersRecords(string[][] records)
         {
-            if (records.Length == 0) return;
             materialParameters_DataGridView.RowCount = 0;
             materialParameters_DataGridView.RowCount = records.Length + 1;
+            if (records.Length == 0) return;
             for (var i = 0; i < records.Length; i++)
             {
                 materialParameters_DataGridView.Rows[i].Cells[0].Value = records[i][0];
@@ -376,9 +378,9 @@ namespace FlowModel
         }
         public void FillMaterialsRecords(string[][] records)
         {
-            if (records.Length == 0) return;
             materials_DataGridView.RowCount = 0;
             materials_DataGridView.RowCount = records.Length + 1;
+            if (records.Length == 0) return;
             for (var i = 0; i < records.Length; i++)
             {
                 materials_DataGridView.Rows[i].Cells[0].Value = records[i][0];

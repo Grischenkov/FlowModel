@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 using FlowModel.Presenter.Views.ReportView;
 
@@ -15,31 +16,41 @@ namespace FlowModel
         private Series _temperatureSeries;
         private Series _viscositySeries;
 
+        public event Action Export;
+
         public ReportView()
         {
             InitializeComponent();
+            export_Button.Click += (sender, args) => Action(Export);
             DoubleBuffered = true;
             InitializeChart();
         }
 
-        public new void Show()
+        private void Action(Action action)
         {
-            ShowDialog();
+            try
+            {
+                action?.Invoke();
+            }
+            catch (Exception e)
+            {
+                ShowError(e.Message);
+            }
         }
 
         public void ShowError(string errorMessage)
         {
-            throw new System.NotImplementedException();
+            MessageBox.Show(errorMessage, @"Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         public void ShowWarning(string warningMessage)
         {
-            throw new System.NotImplementedException();
+            MessageBox.Show(warningMessage, @"Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         public void ShowSuccess(string successMessage)
         {
-            throw new System.NotImplementedException();
+            MessageBox.Show(successMessage, @"Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void InitializeChart()
