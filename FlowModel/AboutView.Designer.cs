@@ -48,7 +48,7 @@ namespace FlowModel
             this.Version.Name = "Version";
             this.Version.Size = new System.Drawing.Size(133, 13);
             this.Version.TabIndex = 19;
-            this.Version.Text = "Version: 1.3    06/05/2021";
+            this.Version.Text = "Version: 1.3.1    24/05/2021";
             // 
             // Author
             // 

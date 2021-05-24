@@ -102,7 +102,7 @@ namespace FlowModel.Model
             new Unit
             {
                 Id = 3,
-                Name = "Дж/кг*С"
+                Name = "Дж/(кг*С)"
             },
             new Unit
             {
@@ -122,7 +122,7 @@ namespace FlowModel.Model
             new Unit
             {
                 Id = 7,
-                Name = "Вт/м^2*С"
+                Name = "Вт/(м^2*С)"
             }
         };
 
@@ -145,7 +145,12 @@ namespace FlowModel.Model
             new Material
             {
                 Id = 1,
-                Name = "Материал 1"
+                Name = "Полиэтилен высокой плотности"
+            },
+            new Material
+            {
+                Id = 2,
+                Name = "Поливинилхлорид"
             }
         };
 
@@ -266,6 +271,63 @@ namespace FlowModel.Model
                 MaterialId = 1,
                 ParameterId = 8,
                 ParameterValue = 250
+            },
+            
+            new MaterialParameters
+            {
+                Id = 9,
+                MaterialId = 2,
+                ParameterId = 1,
+                ParameterValue = 1200
+            },
+            new MaterialParameters
+            {
+                Id = 10,
+                MaterialId = 2,
+                ParameterId = 2,
+                ParameterValue = 2100
+            },
+            new MaterialParameters
+            {
+                Id = 11,
+                MaterialId = 2,
+                ParameterId = 3,
+                ParameterValue = 140
+            },
+            new MaterialParameters
+            {
+                Id = 12,
+                MaterialId = 2,
+                ParameterId = 4,
+                ParameterValue = 10000
+            },
+            new MaterialParameters
+            {
+                Id = 13,
+                MaterialId = 2,
+                ParameterId = 5,
+                ParameterValue = 0.04
+            },
+            new MaterialParameters
+            {
+                Id = 14,
+                MaterialId = 2,
+                ParameterId = 6,
+                ParameterValue = 170
+            },
+            new MaterialParameters
+            {
+                Id = 15,
+                MaterialId = 2,
+                ParameterId = 7,
+                ParameterValue = 0.3
+            },
+            new MaterialParameters
+            {
+                Id = 16,
+                MaterialId = 2,
+                ParameterId = 8,
+                ParameterValue = 450
             }
         };
     }

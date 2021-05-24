@@ -252,7 +252,7 @@ namespace FlowModel.Presenter.Views.AdministratorView
                     Id = Convert.ToInt32(View.MaterialParametersId),
                     MaterialId = unitOfWork.Materials.GetList().First(x => x.Name == View.MaterialItem).Id,
                     ParameterId = unitOfWork.Parameters.GetList().First(x => x.Name == View.ParameterItem).Id,
-                    ParameterValue = Convert.ToInt32(View.ParameterValue)
+                    ParameterValue = Convert.ToDouble(View.ParameterValue.Replace('.', ','))
                 };   
             }
 
