@@ -64,6 +64,7 @@
     <Compile Include="ApplicationController.cs" />
     <Compile Include="BasePresenter.cs" />
     <Compile Include="DataBaseInitializer.cs" />
+    <Compile Include="Excel.cs" />
     <Compile Include="ParentInterfaces\IApplicationController.cs" />
     <Compile Include="ParentInterfaces\IContainer.cs" />
     <Compile Include="ParentInterfaces\IPresenter.cs" />

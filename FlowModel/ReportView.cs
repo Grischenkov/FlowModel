@@ -70,21 +70,26 @@ namespace FlowModel
             temperature_Chart.Series.Add(_temperatureSeries);
             temperature_Chart.ChartAreas[0].AxisX.MajorGrid.Enabled = false;
             temperature_Chart.ChartAreas[0].AxisY.MajorGrid.Enabled = false;
-            temperature_Chart.ChartAreas[0].AxisX.Title = "Координата, м";
+            temperature_Chart.ChartAreas[0].AxisX.Title = "Координата по длине канала, м";
             temperature_Chart.ChartAreas[0].AxisY.Title = "Температура, °C";
             temperature_Chart.Series[0].ToolTip = "Координата, м: #VALX " + "\n" + "Температура, °C: #VALY";
-        
+            temperature_Chart.Legends[0].Enabled = false;
+            
             viscosity_Chart.Series.Clear();
             viscosity_Chart.Series.Add(_viscositySeries);
             viscosity_Chart.ChartAreas[0].AxisX.MajorGrid.Enabled = false;
             viscosity_Chart.ChartAreas[0].AxisY.MajorGrid.Enabled = false;
-            viscosity_Chart.ChartAreas[0].AxisX.Title = "Координата, м";
+            viscosity_Chart.ChartAreas[0].AxisX.Title = "Координата по длине канала, м";
             viscosity_Chart.ChartAreas[0].AxisY.Title = "Вязкость, Па*с";
             viscosity_Chart.Series[0].ToolTip = "Координата, м: #VALX " + "\n" + "Вязкость, Па*с: #VALY";
+            viscosity_Chart.Legends[0].Enabled = false;
         }
 
         public void DrawResults(double[][] results)
         {
+            temperature_Chart.ChartAreas[0].AxisY.Minimum = results[0][1];
+            viscosity_Chart.ChartAreas[0].AxisY.Minimum = results[results.Length - 1][2];
+            
             for (int i = 0, j = 0; i < results.Length; i++)
             {
                 dataGridView.RowCount = j + 1;
