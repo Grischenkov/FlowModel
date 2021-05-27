@@ -45,13 +45,13 @@ if __name__ == "__main__":
             if setupSub in text:
                 break;
             i = i + 1
-        lines[i] = "        "+'"' + "ProductVersion" + '"' + " = " + '"' + "8:"+ sys.argv[1] + ".0" + '"' + '\n'  
+        lines[i] = "        "+'"' + "ProductVersion" + '"' + " = " + '"' + "8:"+ sys.argv[1] + '"' + '\n'  
         file = open(setupFilename, "w")
         file.writelines(lines)
         
         #DEFAULT PUBLISH VERSION
         for filename in files:
-            file = open(filename, "r")
+            file = open(filename, "r", encoding="utf-8")
             lines = file.readlines()
             file.close()
 
@@ -60,16 +60,16 @@ if __name__ == "__main__":
                 if assemblyVersionSub in text:
                     break;
                 i = i + 1
-            lines[i] = "[assembly: AssemblyVersion(" + '"' + sys.argv[1] + '"' + ")]" + '\n'
+            lines[i] = "[assembly: AssemblyVersion(" + '"' + sys.argv[1]  + ".0" + '"' + ")]" + '\n'
 
             i = 0
             for text in lines:
                 if assemblyFileVersionSub in text:
                     break;
                 i = i + 1
-            lines[i] = "[assembly: AssemblyFileVersion(" + '"' + sys.argv[1] + '"' + ")]" + '\n'
+            lines[i] = "[assembly: AssemblyFileVersion(" + '"' + sys.argv[1]  + ".0" + '"' + ")]" + '\n'
 
-            file = open(filename, "w")
+            file = open(filename, "w", encoding="utf-8")
             file.writelines(lines)
         print("Version number bumped to " + sys.argv[1])
     else:
