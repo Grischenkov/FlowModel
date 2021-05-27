@@ -60,14 +60,14 @@ if __name__ == "__main__":
                 if assemblyVersionSub in text:
                     break;
                 i = i + 1
-            lines[i] = "[assembly: AssemblyVersion(" + '"' + sys.argv[1]  + ".0" + '"' + ")]" + '\n'
+            lines[i] = "[assembly: AssemblyVersion(" + '"' + sys.argv[1] + '"' + ")]" + '\n'
 
             i = 0
             for text in lines:
                 if assemblyFileVersionSub in text:
                     break;
                 i = i + 1
-            lines[i] = "[assembly: AssemblyFileVersion(" + '"' + sys.argv[1]  + ".0" + '"' + ")]" + '\n'
+            lines[i] = "[assembly: AssemblyFileVersion(" + '"' + sys.argv[1] + '"' + ")]" + '\n'
 
             file = open(filename, "w", encoding="utf-8")
             file.writelines(lines)
