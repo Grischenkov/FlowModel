@@ -31,6 +31,7 @@ namespace FlowModel
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AboutView));
             this.Version = new System.Windows.Forms.Label();
             this.Author = new System.Windows.Forms.Label();
             this.Discription_third_line = new System.Windows.Forms.Label();
@@ -39,22 +40,23 @@ namespace FlowModel
             this.Title = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.license_TextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // Version
             // 
             this.Version.AutoSize = true;
-            this.Version.Location = new System.Drawing.Point(20, 204);
+            this.Version.Location = new System.Drawing.Point(20, 531);
             this.Version.Name = "Version";
-            this.Version.Size = new System.Drawing.Size(133, 13);
+            this.Version.Size = new System.Drawing.Size(142, 13);
             this.Version.TabIndex = 19;
-            this.Version.Text = "Version: 1.3.1    24/05/2021";
+            this.Version.Text = "Version: 1.3.2    27/05/2021";
             // 
             // Author
             // 
             this.Author.AutoSize = true;
-            this.Author.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
-            this.Author.Location = new System.Drawing.Point(20, 189);
+            this.Author.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Author.Location = new System.Drawing.Point(20, 516);
             this.Author.Name = "Author";
             this.Author.Size = new System.Drawing.Size(284, 15);
             this.Author.TabIndex = 18;
@@ -63,7 +65,7 @@ namespace FlowModel
             // Discription_third_line
             // 
             this.Discription_third_line.AutoSize = true;
-            this.Discription_third_line.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
+            this.Discription_third_line.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Discription_third_line.Location = new System.Drawing.Point(20, 126);
             this.Discription_third_line.Margin = new System.Windows.Forms.Padding(11, 0, 11, 0);
             this.Discription_third_line.Name = "Discription_third_line";
@@ -74,7 +76,7 @@ namespace FlowModel
             // Discription_second_line
             // 
             this.Discription_second_line.AutoSize = true;
-            this.Discription_second_line.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
+            this.Discription_second_line.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Discription_second_line.Location = new System.Drawing.Point(20, 109);
             this.Discription_second_line.Margin = new System.Windows.Forms.Padding(11, 0, 11, 0);
             this.Discription_second_line.Name = "Discription_second_line";
@@ -85,7 +87,7 @@ namespace FlowModel
             // Discription_first_line
             // 
             this.Discription_first_line.AutoSize = true;
-            this.Discription_first_line.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
+            this.Discription_first_line.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Discription_first_line.Location = new System.Drawing.Point(20, 92);
             this.Discription_first_line.Margin = new System.Windows.Forms.Padding(11, 0, 11, 0);
             this.Discription_first_line.Name = "Discription_first_line";
@@ -96,7 +98,7 @@ namespace FlowModel
             // Title
             // 
             this.Title.AutoSize = true;
-            this.Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
+            this.Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Title.Location = new System.Drawing.Point(20, 9);
             this.Title.Margin = new System.Windows.Forms.Padding(11, 0, 11, 0);
             this.Title.Name = "Title";
@@ -107,7 +109,7 @@ namespace FlowModel
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.Location = new System.Drawing.Point(20, 143);
             this.label1.Margin = new System.Windows.Forms.Padding(11, 0, 11, 0);
             this.label1.Name = "label1";
@@ -118,7 +120,7 @@ namespace FlowModel
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.Location = new System.Drawing.Point(20, 160);
             this.label2.Margin = new System.Windows.Forms.Padding(11, 0, 11, 0);
             this.label2.Name = "label2";
@@ -126,11 +128,25 @@ namespace FlowModel
             this.label2.TabIndex = 21;
             this.label2.Text = "продукта для различных геометрических параметров каналов и типов материалов";
             // 
+            // license_TextBox
+            // 
+            this.license_TextBox.BackColor = System.Drawing.SystemColors.Menu;
+            this.license_TextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.license_TextBox.Cursor = System.Windows.Forms.Cursors.Default;
+            this.license_TextBox.Enabled = false;
+            this.license_TextBox.Location = new System.Drawing.Point(23, 197);
+            this.license_TextBox.Multiline = true;
+            this.license_TextBox.Name = "license_TextBox";
+            this.license_TextBox.ReadOnly = true;
+            this.license_TextBox.Size = new System.Drawing.Size(490, 300);
+            this.license_TextBox.TabIndex = 22;
+            // 
             // AboutView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(581, 229);
+            this.ClientSize = new System.Drawing.Size(584, 551);
+            this.Controls.Add(this.license_TextBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Version);
@@ -140,6 +156,7 @@ namespace FlowModel
             this.Controls.Add(this.Discription_first_line);
             this.Controls.Add(this.Title);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AboutView";
@@ -147,6 +164,7 @@ namespace FlowModel
             this.Text = "О программе";
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         private System.Windows.Forms.Label label2;
@@ -161,5 +179,7 @@ namespace FlowModel
         private System.Windows.Forms.Label Version;
 
         #endregion
+
+        private System.Windows.Forms.TextBox license_TextBox;
     }
 }

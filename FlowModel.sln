@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlowModel.Model", "FlowMode
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlowModel.Presenter", "FlowModel.Presenter\FlowModel.Presenter.csproj", "{2A45CCA6-BB36-434A-BAE5-08ED0AEC713C}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "FlowModel.Setup", "FlowModel.Setup\FlowModel.Setup.vdproj", "{22BA473C-5FE0-4F85-9099-DCB01AFC29C2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,8 @@ Global
 		{2A45CCA6-BB36-434A-BAE5-08ED0AEC713C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2A45CCA6-BB36-434A-BAE5-08ED0AEC713C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2A45CCA6-BB36-434A-BAE5-08ED0AEC713C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22BA473C-5FE0-4F85-9099-DCB01AFC29C2}.Debug|Any CPU.ActiveCfg = Debug
+		{22BA473C-5FE0-4F85-9099-DCB01AFC29C2}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
