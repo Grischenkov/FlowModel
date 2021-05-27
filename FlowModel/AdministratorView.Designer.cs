@@ -29,6 +29,7 @@ namespace FlowModel
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdministratorView));
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.open_ToolStrip = new System.Windows.Forms.ToolStripMenuItem();
@@ -179,7 +180,7 @@ namespace FlowModel
             this.tableLayoutPanel16.SuspendLayout();
             this.tableLayoutPanel24.SuspendLayout();
             this.tableLayoutPanel23.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize) (this.materials_DataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.materials_DataGridView)).BeginInit();
             this.materialParameters_TabPage.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
@@ -190,7 +191,7 @@ namespace FlowModel
             this.parameter_GroupBox.SuspendLayout();
             this.materialParametersId_GroupBox.SuspendLayout();
             this.material_GroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize) (this.materialParameters_DataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.materialParameters_DataGridView)).BeginInit();
             this.parameters_TabPage.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
@@ -201,7 +202,7 @@ namespace FlowModel
             this.parameterType_GroupBox.SuspendLayout();
             this.parameterId_GroupBox.SuspendLayout();
             this.parameterName_GroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize) (this.parameters_DataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.parameters_DataGridView)).BeginInit();
             this.types_TabPage.SuspendLayout();
             this.tableLayoutPanel8.SuspendLayout();
             this.tableLayoutPanel12.SuspendLayout();
@@ -210,7 +211,7 @@ namespace FlowModel
             this.tableLayoutPanel29.SuspendLayout();
             this.typeId_GroupBox.SuspendLayout();
             this.typeName_GroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize) (this.types_DataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.types_DataGridView)).BeginInit();
             this.units_TabPage.SuspendLayout();
             this.tableLayoutPanel9.SuspendLayout();
             this.tableLayoutPanel13.SuspendLayout();
@@ -219,7 +220,7 @@ namespace FlowModel
             this.tableLayoutPanel31.SuspendLayout();
             this.unitId_GroupBox.SuspendLayout();
             this.unitName_GroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize) (this.units_DataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.units_DataGridView)).BeginInit();
             this.users_TabPage.SuspendLayout();
             this.tableLayoutPanel10.SuspendLayout();
             this.tableLayoutPanel14.SuspendLayout();
@@ -230,7 +231,7 @@ namespace FlowModel
             this.userPassword_GroupBox.SuspendLayout();
             this.userId_GroupBox.SuspendLayout();
             this.userLogin_GroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize) (this.users_DataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.users_DataGridView)).BeginInit();
             this.report_TabPage.SuspendLayout();
             this.tableLayoutPanel11.SuspendLayout();
             this.tableLayoutPanel15.SuspendLayout();
@@ -239,13 +240,15 @@ namespace FlowModel
             this.reportName_GroupBox.SuspendLayout();
             this.reportId_GroupBox.SuspendLayout();
             this.reportDate_GroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize) (this.reports_DataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reports_DataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip
             // 
             this.menuStrip.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {this.fileToolStripMenuItem, this.helpToolStripMenuItem});
+            this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem,
+            this.helpToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Size = new System.Drawing.Size(1017, 24);
@@ -254,7 +257,13 @@ namespace FlowModel
             // 
             // fileToolStripMenuItem
             // 
-            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {this.open_ToolStrip, this.save_ToolStrip, this.export_ToolStrip, this.logout_ToolStrip, this.toolStripMenuItem2, this.exit_ToolStrip});
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.open_ToolStrip,
+            this.save_ToolStrip,
+            this.export_ToolStrip,
+            this.logout_ToolStrip,
+            this.toolStripMenuItem2,
+            this.exit_ToolStrip});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
             this.fileToolStripMenuItem.Text = "Файл";
@@ -263,7 +272,7 @@ namespace FlowModel
             // 
             this.open_ToolStrip.Enabled = false;
             this.open_ToolStrip.Name = "open_ToolStrip";
-            this.open_ToolStrip.ShortcutKeys = ((System.Windows.Forms.Keys) ((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
+            this.open_ToolStrip.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
             this.open_ToolStrip.Size = new System.Drawing.Size(240, 22);
             this.open_ToolStrip.Text = "Открыть";
             this.open_ToolStrip.Visible = false;
@@ -272,7 +281,7 @@ namespace FlowModel
             // 
             this.save_ToolStrip.Enabled = false;
             this.save_ToolStrip.Name = "save_ToolStrip";
-            this.save_ToolStrip.ShortcutKeys = ((System.Windows.Forms.Keys) ((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
+            this.save_ToolStrip.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
             this.save_ToolStrip.Size = new System.Drawing.Size(240, 22);
             this.save_ToolStrip.Text = "Сохранить";
             // 
@@ -280,14 +289,14 @@ namespace FlowModel
             // 
             this.export_ToolStrip.Enabled = false;
             this.export_ToolStrip.Name = "export_ToolStrip";
-            this.export_ToolStrip.ShortcutKeys = ((System.Windows.Forms.Keys) ((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
+            this.export_ToolStrip.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
             this.export_ToolStrip.Size = new System.Drawing.Size(240, 22);
             this.export_ToolStrip.Text = "Экспорт";
             // 
             // logout_ToolStrip
             // 
             this.logout_ToolStrip.Name = "logout_ToolStrip";
-            this.logout_ToolStrip.ShortcutKeys = ((System.Windows.Forms.Keys) ((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.L)));
+            this.logout_ToolStrip.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.L)));
             this.logout_ToolStrip.Size = new System.Drawing.Size(240, 22);
             this.logout_ToolStrip.Text = "Сменить пользователя";
             // 
@@ -299,13 +308,17 @@ namespace FlowModel
             // exit_ToolStrip
             // 
             this.exit_ToolStrip.Name = "exit_ToolStrip";
-            this.exit_ToolStrip.ShortcutKeys = ((System.Windows.Forms.Keys) ((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Q)));
+            this.exit_ToolStrip.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Q)));
             this.exit_ToolStrip.Size = new System.Drawing.Size(240, 22);
             this.exit_ToolStrip.Text = "Выход";
             // 
             // helpToolStripMenuItem
             // 
-            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {this.setting_ToolStrip, this.helpToolStripMenuItem1, this.help_ToolStrip, this.about_ToolStrip});
+            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.setting_ToolStrip,
+            this.helpToolStripMenuItem1,
+            this.help_ToolStrip,
+            this.about_ToolStrip});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
             this.helpToolStripMenuItem.Text = "Помощь";
@@ -314,7 +327,8 @@ namespace FlowModel
             // 
             this.setting_ToolStrip.Enabled = false;
             this.setting_ToolStrip.Name = "setting_ToolStrip";
-            this.setting_ToolStrip.ShortcutKeys = ((System.Windows.Forms.Keys) (((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) | System.Windows.Forms.Keys.S)));
+            this.setting_ToolStrip.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.S)));
             this.setting_ToolStrip.Size = new System.Drawing.Size(206, 22);
             this.setting_ToolStrip.Text = "Настройки";
             // 
@@ -327,14 +341,14 @@ namespace FlowModel
             // 
             this.help_ToolStrip.Enabled = false;
             this.help_ToolStrip.Name = "help_ToolStrip";
-            this.help_ToolStrip.ShortcutKeys = ((System.Windows.Forms.Keys) ((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.H)));
+            this.help_ToolStrip.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.H)));
             this.help_ToolStrip.Size = new System.Drawing.Size(206, 22);
             this.help_ToolStrip.Text = "Помощь";
             // 
             // about_ToolStrip
             // 
             this.about_ToolStrip.Name = "about_ToolStrip";
-            this.about_ToolStrip.ShortcutKeys = ((System.Windows.Forms.Keys) ((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
+            this.about_ToolStrip.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
             this.about_ToolStrip.Size = new System.Drawing.Size(206, 22);
             this.about_ToolStrip.Text = "О программе";
             // 
@@ -528,7 +542,9 @@ namespace FlowModel
             this.materials_DataGridView.AllowUserToAddRows = false;
             this.materials_DataGridView.AllowUserToDeleteRows = false;
             this.materials_DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.materials_DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {this.materialId_Column, this.materialName_Column});
+            this.materials_DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.materialId_Column,
+            this.materialName_Column});
             this.materials_DataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materials_DataGridView.Location = new System.Drawing.Point(401, 3);
             this.materials_DataGridView.Name = "materials_DataGridView";
@@ -755,7 +771,11 @@ namespace FlowModel
             this.materialParameters_DataGridView.AllowUserToAddRows = false;
             this.materialParameters_DataGridView.AllowUserToDeleteRows = false;
             this.materialParameters_DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.materialParameters_DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {this.materialParameterId_Column, this.material_Column, this.parameter_Column, this.parameterValue_Column});
+            this.materialParameters_DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.materialParameterId_Column,
+            this.material_Column,
+            this.parameter_Column,
+            this.parameterValue_Column});
             this.materialParameters_DataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialParameters_DataGridView.Location = new System.Drawing.Point(401, 3);
             this.materialParameters_DataGridView.Name = "materialParameters_DataGridView";
@@ -996,7 +1016,11 @@ namespace FlowModel
             this.parameters_DataGridView.AllowUserToAddRows = false;
             this.parameters_DataGridView.AllowUserToDeleteRows = false;
             this.parameters_DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.parameters_DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {this.parameterId_Column, this.parameterName_Column, this.parameterType_Column, this.parameterUnit_Column});
+            this.parameters_DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.parameterId_Column,
+            this.parameterName_Column,
+            this.parameterType_Column,
+            this.parameterUnit_Column});
             this.parameters_DataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.parameters_DataGridView.Location = new System.Drawing.Point(401, 3);
             this.parameters_DataGridView.Name = "parameters_DataGridView";
@@ -1193,7 +1217,9 @@ namespace FlowModel
             this.types_DataGridView.AllowUserToAddRows = false;
             this.types_DataGridView.AllowUserToDeleteRows = false;
             this.types_DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.types_DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {this.typeId_Column, this.typeName_Column});
+            this.types_DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.typeId_Column,
+            this.typeName_Column});
             this.types_DataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.types_DataGridView.Location = new System.Drawing.Point(401, 3);
             this.types_DataGridView.Name = "types_DataGridView";
@@ -1376,7 +1402,9 @@ namespace FlowModel
             this.units_DataGridView.AllowUserToAddRows = false;
             this.units_DataGridView.AllowUserToDeleteRows = false;
             this.units_DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.units_DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {this.unitId_Column, this.unitName_Column});
+            this.units_DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.unitId_Column,
+            this.unitName_Column});
             this.units_DataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.units_DataGridView.Location = new System.Drawing.Point(401, 3);
             this.units_DataGridView.Name = "units_DataGridView";
@@ -1602,7 +1630,11 @@ namespace FlowModel
             this.users_DataGridView.AllowUserToAddRows = false;
             this.users_DataGridView.AllowUserToDeleteRows = false;
             this.users_DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.users_DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {this.userId_Column, this.userLogin_Column, this.userPassword_Column, this.userStatus_Column});
+            this.users_DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.userId_Column,
+            this.userLogin_Column,
+            this.userPassword_Column,
+            this.userStatus_Column});
             this.users_DataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.users_DataGridView.Location = new System.Drawing.Point(401, 3);
             this.users_DataGridView.Name = "users_DataGridView";
@@ -1796,7 +1828,10 @@ namespace FlowModel
             this.reports_DataGridView.AllowUserToAddRows = false;
             this.reports_DataGridView.AllowUserToDeleteRows = false;
             this.reports_DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.reports_DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {this.reportId_Column, this.reportDate_Column, this.reportName_Column});
+            this.reports_DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.reportId_Column,
+            this.reportDate_Column,
+            this.reportName_Column});
             this.reports_DataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.reports_DataGridView.Location = new System.Drawing.Point(401, 3);
             this.reports_DataGridView.Name = "reports_DataGridView";
@@ -1833,6 +1868,7 @@ namespace FlowModel
             this.ClientSize = new System.Drawing.Size(1017, 351);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.menuStrip);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(900, 390);
             this.Name = "AdministratorView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -1851,7 +1887,7 @@ namespace FlowModel
             this.tableLayoutPanel16.ResumeLayout(false);
             this.tableLayoutPanel24.ResumeLayout(false);
             this.tableLayoutPanel23.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize) (this.materials_DataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.materials_DataGridView)).EndInit();
             this.materialParameters_TabPage.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel6.ResumeLayout(false);
@@ -1864,7 +1900,7 @@ namespace FlowModel
             this.materialParametersId_GroupBox.ResumeLayout(false);
             this.materialParametersId_GroupBox.PerformLayout();
             this.material_GroupBox.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize) (this.materialParameters_DataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.materialParameters_DataGridView)).EndInit();
             this.parameters_TabPage.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel7.ResumeLayout(false);
@@ -1877,7 +1913,7 @@ namespace FlowModel
             this.parameterId_GroupBox.PerformLayout();
             this.parameterName_GroupBox.ResumeLayout(false);
             this.parameterName_GroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize) (this.parameters_DataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.parameters_DataGridView)).EndInit();
             this.types_TabPage.ResumeLayout(false);
             this.tableLayoutPanel8.ResumeLayout(false);
             this.tableLayoutPanel12.ResumeLayout(false);
@@ -1888,7 +1924,7 @@ namespace FlowModel
             this.typeId_GroupBox.PerformLayout();
             this.typeName_GroupBox.ResumeLayout(false);
             this.typeName_GroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize) (this.types_DataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.types_DataGridView)).EndInit();
             this.units_TabPage.ResumeLayout(false);
             this.tableLayoutPanel9.ResumeLayout(false);
             this.tableLayoutPanel13.ResumeLayout(false);
@@ -1899,7 +1935,7 @@ namespace FlowModel
             this.unitId_GroupBox.PerformLayout();
             this.unitName_GroupBox.ResumeLayout(false);
             this.unitName_GroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize) (this.units_DataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.units_DataGridView)).EndInit();
             this.users_TabPage.ResumeLayout(false);
             this.tableLayoutPanel10.ResumeLayout(false);
             this.tableLayoutPanel14.ResumeLayout(false);
@@ -1914,7 +1950,7 @@ namespace FlowModel
             this.userId_GroupBox.PerformLayout();
             this.userLogin_GroupBox.ResumeLayout(false);
             this.userLogin_GroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize) (this.users_DataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.users_DataGridView)).EndInit();
             this.report_TabPage.ResumeLayout(false);
             this.tableLayoutPanel11.ResumeLayout(false);
             this.tableLayoutPanel15.ResumeLayout(false);
@@ -1926,9 +1962,10 @@ namespace FlowModel
             this.reportId_GroupBox.PerformLayout();
             this.reportDate_GroupBox.ResumeLayout(false);
             this.reportDate_GroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize) (this.reports_DataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reports_DataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         private System.Windows.Forms.ToolStripMenuItem logout_ToolStrip;

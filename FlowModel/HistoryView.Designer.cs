@@ -31,13 +31,14 @@ namespace FlowModel
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HistoryView));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.reports_DataGridView = new System.Windows.Forms.DataGridView();
             this.reportId_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.reportDate_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.reportName_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize) (this.reports_DataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reports_DataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -60,7 +61,10 @@ namespace FlowModel
             this.reports_DataGridView.AllowUserToAddRows = false;
             this.reports_DataGridView.AllowUserToDeleteRows = false;
             this.reports_DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.reports_DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {this.reportId_Column, this.reportDate_Column, this.reportName_Column});
+            this.reports_DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.reportId_Column,
+            this.reportDate_Column,
+            this.reportName_Column});
             this.reports_DataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.reports_DataGridView.Location = new System.Drawing.Point(3, 3);
             this.reports_DataGridView.Name = "reports_DataGridView";
@@ -97,13 +101,15 @@ namespace FlowModel
             this.ClientSize = new System.Drawing.Size(634, 461);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "HistoryView";
             this.Text = "История отчетов";
             this.tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize) (this.reports_DataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reports_DataGridView)).EndInit();
             this.ResumeLayout(false);
+
         }
 
         #endregion
